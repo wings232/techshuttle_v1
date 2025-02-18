@@ -12,7 +12,7 @@
 <body>
     <div class='container'> <!--container Starts -->
         <div class='header'>
-            Hi How r u
+            Hi
         </div>
     </div><!--container Ends -->
 </body>
