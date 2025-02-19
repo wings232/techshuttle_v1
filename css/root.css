@@ -1,6 +1,10 @@
 :root {
     --primary_color: #356df1;
-    --button_background:#ffa52b;
+    /* --button_background:#ffa52b; */
+    --button_background:#356df1;
+    --button_hover:#173375;
     --white: #ffffff;
     --black:black;
+    --font_regular:"rubik_regular";
+    --font_bold:"roboto_bold";
 }
