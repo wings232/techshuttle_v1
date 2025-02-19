@@ -46,6 +46,7 @@ body{
     width:15%;
     float: left;
     padding: 14px 10px;
+    box-sizing: border-box;
 }
 
 .header .logo_search .cate_m .i_con{
@@ -74,7 +75,7 @@ body{
 
 .header .logo_search .cate_m .c_name{    
     float: left;
-    padding: 2px 10px;
+    padding: 2px 5px;
     font-family: var(--font_bold);
     color: white;
     width: 60%;
@@ -85,6 +86,110 @@ body{
     float: right;
     padding: 2px;
     color:white
+}
+
+.header .logo_search .search{
+    width:30%;
+    float: left;
+    padding: 14px 10px;
+    box-sizing: border-box;
+}
+
+.header .logo_search .search .s_bar{
+    width:100%;
+    float: left;
+    display: flex;
+    border: 1px solid #eee;
+    box-sizing: border-box;
+}
+
+.header .logo_search .search .s_bar .search_box{
+    width:100%;
+    float: left;
+}
+
+.header .logo_search .search .s_bar .search_box input{
+    display: block;
+    width: 100%;
+    min-height: 50px;
+    height: 50px;
+    padding: 0 15px;
+    font-size: 13px;
+    font-weight: 400;
+    line-height: 1;
+    color: #777;
+    border-radius: 0;
+    background-color: transparent;
+    border: none;
+    letter-spacing: 0.6px;
+    outline: none;
+    box-sizing: border-box;
+}
+
+.header .logo_search .search .s_bar .button{
+    float: left;
+}
+
+.header .logo_search .search .s_bar .button button{
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 48px; 
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 48px;
+    flex: 0 0 48px;
+    border-radius: 0px;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    outline: 0;
+    padding: 0;
+    height: 50px;
+    border:none;
+    background: none;
+    cursor: pointer;
+}
+
+.header .logo_search .search .s_bar .button button i{
+    transition: all 0.3s ease-in-out;
+    font-size: 18px;
+    color: #4b5966;
+}
+
+.header .logo_search .login{
+    width:34%;
+    float: left;
+    padding: 14px 10px;
+    box-sizing: border-box;
+}
+
+.header .logo_search .login .login_b{
+    float: left;
+    display: flex;
+    float: right;
+    cursor: pointer;
+}
+
+.header .logo_search .login .login_b .image{
+    float: left;
+    padding: 12px 10px;
+}
+
+.header .logo_search .login .login_b .image i{
+    color: var(--button_background);
+}
+
+.header .logo_search .login .login_b .name{
+    float: left;
+    padding: 12px 10px;
+}
+
+.header .logo_search .login .login_b:hover i{
+    color: var(--button_hover);
+}
+
+.header .logo_search .login .login_b:hover .name{
+    color: var(--button_hover);
 }
 
 
