@@ -1,0 +1,117 @@
+@keyframes spin {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes blink-animation {
+    0% {
+        -webkit-transform: translate(-50%, -50%) scale(0.5);
+        transform: translate(-50%, -50%) scale(0.5);
+        opacity: 1
+    }
+
+    100% {
+        -webkit-transform: translate(-50%, -50%) scale(1.3);
+        transform: translate(-50%, -50%) scale(1.3);
+        opacity: 0
+    }
+}
+
+@keyframes rotate-loading {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+
+@keyframes zoom-fade-animation {
+    0% {
+        -webkit-transform: scale(0.6);
+        transform: scale(0.6);
+    }
+
+    50% {
+        -webkit-transform: scale(1);
+        transform: scale(1);
+    }
+
+    100% {
+        -webkit-transform: scale(0.6);
+        transform: scale(0.6);
+    }
+}
+
+@keyframes rotate-animation {
+    100% {
+        -webkit-transform: rotate(360deg);
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes move-element-animation-1 {
+    0% {
+        -webkit-transform: translate(0);
+        transform: translate(0);
+    }
+
+    25% {
+        -webkit-transform: translate(10px, 10px);
+        transform: translate(10px, 10px);
+    }
+
+    50% {
+        -webkit-transform: translate(5px, 5px);
+        transform: translate(5px, 5px);
+    }
+
+    75% {
+        -webkit-transform: translate(10px, -5px);
+        transform: translate(10px, -5px);
+    }
+
+    to {
+        -webkit-transform: translate(0);
+        transform: translate(0);
+    }
+}
+
+.move-element-animation-2 {
+    -webkit-animation: move-element-animation-2 8s linear infinite;
+    animation: move-element-animation-2 8s linear infinite;
+}
+
+@keyframes move-element-animation-2 {
+    0% {
+        -webkit-transform: translate(0);
+        transform: translate(0);
+    }
+
+    25% {
+        -webkit-transform: translate(15px, 15px);
+        transform: translate(15px, 15px);
+    }
+
+    50% {
+        -webkit-transform: translate(8px, 8px);
+        transform: translate(8px, 8px);
+    }
+
+    75% {
+        -webkit-transform: translate(15px, -8px);
+        transform: translate(15px, -8px);
+    }
+
+    to {
+        -webkit-transform: translate(0);
+        transform: translate(0);
+    }
+}
