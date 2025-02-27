@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="css/fonts.css"/>    
     <link rel="stylesheet" href="css/animation.css"/> 
     <link rel="stylesheet" href="css/style.css"/>
+    <script type="text/javascript" src="js/jquery.js"></script>
 </head>
 <body>
     <div class='container'> <!--container Starts -->
@@ -18,7 +19,7 @@
                 <div class="header"><!--header Starts -->
                     <div class='logo_search'><!--logo_search Starts -->
                         <div class='logo'><!--logo Starts -->
-                            <img src='images/logo.png'/>
+                            <img src='images/logo_01.png'/>
                         </div><!--logo Ends -->
                         <div class='cate_m'><!--cate_m Starts -->
                             <div class='overlay'>
@@ -303,8 +304,328 @@
     </section>
 
 
+        <div class="course_t_con"><!--course_t_con Starts -->
+            <div class="course_t_center">
+                <div class="course_t">
+                    <div class="course_heads"><!--course_heads Starts -->
+                        <div class="pop_course">
+                            <div class="pop_title">
+                                <div class="title">Popular Courses</div>
+                            </div>
+                            <div class="pop_head">
+                                Explore Top
+                                <span>Courses 
+                                    <img  src="images/label/course_head_line.svg" alt="" />
+                                </span>
+                            </div>
+                        </div>
+                        <div class="pop_cate">
+                            <div class="cate_list">
+                                <ul>
+                                    <li class="tactive">All Courses<span><img  src="images/label/line_tab.png" alt="" /></span></li>
+                                    <li>Trending<span><img  src="images/label/course_tab.png" alt="" /></span></li>
+                                    <li>Popularity<span><img  src="images/label/course_tab.png" alt="" /></span></li>
+                                    <li>Featured<span><img  src="images/label/course_tab.png" alt="" /></span></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>  <!--course_heads Ends -->
+                    
+                    <div class="course_list">
+                        <ul>
+                            <?php for($i=0; $i<=7; $i++){ ?>
+                            <li><!-- Course_list loop starts-->
+                                <div class="list_con">
+                                    <div class="image">
+                                        <img src="images/course/18.jpg"/>
+                                    </div>
+                                    <div class="img_cont">
+                                        <div class="depart">
+                                            <span>
+                                               <div class='cor'><a href="">SAP</a></div>
+                                            </span>
+                                        </div>
+                                        <div class="head">
+                                            Learn With Advance Web Design (UX/UI) Course
+                                        </div>
+                                        <!--<div class="para">
+                                            <p>
+                                                Education is a vital process that fosters personal growth, societal development, and intellectual advancement. It equips individuals with the knowledge, skills, and critical thinking.
+                                            </p>
+                                        </div>-->
+                                        <div class="list_type_con">
+                                            <ul>
+                                                <li>
+                                                    <div class="list_type">
+                                                        <div class="images">
+                                                            <i class="fa-solid fa-book-open"></i>
+                                                        </div>
+                                                        <div class="image_txt">
+                                                            Lessons
+                                                        </div>
+                                                    </div> 
+                                                </li>
+                                                <li>
+                                                    <div class="list_type">
+                                                        <div class="images">
+                                                            <i class="far fa-user"></i>
+                                                        </div>
+                                                        <div class="image_txt">
+                                                            80 students
+                                                        </div>
+                                                    </div> 
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="list_hover">
+                                    <div class="img_cont">
+                                        <div class="depart">
+                                            <span>
+                                               <div class='cor'><a href="">SAP</a></div>
+                                            </span>
+                                        </div>
+                                        <div class="head">
+                                            Learn With Advance Web Design (UX/UI) Course
+                                        </div>
+                                        <div class="f_num"><!--f_num Starts -->
+                                            <div class="fees_sym"><!--fees_sym Starts -->
+                                                <div class="sym">₹</div>
+                                            </div><!--fees_sym Ends -->
+                                            <div class="fees_num"><!--fees_num Starts -->
+                                                <div class="num">30000</div>
+                                            </div><!--fees_num Ends -->
+                                        </div>
+                                       <div class="para">
+                                            <p>
+                                                Education is a vital process that fosters personal growth, societal development, and intellectual advancement. It equips individuals with the knowledge, skills, and critical thinking.
+                                            </p>
+                                        </div>
+                                        <div class="list_type_con">
+                                            <ul>
+                                                <li>
+                                                    <div class="list_type">
+                                                        <div class="images">
+                                                            <i class="fa-solid fa-book-open"></i>
+                                                        </div>
+                                                        <div class="image_txt">
+                                                            Lessons
+                                                        </div>
+                                                    </div> 
+                                                </li>
+                                                <li>
+                                                    <div class="list_type">
+                                                        <div class="images">
+                                                            <i class="far fa-user"></i>
+                                                        </div>
+                                                        <div class="image_txt">
+                                                            80 students
+                                                        </div>
+                                                    </div> 
+                                                </li>
+                                            </ul>
+                                        </div>
 
+                                        <div class="button">
+                                            <div class="banner-btn wow fadeup-animation animated" data-wow-duration="0.8s" data-wow-delay="0.5s" style="visibility: visible; animation-duration: 0.8s; animation-delay: 0.5s;">
+                                                <a href="contact-us.html" class="sec-btn" title="Get Started"><span>Get Started</span></a>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </li><!-- Course_list loop Ends-->
+                            <?php } ?>
+                        </ul>
+
+                    </div>
+                    
+
+                </div>
+            </div>
+        </div><!--course_t_con Ends -->
+
+
+        <div class="about_in_con"><!--about_in_con Starts -->
+            <div class="about_in_center">
+                <div class="about_in">
+                    <div class="about_image">
+                        <div class="img">
+                            <div class="img_left">
+                                <img src="images/label/01.webp"/>
+                                <img src="images/label/02_1.webp"/>
+                            </div>
+                            <div class="img_right">
+                                <img src="images/label/03.webp"/>
+                            </div>
+
+                            <img class="shape_one" src="images/svg/01_about.svg"/>
+                            <img class="shape_two" src="images/svg/02_about.svg"/>
+                            <img class="shape_three" src="images/svg/03_about.svg"/>
+                               
+
+                        </div>           
+                    </div>
+                    <div class="about_content">
+
+                    </div>
+                </div>
+            </div>
+        </div><!--about_in_con Ends -->
+
+
+    <div class="certi_cor_con"><!--certi_cor_con Starts -->
+        <div class="certi_cor_center">
+            <div class="certi_cor">
+                <div class='apply_now'>
+                    <div class="img_over">
+                        <img src="images/svg/shape.svg"/>
+                    </div>
+                    <div class='app_con'>
+                        <div class="apply_image">
+                            <img src="images/girl.png"/>
+                        </div>
+                        <div class="apply_now_txt">
+                            <div class="apply_title">
+                                <div class="head">
+                                    Apply Now
+                                </div>
+                                <div class="sub_head">
+                                    Get Your Best Skills Certificate Now !
+                                </div>
+                            </div>
+                            <div class="button">
+                                <div class="banner-btn wow fadeup-animation animated" data-wow-duration="0.8s" data-wow-delay="0.5s" style="visibility: visible; animation-duration: 0.8s; animation-delay: 0.5s;">
+                                    <a href="contact-us.html" class="sec-btn" title="Get Started"><span>Get Started</span></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div><!--certi_cor_con Ends -->
+
+    <div class="footer_con"><!--footer_con Starts -->
+            <div class="footer_center"><!--footer_center Starts -->
+                <div class="footer"><!--footer Starts -->
+                    <div class="subs_con"><!--subs_con Starts -->
+                        <div class="subs_p">
+                            <div class="para">
+                                <p>
+                                    One Platform for all Your Online Teaching Needs
+                                </p>
+                            </div>
+                            <div class="view">
+                                <div class="course_btn">
+                                    <a href="/course-with-filter" class="tp-btn-inner">View Course 
+                                        <span><i class="fa fa-arrow-right" aria-hidden="true"></i></span>
+                                    </a>
+                                </div>
+                                <div class="course_btn">
+                                    <a href="/course-with-filter" class="tp-btn-inner">View Course 
+                                        <span><i class="fa fa-arrow-right" aria-hidden="true"></i></span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="subs_now">
+                            <div class='sub_t'>
+                                Keep Yourself Up to Date
+                            </div>
+                            <div class="sub_head">
+                                <p>
+                                Techshuttle is a place of excellence and mentoring to develop skills expertise resulting in Great Placements and Fulfilling Careers
+                                </p>                                
+                            </div>
+                            <div class="subs_form">
+                                <div class="feild_one">
+                                    <input type="text" placeholder="Email"/>
+                                </div>
+                                <div class="feild_two">
+                                    <button type="submit" >
+                                        <span>Subscribe Now</span>
+                                        <i class="fa fa-arrow-right" aria-hidden="true"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div><!--subs_con Ends -->
+
+                    <div class="footer_sec_two">
+                        <div class="sect_two_con">
+                            <div class="logo">
+                                <img src="images/logo_01.png"/>
+                            </div>
+                            <div class="sub_head">
+                                <p>
+                                Techshuttle is a place of excellence and mentoring to develop skills expertise resulting in Great Placements and Fulfilling Careers
+                                </p>                                
+                            </div>
+                            <div class="social_icon">
+                                <div class="tp-footer-bottom-social">
+                                    <a class="social-fb" href="https://www.facebook.com" target="_blank"><i class="fa-brands fa-facebook-f"></i></a>
+                                    <a class="social-twit" href="https://www.twitter.com" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+                                    <a class="social-twit" href="https://www.twitter.com" target="_blank"><i class="fa-brands fa-x-twitter"></i></a>
+                                    <a class="social-lnkd" href="https://www.linkedin.com" target="_blank"><i class="fa-brands fa-linkedin-in"></i></a>
+                                    <a class="social-yout" href="https://www.youtube.com" target="_blank"><i class="fa-brands fa-youtube"></i></a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="sect_sitemap">
+                            <div class="site_se"><!--site_se loop Starts -->
+                                <div class="head">About</div>
+                                <div class="site_list">
+                                    <ul>
+                                        <li><a href="#">About Us</a></li>
+                                        <li><a href="#">Courses</a></li>
+                                        <li><a href="#">News & Blog</a></li>
+                                        <li><a href="#">Become A Teacher</a></li>
+                                        <li><a href="#">Events</a></li>
+                                        <li><a href="#">Contact</a></li>
+                                    </ul>
+                                </div>
+                            </div><!--site_se loop Ends -->
+                            <div class="site_se"><!--site_se loop Starts -->
+                                <div class="head">Quick links</div>
+                                <div class="site_list">
+                                    <ul>
+                                        <li><a href="#">Students</a></li>
+                                        <li><a href="#">Admissions</a></li>
+                                        <li><a href="#">Faculty & Staffs</a></li>
+                                        <li><a href="#">Media Relations</a></li>
+                                        <li><a href="#">Alumni</a></li>
+                                        <li><a href="#">Visit</a></li>
+                                    </ul>
+                                </div>
+                            </div><!--site_se loop Ends -->
+                        </div>
+
+                        
+
+                    </div>
+
+                    <div class='footer_sec_three'>
+                            <div class="copy">
+                                <p>© 2025 Powered by <a href="#">Techshuttle</a>. All Rights Reserved.</p>
+                            </div>
+                            <div class="rights">
+                                <ul>
+                                    <li><a href="">Careers</a></li>
+                                    <li><a href="">Terms of use</a></li>
+                                    <li><a href="">Privacy policy</a></li>
+                                    <li><a href="">Contact Us</a></li>
+                                </ul>
+                            </div>
+                        </div>
+
+                </div><!--footer Ends -->
+            </div><!--footer_center Ends -->
+        </div><!--footer_con Ends -->
 
     </div><!--container Ends -->
 </body>
 </html>
+<script type="text/javascript" src="js/code.js"></script>
