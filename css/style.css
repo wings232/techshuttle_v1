@@ -1,16 +1,11 @@
 body{
-<<<<<<< HEAD
     font-family: "rubik_regular";  
-=======
     font-family: var(--font_regular);  
->>>>>>> 7ce02f14fbbee4fdcfc6469c502df11d4c8b53ab
     line-height: 26px;
     font-size: 16px;
     font-weight: normal;
 }   
 
-<<<<<<< HEAD
-=======
 .container{
     width:100%;
     float: left;
@@ -919,6 +914,5 @@ body{
 
 
 /*==========Banner CSS End==========*/
->>>>>>> 7ce02f14fbbee4fdcfc6469c502df11d4c8b53ab
 
 

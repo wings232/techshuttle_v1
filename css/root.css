@@ -1,10 +1,8 @@
 :root {
     --primary_color: #356df1;
-<<<<<<< HEAD
     --button_background:#ffa52b;
     --white: #ffffff;
     --black:black;
-=======
     /* --button_background:#ffa52b; */
     --button_background:#356df1;
     --button_hover:#173375;
@@ -12,5 +10,4 @@
     --black:black;
     --font_regular:"rubik_regular";
     --font_bold:"roboto_bold";
->>>>>>> 7ce02f14fbbee4fdcfc6469c502df11d4c8b53ab
 }

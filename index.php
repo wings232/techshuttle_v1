@@ -6,24 +6,19 @@
     <title>Techshuttle | Home</title>    
     <link rel="stylesheet" href="css/reset.css"/>
     <link rel="stylesheet" href="css/root.css"/>
-<<<<<<< HEAD
     <link rel="stylesheet" href="css/fonts.css"/>    
-=======
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"/>
     <link rel="stylesheet" href="css/fonts.css"/>    
     <link rel="stylesheet" href="css/animation.css"/> 
->>>>>>> 7ce02f14fbbee4fdcfc6469c502df11d4c8b53ab
     <link rel="stylesheet" href="css/style.css"/>
 </head>
 <body>
     <div class='container'> <!--container Starts -->
-<<<<<<< HEAD
         <div class='header'>
         </div>
     </div><!--container Ends -->
 </body>
 </html>
-=======
         <div class='header_con'><!--header_con Starts -->
             <div class="header_center"><!--header_center Starts -->
                 <div class="header"><!--header Starts -->
@@ -319,4 +314,3 @@
     </div><!--container Ends -->
 </body>
 </html>
->>>>>>> 7ce02f14fbbee4fdcfc6469c502df11d4c8b53ab
