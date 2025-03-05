@@ -1,0 +1,148 @@
+.container{
+    width:100%;
+    float: left;
+}
+
+.container .course_sec_con{
+    width:100%;
+    float: left;
+    
+}
+
+.container .course_sec_con .course_sec_center{
+    width:1300px;
+    margin:0 auto;
+}
+
+.container .course_sec_con .course_sec_center .course_sec{
+    width:100%;
+    float: left;
+    position: relative;   
+}
+
+.course_sec{
+    width:100%;
+    float: left;
+    position: relative;   
+}
+
+.course_sec .user_nav {
+    width: 100%;
+    float: left;
+}
+
+.course_sec .user_nav ul {
+    float: left;
+    padding: 15px 0px;
+}
+
+.course_sec .user_nav ul li {
+    float: left;
+    
+}
+
+.course_sec .user_nav ul li a {
+    font-family: var(--font_regular);
+    border-right: 1px solid var(--primary_color);
+    font-size: 11px;
+    color:var(--primary_color);
+    text-transform: uppercase;
+    padding: 0px 10px;
+}
+
+.course_sec .user_nav ul li:last-child a{
+    border-right:0;
+}
+
+.course_sec .product_details_con {
+    width: 100%;
+    float: left;
+}
+
+.course_sec .product_details_con .product_details{
+    width: 100%;
+    float: left;
+}
+
+.product_details_con .product_leftbar{
+    width: 70%;
+    float: left;
+    box-sizing: border-box;
+    padding: 5px;
+}
+
+.product_details_con .product_leftbar .product_det{
+    width: 100%;
+    float: left;
+}
+
+.product_details_con .product_leftbar .product_det .course_name{
+    width: 100%;
+    float: left;
+}
+
+.product_details_con .product_leftbar .product_det .course_name .name{
+    width: 100%;
+    float: left;
+    font-family: var(--font_medium);
+    font-size: 22px;
+    color: rgb(35, 47, 62);
+    text-transform: uppercase;
+    padding: 10px 0px;
+}
+
+.product_details_con .product_leftbar .product_det .type_list_one{
+    width: 100%;
+    float: left;
+}
+
+.product_details_con .product_leftbar .product_det .type_list_one > ul > li{
+    width: 25%;
+    float: left;
+    padding: 5px 10px;
+    box-sizing: border-box;
+    margin: 5px 0px;
+}
+
+.product_details_con .product_leftbar .product_det .type_list_one > ul > li:last-child{
+    float: right;
+    width: 31%;
+}
+
+.product_details_con .product_leftbar .product_det .type_list_one > ul > li .list_type{
+    width: 100%;
+    float: left;
+}
+
+.product_leftbar .product_det .type_list_one > ul > li .list_type .image{
+    width: 12%;
+    float: left;
+}
+
+.product_leftbar .product_det .type_list_one > ul > li .list_type .image i {
+    color: var(--primary_color);
+    font-size: 16px;
+}
+
+.product_leftbar .product_det .type_list_one > ul > li .list_type .image_txt{
+    width: 80%;
+    float: left;
+    font-family: "rubik_regular";
+    font-size: 15px;
+}
+
+
+.product_leftbar .product_det .type_list_one > ul > li .list_type .image_txt span{
+    color: var(--primary_color);
+}
+
+.product_leftbar .product_det  .product_images {
+    width: 100%;
+    float: left;
+    margin: 10px 0px;
+}
+
+.product_leftbar .product_det  .product_images  img {
+    width: 100%;
+    float: left;
+}
