@@ -70,3 +70,25 @@ $(document).on("click",".cate_m .tech_menu .cate_sub > ul > li",function(ev){ 	/
     	//ev.preventDefault();
 	}
 });
+
+$(document).on("click",".course_batch_list .batch_row .row_n > ul > li .new_button",function(){
+    $('.course_batch_list .batch_row .row_n > ul .batch_det').slideUp();
+   	if($(this).parent().next().is(':hidden') == true){
+   		$(this).parent().next().slideDown(200);
+   	}    
+});
+$(document).on("click",".acnav__label",function(){ 
+
+	var label = $(this);
+	var parent = label.parent('.has-children');
+	var list = label.siblings('.acnav__list');
+
+	if ( parent.hasClass('is-open') ) {
+		list.slideUp('fast');
+		parent.removeClass('is-open');
+	}
+	else {
+		list.slideDown('fast');
+		parent.addClass('is-open');
+	}
+});
