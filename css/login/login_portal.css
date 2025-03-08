@@ -1,0 +1,597 @@
+
+.container {
+    width: 100%;
+    float: left;
+}
+
+.container .login_portal {
+    width: 100%;
+    float: left;
+}
+
+.container .login_portal .login_image {
+    position: absolute;
+    right: 800px;
+    background: #f5f5f5;
+    transition: 0.5s;
+    min-height: 100vh;
+    width: calc(100% - 800px);
+    box-sizing: border-box;
+}
+
+.container .login_portal .login_image .image {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+}
+
+.container .login_portal .login_image img {
+    object-fit: cover;
+    /* object-position: 60% 75%; */
+    width: 100%;
+    height: 100%;
+    display: block;
+}
+
+.container .login_portal .login_image .overlay {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background: rgba(51,51,51,0.5);
+}
+
+.container .login_portal .login_form {
+    width: 800px;
+    position: fixed;
+    background: #fff;
+    height: 100%;
+    right: 0;
+    max-height: 100%;
+    overflow-y: auto;
+}
+
+.login_form .form_spinner {
+    display: none;
+}
+
+.login_form .transaction_spinner {
+    position: fixed;
+    width: 700px;
+    height: 100%;
+    top: 0%;
+    right: 0;
+    z-index: 2;
+}
+
+.login_form .transaction_overlay {
+    position: fixed;
+    width: 700px;
+    height: 100%;
+    background: rgba(255,255,255,0.9);
+    top: 0;
+    right: 0;
+    z-index: 1;
+}
+
+.login_form .transaction_spinner .transaction_center{
+	margin: 0 auto;
+	width: 100px;
+}
+
+.login_form .transaction_spinner img {
+    width: 100px;
+    position: absolute;
+    top: 40%;
+    left: 210px;
+}
+
+.container .login_portal .login_form .login_container {
+    width: 70%;
+    margin: 0 auto;
+}
+
+.container .login_portal .login_form .logo {
+    width: 100%;
+    float: left;
+}
+
+.container .login_portal .login_form .logo .images .logo_cen {
+    margin: 0 auto;
+	width: 70%;
+}
+
+.container .login_portal .login_form .logo .images {
+    width: 100%;
+    float: left;
+}
+
+.container .login_portal .login_form .logo .images img {
+    width: 100%;
+    padding: 25px 0px;
+}
+
+.container .login_portal .login_form .form_head {
+    width: 100%;
+    float: left;
+}
+
+.container .login_portal .login_form .form_head .form_ajax {
+    width: 100%;
+    float: left;
+}
+
+.container .login_portal .login_form .form_head .form_ajax .login_view {
+    width: 100%;
+    float: left;
+    margin-top: 100px;
+}
+
+.container .login_portal .login_form .form_head .form_ajax .login_head {
+    width: 100%;
+    float: left;
+}
+
+.container .login_portal .login_form .form_head .login_head .head {
+    width: 100%;
+    float: left;
+    font-family: var(--font_bold);
+    text-align: center;
+    font-size: 25px;
+    text-transform: uppercase;
+}
+
+.container .login_portal .login_form .form_head .form_ajax .form_feild {
+    width: 100%;
+    float: left;
+    margin-top: 20px;
+}
+
+.container .login_portal .login_form .form_head .form_ajax .form_feild .form_center {
+    width: 100%;
+    margin: 0 auto;
+}
+
+.container .login_portal .login_form .form_head .form_ajax .form_feild .login_feild {
+    width: 100%;
+    float: left;
+}
+
+.login_form .form_head .form_ajax .form_feild .login_feild .feild {
+    width: 100%;
+    float: left;
+    position: relative;
+    margin-bottom: 35px;
+}
+
+.login_form .form_head .form_ajax .form_feild .login_feild .feild .feild_image {
+    float: left;
+    width: 15%;
+    padding: 11px 5px;
+    box-sizing: border-box;
+    border-bottom: 1px solid var(--primary_color);
+    text-align: center;
+}
+
+.login_form .form_head .form_ajax .form_feild .login_feild .feild .feild_image i {
+    font-size: 20px;
+    color: var(--primary_color);
+}
+
+.login_form .form_head .form_ajax .form_feild .login_feild .feild .feild_box {
+    float: left;
+    position: relative;
+    width: 85%;
+}
+
+.login_form .form_head .form_ajax .form_feild .login_feild .feild input {
+    width: 100%;
+    padding: 12px 10px 9px 10px;
+    font-size: 14px;
+    box-sizing: border-box;
+    color: var(--black);
+    border: none;
+    border-bottom: 1px solid rgba(51,51,51,0.2);
+    outline: none;
+    letter-spacing: 1px;
+    background: transparent;
+    font-family: "Poppins_regular";
+    transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
+}
+
+.login_form .form_head .form_ajax .form_feild .login_feild .feild .feild_box .age_count {
+    position: absolute;
+    top: 10px;
+    right: 0;
+    width: 35%;
+    font-family: var(--font_regular);
+}
+
+.login_form .form_head .form_ajax .form_feild .login_feild .feild .feild_box .age_count #age_c{
+    font-size: 11px;
+    border: none;
+    color: #65657b;
+    padding: 3px 10px 4px 10px;
+    border-left: 1px solid rgba(51,51,51,0.2);
+}
+
+.login_form .form_head .form_ajax .form_feild .login_feild .feild label.error{
+    color:var(--error);
+    position: absolute;
+    left: 8px;
+    top: 110%;
+    font-size: 12px;
+}
+
+.login_form .form_head .form_ajax .form_feild .login_feild .feild .feild_box .gender_drop{
+    position: absolute;
+    top: 100%;
+    width: 100%;
+    background: var(--white);
+    z-index: 1;
+    box-shadow: 1px 1px 7px rgb(51 51 51 / 25%);
+    display: none;
+}
+
+.login_form .form_head .form_ajax .form_feild .login_feild .feild .feild_box .gender_drop ul li{
+    padding: 10px;
+    border-bottom: 1px solid rgba(90,145,87,0.1);
+    font-size: 14px;
+    font-family: var(--font_regular);
+    cursor: pointer;
+}
+
+.container .login_portal .login_form .form_head .form_ajax  .already_exist {
+    width: 100%;
+    float: left;
+    margin-top: 100px;
+}
+
+.container .login_portal .login_form .form_head .form_ajax  .already_exist .al_images{
+	width: 100%;
+    float: left;
+}
+
+.login_form .form_head .form_ajax  .already_exist .al_images .al_img_center{
+	width: 50%;
+    margin:0 auto;
+}
+
+.login_form .form_head .form_ajax  .already_exist .al_images .al_img_center img{
+	width: 100%;
+}
+
+
+.container .login_portal .login_form .form_head .form_ajax  .already_exist .exist_code{
+    width: 100%;
+    float: left;
+    text-align: center;
+    line-height: 30px;
+}
+
+.container .login_portal .login_form .form_head .form_ajax  .verify_para {
+    width: 100%;
+    float: left;
+}
+
+.container .login_portal .login_form .form_head .form_ajax  .verify_para p {
+    width: 100%;
+    float: left;
+    text-align: center;
+    padding: 20px 0px;
+    font-family: var(--font_regular);
+}
+
+.container .login_portal .login_form .form_head .form_ajax .multiple_button{
+	width: 100%;
+	float: left;
+	margin-top: 25px;
+}
+
+.container .login_portal .login_form .form_head .form_ajax .multiple_button ul li:nth-child(1){
+    float: left;
+    background: linear-gradient(to bottom, #eb3349 0%, #f45c43 100%);
+    padding: 10px 15px;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-left: 30px;
+}
+
+.container .login_portal .login_form .form_head .form_ajax .multiple_button ul li:nth-child(2){
+    float: right;
+    background: linear-gradient(223deg, #56ab2f 23%, #688742 100%);
+    padding: 10px 15px;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-right: 30px;
+}
+
+.container .login_portal .login_form .form_head .form_ajax  .verify_para p span {
+    color: rgb(22 140 159);
+    cursor: pointer;
+}
+
+.focus-input {
+  position: absolute;
+  display: block;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  pointer-events: none;
+}
+
+.focus-input:before {
+  background-color: var(--button_background);
+  content: "";
+  width: 0;
+  height: 1px;
+  display: block;
+  position: absolute;
+  bottom: 0px;
+  left: 0;
+  -webkit-transition: all 0.4s;
+  -o-transition: all 0.4s;
+  -moz-transition: all 0.4s;
+  transition: all 0.4s;
+}
+
+.login_form .form_head .form_ajax .form_feild .login_feild .feild input:focus ~ .focus-input:before{
+    width: 100%;
+}
+
+/*.input {
+  background-color: #303245;
+  border: 0;
+  box-sizing: border-box;
+  color: #eee;
+  font-size: 18px;
+  height: 100%;
+  outline: 0;
+  padding: 4px 20px 0;
+  width: 100%;
+}*/
+
+.cut {
+  /* //background-color: #15172b; */
+  border-radius: 10px;
+  height: 20px;
+  left: 20px;
+  position: absolute;
+  top: -20px;
+  transform: translateY(0);
+  transition: transform 200ms;
+  width: 76px;
+}
+
+.cut-short {
+  width: 50px;
+}
+
+.input:focus ~ .cut,
+.input:not(:placeholder-shown) ~ .cut {
+  transform: translateY(8px);
+}
+
+.placeholder {
+  color: #65657b;
+  font-family: var(--font_regular);
+  left: 10px;
+  font-size: 14px;
+  line-height: 14px;
+  pointer-events: none;
+  position: absolute;
+  transform-origin: 0 50%;
+  transition: transform 200ms, color 200ms;
+  top: 20px;
+}
+
+.input:focus ~ .placeholder,
+.input:not(:placeholder-shown) ~ .placeholder {
+  transform: translateY(-28px) translateX(-2px) scale(0.90);
+}
+
+.input:not(:placeholder-shown) ~ .placeholder {
+  color: #808097;
+}
+
+.input:focus ~ .placeholder {
+  color: #dc2f55;
+}
+
+.login_form .form_head .form_ajax .form_feild .login_feild .feild_check {
+    width: 100%;
+    float: left;
+    position: relative;
+    margin-bottom: 15px;
+}
+
+.login_form .form_head .form_ajax .form_feild .login_feild .feild_check .feild_image_c {
+    float: left;
+    width: 10%;
+    padding: 7.5px 5px;
+    box-sizing: border-box;
+}
+
+/* .squaredThree */
+
+.login_form .form_head .form_ajax .form_feild .login_feild .feild_check .feild_image_c .squaredThree label.error{
+    top: 70px;
+}
+
+.login_form .form_head .form_ajax .form_feild .login_feild .feild_check .feild_image_c .card_agree label.error{
+    top: 157px;
+}
+
+.login_form .form_head .form_ajax .form_feild .login_feild .feild_check .feild_image_c .mob_agree label.error{
+    top: 40px;
+    left:46px;
+}
+
+.squaredThree {
+  width: 20px;
+  position: relative;
+}
+
+.squaredThree input{
+    border:none;
+}
+
+
+
+.squaredThree label.error{
+    width: 200px;
+    position: absolute;
+    /* left: 8px; */
+    top: 62px;
+    font-size: 12px;
+    background: none;
+    box-shadow: none;
+    color: var(--error);
+}
+
+.squaredThree label {
+  width: 22px;
+  height: 22px;
+  cursor: pointer;
+  position: absolute;
+  top: 0;
+  left: 0;
+  /*background: linear-gradient(to bottom, #222222 0%, #45484d 100%);*/
+  /*background:linear-gradient(to bottom, #702182 0%, #e7343f 100%);
+  border-radius: 4px;*/
+  box-shadow: inset 0px 1px 1px rgba(0, 0, 0, 0.5), 0px 1px 0px rgba(255, 255, 255, 0.4);
+  background: #5c7086;
+  border-radius: 5px;
+}
+.squaredThree label:after {
+  content: '';
+  width: 9px;
+  height: 5px;
+  position: absolute;
+  top: 5px;
+  left: 5px;
+  border: 3px solid #fcfff4;
+  border-top: none;
+  border-right: none;
+  background: transparent;
+  opacity: 0;
+  transform: rotate(-45deg);
+}
+.squaredThree label:hover::after {
+  opacity: 0.5;
+}
+.squaredThree input[type=checkbox] {
+  visibility: hidden;
+}
+.squaredThree input[type=checkbox]:checked ~ label:after {
+  opacity: 1;
+}
+
+/* end .squaredThree */
+
+.login_form .form_head .form_ajax .form_feild .login_feild .feild_check .feild_box {
+    float: left;
+    position: relative;
+    width: 85%;
+}
+
+.login_form .form_head .form_ajax .form_feild .login_feild .feild_check .feild_box p {
+    padding: 0px 15px;
+    font-family: var(--font_regular);
+    font-size: 13px;
+    line-height: 23px;
+    width: 100%;
+    text-align: justify;
+}
+
+.login_form .form_head .form_ajax .form_feild .login_feild .feild_button {
+    width: 100%;
+    float: left;
+    position: relative;
+    margin-bottom: 15px;
+}
+
+.login_form .form_head .form_ajax .form_feild .login_feild .feild_button .feild_box {
+    float: left;
+    position: relative;
+    width: 100%;
+    margin-top: 15px;
+}
+
+.login_form .form_head .form_ajax .form_feild .login_feild .feild_button .feild_box .feild_box_cen {
+    margin:0 auto;
+    width:100%;
+}
+
+/* .login_form .form_head .form_ajax .form_feild .login_feild .feild_button input {
+    /* width: 150px;
+    border: none;
+    padding: 10px;
+    background: linear-gradient(0deg, rgba(255,27,0,1) 0%, rgba(251,75,2,1) 100%);
+    color: white;
+    font-family: var(--font_regular);
+    cursor: pointer;
+    position: relative;
+    transition: all 200ms linear 0s;
+    border-radius: 5px;
+    border: 1px solid #fff;
+} */
+
+.sec-btn {
+    width:100%;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(-90deg, rgb(2 81 175) 0%, rgb(99 136 213) 100%);
+    border-radius: 10px;
+    font-size: 15px;
+    line-height: 1.2;
+    color: #fff;
+    font-weight: 500;    
+    text-transform: uppercase;
+    overflow: hidden;
+    position: relative;
+    text-align: center;
+    padding: 21px 36px;
+    outline: none;
+    border: none;
+    transition: 0.3s;
+    background-size: 100% 100%;
+    background-position: left center;
+    z-index: 1;
+}
+
+.sec-btn:hover {
+    background-position: right center;
+    background-size: 200% 100%;
+    color: #fff;
+}
+
+.sec-btn::after {
+    --size: 100%;
+    content: "";
+    position: absolute;
+    top: -65px;
+    right: -48px;
+    width: var(--size);
+    height: var(--size);
+    opacity: 0.2;
+    background:#fff;
+    --mask-image: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI5OCIgaGVpZ2h0PSIxMDIiIHZpZXdCb3g9IjAgMCA5OCAxMDIiPgo8cGF0aCBkPSJNNDAuNzcyIDQuODk3OTFDNDQuMzQ3MyAtMS41NzU3MiA1My42NTI3IC0xLjU3NTcyIDU3LjIyOCA0Ljg5NzkxVjQuODk3OTFDNTkuNjIwMSA5LjIyOTE2IDY0Ljk2MDQgMTAuOTY0MyA2OS40NDE1IDguODY2MzNWOC44NjYzM0M3Ni4xMzkxIDUuNzMwNTggODMuNjY3MyAxMS4yMDAxIDgyLjc1NDcgMTguNTM4OVYxOC41Mzg5QzgyLjE0NDEgMjMuNDQ5IDg1LjQ0NDYgMjcuOTkxOCA5MC4zMDMxIDI4LjkyODRWMjguOTI4NEM5Ny41NjQ3IDMwLjMyODMgMTAwLjQ0IDM5LjE3ODIgOTUuMzg4MyA0NC41NzlWNDQuNTc5QzkyLjAwODIgNDguMTkyNCA5Mi4wMDgyIDUzLjgwNzYgOTUuMzg4MyA1Ny40MjFWNTcuNDIxQzEwMC40NCA2Mi44MjE4IDk3LjU2NDcgNzEuNjcxNyA5MC4zMDMxIDczLjA3MTZWNzMuMDcxNkM4NS40NDQ2IDc0LjAwODIgODIuMTQ0MSA3OC41NTEgODIuNzU0NyA4My40NjExVjgzLjQ2MTFDODMuNjY3MyA5MC43OTk5IDc2LjEzOTEgOTYuMjY5NCA2OS40NDE1IDkzLjEzMzdWOTMuMTMzN0M2NC45NjA0IDkxLjAzNTcgNTkuNjIwMSA5Mi43NzA4IDU3LjIyOCA5Ny4xMDIxVjk3LjEwMjFDNTMuNjUyNyAxMDMuNTc2IDQ0LjM0NzMgMTAzLjU3NiA0MC43NzIgOTcuMTAyMVY5Ny4xMDIxQzM4LjM3OTkgOTIuNzcwOCAzMy4wMzk2IDkxLjAzNTcgMjguNTU4NSA5My4xMzM3VjkzLjEzMzdDMjEuODYwOSA5Ni4yNjk0IDE0LjMzMjcgOTAuNzk5OSAxNS4yNDUzIDgzLjQ2MTFWODMuNDYxMUMxNS44NTU5IDc4LjU1MSAxMi41NTU0IDc0LjAwODIgNy42OTY5IDczLjA3MTZWNzMuMDcxNkMwLjQzNTI3MyA3MS42NzE3IC0yLjQ0MDIzIDYyLjgyMTggMi42MTE3MiA1Ny40MjFWNTcuNDIxQzUuOTkxNzggNTMuODA3NiA1Ljk5MTc4IDQ4LjE5MjQgMi42MTE3MiA0NC41NzlWNDQuNTc5Qy0yLjQ0MDIzIDM5LjE3ODIgMC40MzUyNzIgMzAuMzI4MyA3LjY5NjkgMjguOTI4NFYyOC45Mjg0QzEyLjU1NTQgMjcuOTkxOCAxNS44NTU5IDIzLjQ0OSAxNS4yNDUzIDE4LjUzODlWMTguNTM4OUMxNC4zMzI3IDExLjIwMDEgMjEuODYwOSA1LjczMDU4IDI4LjU1ODUgOC44NjYzM1Y4Ljg2NjMzQzMzLjAzOTYgMTAuOTY0MyAzOC4zNzk5IDkuMjI5MTYgNDAuNzcyIDQuODk3OTFWNC44OTc5MVoiLz4KPC9zdmc+");
+    -webkit-mask-image: var(--mask-image);
+    mask-image: var(--mask-image);
+    -webkit-mask-size: contain;
+    mask-size: contain;
+    -webkit-mask-position: center;
+    mask-position: center;
+    -webkit-mask-repeat: no-repeat;
+    mask-repeat: no-repeat;
+    transition: 0.3s;
+    z-index: -1;
+}
+
+.sec-btn:hover::after {
+    animation: spin 6000ms infinite linear;
+    transition: 0.3s;
+}

@@ -514,254 +514,315 @@
 									</div><!--course_overview Ends -->
 
 									<div class="course_content"><!--course_content Starts -->
-										<div class="content"><!--content Starts -->
-											<div class="head"><!--head Starts -->
-												Course Content
-											</div><!--head Ends -->
-										</div><!--content Ends -->
+										<div class="course_con">
+											<div class="content"><!--content Starts -->
+												<div class="head"><!--head Starts -->
+													Course Content
+												</div><!--head Ends -->
+											</div><!--content Ends -->
 
-										<div class="content_acco"><!--overview_para Starts -->
-										<nav class="acnav" role="navigation">
-											<!-- start level 1 -->
-											<ul class="acnav__list acnav__list--level1">
+											<div class="content_acco"><!--content_acco Starts -->
+												<nav class="acnav" role="navigation">
+												<!-- start level 1 -->
+												<ul class="acnav__list acnav__list--level1">
+<?php for($i=0;$i<15; $i++){ ?>
+													<!-- start group 1 -->
+													<li class="has-children">
+														<div class="acnav__label">
+															Level 1 Content -  <?php echo $i; ?>
+														</div>
+														<!-- start level 2 -->
+														<ul class="acnav__list acnav__list--level2">
+    <?php for($j=0;$j<5; $j++){ ?>
+															<li>
+																<div class="list_con">
+																	<div class="image">
+																		<i class="fa fa-file-text"></i>
+																	</div>
+																	<div class="img_txt">
+																		<div class="txt">
+																			Level 2 Content -  <?php echo $j; ?>																	</div>
+																	</div>
+																</div>
+															</li>
+	<?php } ?>										
+															
 
-												<!-- start group 1 -->
-												<li class="has-children">
-													<div class="acnav__label">
-														Cloud Architecture & Components
+															<?php /* ?>
+															<li class="has-children">
+																<div class="acnav__label acnav__label--level2">
+																	Group 1.1 (level 2)
+																</div>
+																<!-- start level 3 -->
+																<ul class="acnav__list acnav__list--level3">
+																	<li>
+																		<a class="acnav__link acnav__link--level3" href="">Item (level 3)</a>
+																	</li>
+																	<li>
+																		<a class="acnav__link acnav__link--level3" href="">Item (level 3)</a>
+																	</li>
+																	<li class="has-children">
+																		<div class="acnav__label acnav__label--level3">
+																			Group 1.1.1 (level 3)
+																		</div>
+																		<!-- start level 4 -->
+																		<ul class="acnav__list acnav__list--level4">
+																			<li>
+																				<a class="acnav__link acnav__link--level4" href="">Item (level 4)</a>
+																			</li>
+																		</ul>
+																		<!-- end level 4 -->
+																	</li>
+																	<li class="has-children">
+																		<div class="acnav__label acnav__label--level3">
+																			Group 1.1.2 (level 3)
+																		</div>
+																		<!-- start level 4 -->
+																		<ul class="acnav__list acnav__list--level4">
+																			<li>
+																				<a class="acnav__link acnav__link--level4" href="">Item (level 4)</a>
+																			</li>
+																		</ul>
+																		<!-- end level 4 -->
+																	</li>
+																</ul>
+																<!-- end level 3 -->
+															</li>
+
+															<li class="has-children">
+																<div class="acnav__label acnav__label--level2">
+																	Group 1.2 (level 2)
+																</div>
+																<!-- start level 3 -->
+																<ul class="acnav__list acnav__list--level3">
+																	<li>
+																		<a class="acnav__link acnav__link--level3" href="">Item (level 3)</a>
+																	</li>
+																	<li>
+																		<a class="acnav__link acnav__link--level3" href="">Item (level 3)</a>
+																	</li>
+																	<li class="has-children">
+																		<div class="acnav__label acnav__label--level3">
+																			Group 1.2.1 (level 3)
+																		</div>
+																		<!-- start level 4 -->
+																		<ul class="acnav__list acnav__list--level4">
+																			<li>
+																				<a class="acnav__link acnav__link--level4" href="">Item (level 4)</a>
+																			</li>
+																		</ul>
+																		<!-- end level 4 -->
+																	</li>
+																	<li class="has-children">
+																		<div class="acnav__label acnav__label--level3">
+																			Group 1.2.2 (level 3)
+																		</div>
+																		<!-- start level 4 -->
+																		<ul class="acnav__list acnav__list--level4">
+																			<li>
+																				<a class="acnav__link acnav__link--level4" href="">Item (level 4)</a>
+																			</li>
+																		</ul>
+																		<!-- end level 4 -->
+																	</li>
+																</ul>
+																<!-- end level 3 -->
+															</li>
+
+															<?php */ ?>
+														</ul>
+														<!-- end level 2 -->
+													</li>
+													<!-- end group 1 -->
+<?php } ?>													
+
+																						
+
+												</ul>
+												<!-- end level 1 -->
+												</nav>
+											</div><!--content_acco Ends -->
+										</div>
+										<div class="course_right">
+											<div class="border_bar">
+												<div class="image">
+													<img src="images/course/sidebar/sidebar.webp"/>
+												</div>
+												<div class="button">
+													<div class="banner-btn wow fadeup-animation animated" data-wow-duration="0.8s" data-wow-delay="0.5s" style="visibility: visible; animation-duration: 0.8s; animation-delay: 0.5s;">
+														<div class="sec-btn"><span>Enroll Now</span></div>
 													</div>
-													<!-- start level 2 -->
-													<ul class="acnav__list acnav__list--level2">
-														<li>
-															<div class="list_con">
-																<div class="image">
-																	<i class="fa fa-file-text"></i>
-																</div>
-																<div class="img_txt">
-																	<div class="txt">
-																		Cloud Architecture &amp; Components																		</div>
-																</div>
-															</div>
-														</li>
-														<li>
-														<div class="list_con">
-																<div class="image">
-																	<i class="fa fa-file-text"></i>
-																</div>
-																<div class="img_txt">
-																	<div class="txt">
-																		Cloud Architecture &amp; Components																		</div>
-																</div>
-															</div>
-														</li>
-
-														<?php /* ?>
-														<li class="has-children">
-															<div class="acnav__label acnav__label--level2">
-																Group 1.1 (level 2)
-															</div>
-															<!-- start level 3 -->
-															<ul class="acnav__list acnav__list--level3">
-																<li>
-																	<a class="acnav__link acnav__link--level3" href="">Item (level 3)</a>
-																</li>
-																<li>
-																	<a class="acnav__link acnav__link--level3" href="">Item (level 3)</a>
-																</li>
-																<li class="has-children">
-																	<div class="acnav__label acnav__label--level3">
-																		Group 1.1.1 (level 3)
-																	</div>
-																	<!-- start level 4 -->
-																	<ul class="acnav__list acnav__list--level4">
-																		<li>
-																			<a class="acnav__link acnav__link--level4" href="">Item (level 4)</a>
-																		</li>
-																	</ul>
-																	<!-- end level 4 -->
-																</li>
-																<li class="has-children">
-																	<div class="acnav__label acnav__label--level3">
-																		Group 1.1.2 (level 3)
-																	</div>
-																	<!-- start level 4 -->
-																	<ul class="acnav__list acnav__list--level4">
-																		<li>
-																			<a class="acnav__link acnav__link--level4" href="">Item (level 4)</a>
-																		</li>
-																	</ul>
-																	<!-- end level 4 -->
-																</li>
-															</ul>
-															<!-- end level 3 -->
-														</li>
-
-														<li class="has-children">
-															<div class="acnav__label acnav__label--level2">
-																Group 1.2 (level 2)
-															</div>
-															<!-- start level 3 -->
-															<ul class="acnav__list acnav__list--level3">
-																<li>
-																	<a class="acnav__link acnav__link--level3" href="">Item (level 3)</a>
-																</li>
-																<li>
-																	<a class="acnav__link acnav__link--level3" href="">Item (level 3)</a>
-																</li>
-																<li class="has-children">
-																	<div class="acnav__label acnav__label--level3">
-																		Group 1.2.1 (level 3)
-																	</div>
-																	<!-- start level 4 -->
-																	<ul class="acnav__list acnav__list--level4">
-																		<li>
-																			<a class="acnav__link acnav__link--level4" href="">Item (level 4)</a>
-																		</li>
-																	</ul>
-																	<!-- end level 4 -->
-																</li>
-																<li class="has-children">
-																	<div class="acnav__label acnav__label--level3">
-																		Group 1.2.2 (level 3)
-																	</div>
-																	<!-- start level 4 -->
-																	<ul class="acnav__list acnav__list--level4">
-																		<li>
-																			<a class="acnav__link acnav__link--level4" href="">Item (level 4)</a>
-																		</li>
-																	</ul>
-																	<!-- end level 4 -->
-																</li>
-															</ul>
-															<!-- end level 3 -->
-														</li>
-
-														<?php */ ?>
-													</ul>
-													<!-- end level 2 -->
-												</li>
-												<!-- end group 1 -->
-
-												<li class="has-children">
-													<div class="acnav__label">
-														Cloud Architecture & Components
+												</div>
+												<div class="other_details">
+													<div class="details_head">
+														Course includes
 													</div>
-													<!-- start level 2 -->
-													<ul class="acnav__list acnav__list--level2">
-														<li>
-															<div class="list_con">
-																<div class="image">
-																	<i class="fa fa-file-text"></i>
-																</div>
-																<div class="img_txt">
-																	<div class="txt">
-																		Cloud Architecture &amp; Components																		</div>
-																</div>
-															</div>
-														</li>
-														<li>
-														<div class="list_con">
-																<div class="image">
-																	<i class="fa fa-file-text"></i>
-																</div>
-																<div class="img_txt">
-																	<div class="txt">
-																		Cloud Architecture &amp; Components																		</div>
-																</div>
-															</div>
-														</li>
+													<div class="details_oth">
+														<ul>
+															<li><!--Loop Starts -->
+																<div class="detail_list"><!--detail_list Starts -->
+																	<div class="column_one"><!--column_one Starts -->
+																		<div class="images">
+																			<i class="fa fa-ticket"></i>
+																		</div>
+																		<div class="text">
+																			Seats
+																		</div>															 
+																	</div><!--column_one Ends -->
+																	<div class="column_two"><!--column_two Starts -->
+																		15
+																	</div><!--column_two Ends -->
+																</div><!--detail_list Ends -->
+															</li><!--Loop Ends -->
+															<li><!--Loop Starts -->
+																<div class="detail_list"><!--detail_list Starts -->
+																	<div class="column_one"><!--column_one Starts -->
+																		<div class="images">
+																			<i class="fa fa-clock-o"></i>
+																		</div>
+																		<div class="text">
+																			Schedule
+																		</div>
+																	</div><!--column_one Ends -->
+																	<div class="column_two"><!--column_two Starts -->
+																		2.00 pm to 4.00 pm
+																	</div><!--column_two Ends -->
+																</div><!--detail_list Ends -->
+															</li><!--Loop Ends -->
+															<li><!--Loop Starts -->
+																<div class="detail_list"><!--detail_list Starts -->
+																	<div class="column_one"><!--column_one Starts -->
+																		<div class="images">
+																			<i class="fa fa-book" aria-hidden="true"></i>
+																		</div>
+																		<div class="text">
+																			Lessons
+																		</div>
+																	</div><!--column_one Ends -->
+																	<div class="column_two"><!--column_two Starts -->
+																		87 Lessons
+																	</div><!--column_two Ends -->
+																</div><!--detail_list Ends -->
+															</li><!--Loop Ends -->
+															<li><!--Loop Starts -->
+																<div class="detail_list"><!--detail_list Starts -->
+																	<div class="column_one"><!--column_one Starts -->
+																		<div class="images">
+																			<i class="fa fa-clock-o"></i>
+																		</div>
+																		<div class="text">
+																			Duration
+																		</div>
+																	</div><!--column_one Ends -->
+																	<div class="column_two"><!--column_two Starts -->
+																		40 h
+																	</div><!--column_two Ends -->
+																</div><!--detail_list Ends -->
+															</li><!--Loop Ends -->
+															<li><!--Loop Starts -->
+																<div class="detail_list"><!--detail_list Starts -->
+																	<div class="column_one"><!--column_one Starts -->
+																		<div class="images">
+																			<i class="fa fa-list-alt" aria-hidden="true"></i>
+																		</div>
+																		<div class="text">
+																			Categories
+																		</div>
+																	</div><!--column_one Ends -->
+																	<div class="column_two"><!--column_two Starts -->
+																		It &amp; Software
+																	</div><!--column_two Ends -->
+																</div><!--detail_list Ends -->
+															</li><!--Loop Ends -->
+															<li><!--Loop Starts -->
+																<div class="detail_list"><!--detail_list Starts -->
+																	<div class="column_one"><!--column_one Starts -->
+																		<div class="images">
+																			<i class="fa fa-language" aria-hidden="true"></i>
+																		</div>
+																		<div class="text">
+																			Launguage
+																		</div>
+																	</div><!--column_one Ends -->
+																	<div class="column_two"><!--column_two Starts -->
+																		English, Tamil
+																	</div><!--column_two Ends -->
+																</div><!--detail_list Ends -->
+															</li><!--Loop Ends -->
 
-														<?php /* ?>
-														<li class="has-children">
-															<div class="acnav__label acnav__label--level2">
-																Group 1.1 (level 2)
-															</div>
-															<!-- start level 3 -->
-															<ul class="acnav__list acnav__list--level3">
-																<li>
-																	<a class="acnav__link acnav__link--level3" href="">Item (level 3)</a>
-																</li>
-																<li>
-																	<a class="acnav__link acnav__link--level3" href="">Item (level 3)</a>
-																</li>
-																<li class="has-children">
-																	<div class="acnav__label acnav__label--level3">
-																		Group 1.1.1 (level 3)
-																	</div>
-																	<!-- start level 4 -->
-																	<ul class="acnav__list acnav__list--level4">
-																		<li>
-																			<a class="acnav__link acnav__link--level4" href="">Item (level 4)</a>
-																		</li>
-																	</ul>
-																	<!-- end level 4 -->
-																</li>
-																<li class="has-children">
-																	<div class="acnav__label acnav__label--level3">
-																		Group 1.1.2 (level 3)
-																	</div>
-																	<!-- start level 4 -->
-																	<ul class="acnav__list acnav__list--level4">
-																		<li>
-																			<a class="acnav__link acnav__link--level4" href="">Item (level 4)</a>
-																		</li>
-																	</ul>
-																	<!-- end level 4 -->
-																</li>
-															</ul>
-															<!-- end level 3 -->
-														</li>
+															<li><!--Loop Starts -->
+																<div class="detail_list"><!--detail_list Starts -->
+																	<div class="column_one"><!--column_one Starts -->
+																		<div class="images">
+																			<i class="fas fa-sliders-h"></i>
+																		</div>
+																		<div class="text">
+																			Skills
+																		</div>
+																	</div><!--column_one Ends -->
+																	<div class="column_two"><!--column_two Starts -->
+																		All Levels
+																	</div><!--column_two Ends -->
+																</div><!--detail_list Ends -->
+															</li><!--Loop Ends -->
 
-														<li class="has-children">
-															<div class="acnav__label acnav__label--level2">
-																Group 1.2 (level 2)
-															</div>
-															<!-- start level 3 -->
-															<ul class="acnav__list acnav__list--level3">
-																<li>
-																	<a class="acnav__link acnav__link--level3" href="">Item (level 3)</a>
-																</li>
-																<li>
-																	<a class="acnav__link acnav__link--level3" href="">Item (level 3)</a>
-																</li>
-																<li class="has-children">
-																	<div class="acnav__label acnav__label--level3">
-																		Group 1.2.1 (level 3)
-																	</div>
-																	<!-- start level 4 -->
-																	<ul class="acnav__list acnav__list--level4">
-																		<li>
-																			<a class="acnav__link acnav__link--level4" href="">Item (level 4)</a>
-																		</li>
-																	</ul>
-																	<!-- end level 4 -->
-																</li>
-																<li class="has-children">
-																	<div class="acnav__label acnav__label--level3">
-																		Group 1.2.2 (level 3)
-																	</div>
-																	<!-- start level 4 -->
-																	<ul class="acnav__list acnav__list--level4">
-																		<li>
-																			<a class="acnav__link acnav__link--level4" href="">Item (level 4)</a>
-																		</li>
-																	</ul>
-																	<!-- end level 4 -->
-																</li>
-															</ul>
-															<!-- end level 3 -->
-														</li>
+														</ul>
+													</div>
 
-														<?php */ ?>
-													</ul>
-													<!-- end level 2 -->
-												</li>
-												<!-- end group 1 -->										
+													<div class="details_head">
+														Share On
+													</div>
 
-											</ul>
-											<!-- end level 1 -->
-										</nav>
-										</div><!--overview_para Ends -->
+													<div class="social_icon">
+														<div class="tp-footer-bottom-social">
+															<a class="social-fb" href="https://www.facebook.com" target="_blank"><i class="fa-brands fa-facebook-f"></i></a>
+															<a class="social-twit" href="https://www.twitter.com" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+															<a class="social-twit" href="https://www.twitter.com" target="_blank"><i class="fa-brands fa-x-twitter"></i></a>
+															<a class="social-lnkd" href="https://www.linkedin.com" target="_blank"><i class="fa-brands fa-linkedin-in"></i></a>
+															<a class="social-yout" href="https://www.youtube.com" target="_blank"><i class="fa-brands fa-youtube"></i></a>
+														</div>
+													</div>
+
+												</div>
+												
+											</div>
+
+											<div class="border_bar">
+												<div class="other_details">
+													<div class="details_head">
+														Popular Tags
+													</div>
+													<div class="tags">
+														<ul>
+															<li>
+																<a href="">blog</a>
+															</li>
+															<li>
+																<a href="">business</a>
+															</li>
+															<li>
+																<a href="">theme</a>
+															</li>
+															<li>
+																<a href="">SAP</a>
+															</li>
+															<li>
+																<a href="">data science</a>
+															</li>
+															<li>
+																<a href="">web development</a>
+															</li>
+															<li>
+																<a href="">tips</a>
+															</li>
+															<li>
+																<a href="">machinelearning</a>
+															</li>
+														</ul>
+													</div>
+												</div>
+											</div>
+										</div>
 									</div><!--course_content Ends -->
 
 									<div class="course_overview"><!--course_overview Starts -->
@@ -979,6 +1040,10 @@
                                 </div><!--product_det Ends -->
                             </div><!--product_leftbar Ends -->
 
+							<div class="course_t_con"><!--course_t_con Starts -->
+								<?php include "course_index.php"; ?>
+							</div><!--course_t_con Ends -->
+<?php /* ?>
                             <div class="product_rightbar"><!--product_rightbar Starts -->
                                 <div class="border_bar">
 									<div class="image">
@@ -1160,6 +1225,7 @@
 								</div>
 
                             </div><!--product_rightbar Ends -->
+<?php */  ?>
 
                         </div><!--product_details Ends -->
                     </div><!--product_details_con Ends -->

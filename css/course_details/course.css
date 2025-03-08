@@ -65,7 +65,7 @@
 }
 
 .product_details_con .product_leftbar{
-    width: 70%;
+    width: 100%;
     float: left;
     box-sizing: border-box;
     padding: 5px;
@@ -957,6 +957,14 @@
     margin:20px 0px;
 }   
 
+.product_leftbar .product_det .course_content .course_con{
+    width: 70%;
+    float: left;
+    padding: 10px;
+    padding-right: 40px;
+    box-sizing: border-box;
+} 
+
 
 .product_leftbar .product_det .course_content .content{
     width: 100%;
@@ -989,6 +997,171 @@
     line-height: 30px;
     padding: 10px;
     box-sizing: border-box;
+}
+
+.product_leftbar .product_det .course_content .course_right{
+    width: 30%;
+    float: left;
+} 
+
+
+.course_content .course_right .border_bar{
+    width: 100%;
+    float: left;
+    box-sizing: border-box;
+    padding: 10px;
+    border: 1px solid #dde0e3;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+
+.course_content .course_right .border_bar .image{
+    width: 100%;
+    float: left;
+}
+
+.course_content .course_right .border_bar .image img{
+    width: 100%;
+    border-radius: 10px;
+}
+
+.course_content .course_right .border_bar .button{
+    width: 100%;
+    float: left;
+    display: flex;
+    justify-content: center;
+    margin: 20px 0;
+    border-bottom: 1px solid #dde0e3;
+    padding-bottom: 20px;
+}
+
+.course_content .course_right .border_bar .button .sec-btn{
+    cursor: pointer;
+    padding: 21px 59px;
+}
+
+.course_content .course_right .border_bar .other_details{
+    width: 100%;
+    float: left;
+    padding-top: 20px;
+    
+}
+
+.course_content .course_right .border_bar .other_details .details_head{
+    width: 100%;
+    float: left;
+    font-family: var(--font_bold);
+    font-size: 25px;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.course_content .course_right .border_bar .other_details .details_oth{
+    width: 100%;
+    float: left;
+    margin: 10px 0;
+}
+
+
+
+.course_content .course_right .border_bar .other_details .details_oth ul li{
+    width: 100%;
+    float: left;
+    padding: 10px;
+    box-sizing: border-box;
+    border-bottom: 1px solid #d9dee0;
+}
+
+.course_content .course_right .border_bar .other_details .details_oth ul li .detail_list{
+    width: 100%;
+    float: left;
+}
+
+.course_content .course_right .border_bar .other_details .details_oth ul li .detail_list .column_one{
+    width: 50%;
+    float: left;
+    padding: 5px;
+    box-sizing: border-box;
+    font-family: var(--font_medium);
+    font-size: 14px;
+    text-transform: uppercase;
+    display: flex;
+    
+}
+
+.course_content .course_right .border_bar .other_details .details_oth ul li .detail_list .column_one .images{
+    padding: 5px;
+    color: var(--primary_color);
+}
+
+.course_content .course_right .border_bar .other_details .details_oth ul li .detail_list .column_one .images i{
+    font-size: 20px;
+}
+
+.course_content .course_right .border_bar .other_details .details_oth ul li .detail_list .column_one .text{
+    padding: 5px;
+}
+
+.course_content .course_right .border_bar .other_details .details_oth ul li .detail_list .column_two{
+    width: 50%;
+    float: left;
+    padding: 5px;
+    box-sizing: border-box;
+    text-align: right;
+    font-family: var(--font_regular);
+    font-size: 14px;
+    text-transform: uppercase;
+}
+
+.course_content .course_right .border_bar .other_details .social_icon{
+    width: 100%;
+    float: left;
+    margin: 10px 0;
+    display: flex;
+    justify-content: center;
+}
+
+
+.course_content .course_right .border_bar .other_details .social_icon .tp-footer-bottom-social a {
+    background-color: var(--primary_color);
+    border-radius: 50%;
+    color: var(--white);
+    display: inline-block;
+    font-size: 16px;
+    height: 36px;
+    line-height: 36px;
+    margin-right: 4px;
+    text-align: center;
+    width: 36px;
+}
+
+.course_content .course_right .border_bar .other_details .tags{
+    width: 100%;
+    float: left;
+    margin-top: 20px;
+}
+
+.course_content .course_right .border_bar .other_details .tags ul{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    gap: 5px;
+}
+
+.course_content .course_right .border_bar .other_details .tags ul li a{
+    letter-spacing: .5px;
+    position: relative;
+    overflow: hidden;
+    outline: 0;
+    white-space: nowrap;
+    margin-bottom: 6px;
+    background: transparent;
+    border: 1px solid #cfd3d7;
+    color: #747579;
+    padding: 10px 15px;
+    border-radius: 5px;
+    float: left;
+    font-family: var(--font_regular);
 }
 
 
