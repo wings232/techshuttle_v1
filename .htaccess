@@ -1,0 +1,96 @@
+# enable basic rewriting
+RewriteEngine on
+# directory browsing
+# if any one directly access the other folders in directory it automatically redirects the file to index
+Options All -Indexes
+
+
+<IfModule mod_deflate.c>
+  Compress HTML, CSS, JavaScript, Text, XML and fonts
+  AddOutputFilterByType DEFLATE application/javascript
+  AddOutputFilterByType DEFLATE application/rss+xml
+  AddOutputFilterByType DEFLATE application/vnd.ms-fontobject
+  AddOutputFilterByType DEFLATE application/x-font
+  AddOutputFilterByType DEFLATE application/x-font-opentype
+  AddOutputFilterByType DEFLATE application/x-font-otf
+  AddOutputFilterByType DEFLATE application/x-font-truetype
+  AddOutputFilterByType DEFLATE application/x-font-ttf
+  AddOutputFilterByType DEFLATE application/x-javascript
+  AddOutputFilterByType DEFLATE application/xhtml+xml
+  AddOutputFilterByType DEFLATE application/xml
+  AddOutputFilterByType DEFLATE font/opentype
+  AddOutputFilterByType DEFLATE font/otf
+  AddOutputFilterByType DEFLATE font/ttf
+  AddOutputFilterByType DEFLATE image/svg+xml
+  AddOutputFilterByType DEFLATE image/x-icon
+  AddOutputFilterByType DEFLATE text/css
+  AddOutputFilterByType DEFLATE text/html
+  AddOutputFilterByType DEFLATE text/javascript
+  AddOutputFilterByType DEFLATE text/plain
+  AddOutputFilterByType DEFLATE text/xml
+
+  # Remove browser bugs (only needed for really old browsers)
+  BrowserMatch ^Mozilla/4 gzip-only-text/html
+  BrowserMatch ^Mozilla/4\.0[678] no-gzip
+  BrowserMatch \bMSIE !no-gzip !gzip-only-text/html
+  Header append Vary User-Agent
+  Header unset ETag
+</IfModule>
+FileETag None
+
+<FilesMatch "\.(flv|gif|jpg|jpeg|png|ico|pdf|swf)$">
+Header set Cache-Control "max-age=2592000"
+</FilesMatch> 
+<FilesMatch "\.(js|css)$">
+#Header set Cache-Control "max-age=604800" 
+Header set Cache-Control "max-age=28800" 
+</FilesMatch> 
+<FilesMatch "\.(html|htm|txt)$"> 
+Header set Cache-Control "max-age=600"
+</FilesMatch> 
+<FilesMatch "\.(pl|php|cgi|spl|scgi|fcgi)$"> 
+Header unset Cache-Control 
+</FilesMatch>
+
+
+  
+#ErrorDocument 404 https://techshuttle.com/tech-notfound.php
+#ErrorDocument 403 https://techshuttle.com/
+ErrorDocument 404 http://192.168.0.34/studies/techshuttle/tech-notfound.php
+ErrorDocument 403 https://192.168.0.34/studies/techshuttle/
+
+
+
+<IfModule mod_negotiation.c>
+    #Options -MultiViews
+</IfModule>
+
+#Options +MultiViews
+
+php_flag display_startup_errors on
+php_flag display_errors on
+php_value error_log logs/all_errors.log
+#RewriteCond %{HTTP_HOST} ^drkmh\.com$ [OR]
+#RewriteCond %{HTTP_HOST} ^www\.drkmh\.com$
+#RewriteRule ^/?$ "https\:\/\/drkmh\.com\/" [R=301,L]
+RewriteCond %{SERVER_PORT} 80
+RewriteCond %{HTTP_HOST} ^(www\.)?drkmh\.com
+RewriteCond %{HTTP_HOST} !^www.drkmh.com$ [NC]
+RewriteRule ^(.*)$ https://www.drkmh.com$1 [R,L]
+
+
+
+RewriteEngine on
+
+#RewriteRule ^drkmh-consultants drkmh-consultants.php [NC,L]
+#RewriteRule ^index index.php [NC,L]
+
+#rewrite code for url for Course Details page for two query
+RewriteRule ^([0-9a-zA-Z_-]+)/([0-9a-zA-Z_-]+)$ course_details.php?key_one=$1&&key_two=$2 [NC,L]
+
+#rewrite code for url for Course catalogue page for three query
+RewriteRule ^([0-9a-zA-Z_-]+)/([0-9a-zA-Z_-]+)/([0-9a-zA-Z_-]+)$ course_catalogue.php?key_one=$1&&key_two=$2&&key_two=$3 [NC,L]
+
+
+
+

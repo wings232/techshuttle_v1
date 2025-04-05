@@ -124,18 +124,16 @@ body{
 
 .cate_m .tech_menu .cate_sub{
     width: 300px;
-    max-height: 400px;
-    min-height: 400px;
+    max-height: 530px;
+    min-height: 530px;
     background: #ebf1f8;
     position: relative;
 }
 
-.cate_m .tech_menu .cate_sub > ul {
-    padding: 5px;
-}
+
 
 .cate_m .tech_menu .cate_sub > ul > li {
-    padding: 5px;
+    padding: 10px 5px;
     width: 100%;
     float: left;
     line-height: 32px;
@@ -144,6 +142,12 @@ body{
     font-family: "rubik_regular";
     text-transform: uppercase;
     cursor: pointer;
+}
+
+.cate_m .tech_menu .cate_sub > ul > li:hover{
+    border-left: 3px solid var(--primary_color);
+    background: white;
+    
 }
 
 .cate_m .tech_menu .cate_sub > ul > li > .sub_cate {
@@ -168,7 +172,7 @@ body{
 }
 
 .cate_m .tech_menu .cate_sub > ul > li > .sub_cate .sub_level .course_head {
-    width: 45%;
+    width: 42%;
     float: left;
     padding: 10px;
     box-sizing: border-box;
@@ -180,15 +184,19 @@ body{
 }
 
 .cate_m .tech_menu .cate_sub > ul > li > .sub_cate .sub_level .course_head .head a {
-    color: #486bb3;
+    color: #ffffff;
     font-family: "rubik_bold";
     letter-spacing: 0.5px;
+    display: block;
+    padding: 6px 20px;
+    background: var(--primary_color);
+    margin-bottom: 8px;
 }
 
 .cate_m .tech_menu .cate_sub > ul > li > .sub_cate .sub_level .course_head .head_list {
     width: 100%;
     float: left;
-    padding-left: 10px;
+    padding-left: 5px;
     box-sizing: border-box;
 }
 
@@ -196,6 +204,26 @@ body{
     color: #486bb3;
     font-family: var(--font_regular);
     letter-spacing: 0.5px;
+    display: block;
+    border: 1px solid #0251af5e;
+    margin-bottom: 5px;
+    border-radius: 5px;
+    width: 99%;
+    box-sizing: border-box;
+}
+
+.cate_m .tech_menu .cate_sub > ul > li > .sub_cate .sub_level .course_head .head_list ul li a .image{
+    padding: 5px;
+}
+
+.cate_m .tech_menu .cate_sub > ul > li > .sub_cate .sub_level .course_head .head_list ul li a .image img{
+    display: block;
+}
+
+.cate_m .tech_menu .cate_sub > ul > li > .sub_cate .sub_level .course_head .head_list ul li a .txt{
+    padding: 5px;
+    font-family: var(--font_medium);
+    font-size: 14px;
 }
 
 .cate_m .tech_menu .cate_sub > ul > li > .sub_cate .course_img {

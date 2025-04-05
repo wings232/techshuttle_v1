@@ -733,7 +733,7 @@
 .product_leftbar .product_det .course_overview .overview{
     width: 100%;
     float: left;
-    border-bottom: 1px solid rgba(26,26,26,.09);
+    /* border-bottom: 1px solid rgba(26,26,26,.09); */
 }
 
 .product_leftbar .product_det .course_overview .overview .head{
@@ -969,7 +969,7 @@
 .product_leftbar .product_det .course_content .content{
     width: 100%;
     float: left;
-    border-bottom: 1px solid rgba(26,26,26,.09);
+    /* border-bottom: 1px solid rgba(26,26,26,.09); */
 }
 
 .product_leftbar .product_det .course_content .content .head{
@@ -987,17 +987,22 @@
     width: 100%;
     float: left;
     margin-top: 10px;
+    background: #e9eef5;
 }
 
 .product_leftbar .product_det .course_content .content_acco p{
-    width: 100%;
+    width: 93%;
     float: left;
     font-family: var(--font_regular);
     text-align: justify;
     line-height: 30px;
-    padding: 10px;
+    padding: 0;
     box-sizing: border-box;
+   
 }
+
+
+
 
 .product_leftbar .product_det .course_content .course_right{
     width: 30%;
@@ -1185,15 +1190,48 @@
     width: 100%;
 }
 
+.acnav__list--level1 > li{
+   
+    float: left;
+    width: 100%;
+    box-sizing: border-box;
+    box-shadow: inset 0 -1px #3988a0;
+}
+
+.acnav__list--level1 > li .level_one{
+    padding: 20px 10px;
+}
+
+
+.acnav__list--level1 > li:hover{    
+    /* background: #0251afcc;     */
+}
+
+.acnav__list--level1 li:hover .acnav__label::before{
+    /* color:white */
+}
+
+.acnav__list--level1 > li:hover .acnav__label{   
+    /* color:white */
+}
+
+
 .acnav__list--level2 li{
     width: 100%;
     float: left;
-    padding: 15px;
     box-sizing: border-box;
     line-height: 30px;
-    border-bottom: 1px solid #d9dee0;
-    margin-bottom: 6px;
+    padding: 10px;
     padding-left: 40px;
+    position: relative;
+}
+
+
+
+.acnav__list--level2 li .acnav__label::before{
+    position: absolute;
+    right: 0;
+    display: none;
 }
 
 .acnav__list li .list_con  {
@@ -1207,19 +1245,21 @@
 }
 
 .acnav__list li .list_con .image i {
-    color:var(--primary_color);
+    /* color: #fe4a55; */
+    color: #4762b1;
     font-size: 25px;
 }
 
 .acnav__list li .list_con .img_txt {
-    width: 95%;
+    width: 90%;
     float: left;
 }
 
 .acnav__list li .list_con .img_txt .txt {
     width: 100%;
     float: left;
-    font-family: "rubik_regular";
+    font-family: var(--font_regular);
+    text-align: justify;
 }
 
 .acnav__list li .list_con {
@@ -1237,6 +1277,10 @@
     text-rendering: auto;
     margin-right: 1em;
     transition: transform 0.3s;
+    /* color:#fe4a55; */
+    color: #4762b1;
+    float: left;
+    margin-top: 5px;
 }
 .has-children.is-open > .acnav__label::before {
     transform: rotate(405deg);
@@ -1246,18 +1290,19 @@
     width:100%;
     float: left;
     font-size: 1rem;
-    padding: 15px;
     margin: 0;
     cursor: pointer;
     box-sizing: border-box;
     color: #000000;
-    /* background: #317589; */
-    box-shadow: inset 0 -1px #3988a0;
-    transition: color 0.25s ease-in, background-color 0.25s ease-in;
+   /*  transition: color 0.25s ease-in, background-color 0.25s ease-in; */
 }
 .acnav__link:focus, .acnav__label:focus, .acnav__link:hover, .acnav__label:hover {
-    color: #ffffff;
-    background: #0251afcc;
+   /*  color: #ffffff; */
+    
+}
+
+.acnav__label:hover:before{
+   /*  color: #ffffff; */
 }
 .acnav__link--level2, .acnav__label--level2 {
     padding-left: 3em;

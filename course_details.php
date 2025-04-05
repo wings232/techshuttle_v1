@@ -1,8 +1,26 @@
+<?php
+	include "check_ses_list.php";
+	include "dbconn.php";
+	include_once "func_templates/func_code.php";
+	include "constantconfig.php";
+	$host  = $_SERVER['HTTP_HOST'];
+	$key_one = isset($_REQUEST['key_one'])?$_REQUEST['key_one']:"";
+	$key_two = isset($_REQUEST['key_two'])?$_REQUEST['key_two']:"";
+	$forCourseSingleDetails= forCourseSingleDetails("tbl_navigation_details",$key_two,4,'Active');
+	$forCourseSingleDetails_json = json_decode($forCourseSingleDetails, true);
+	//print_r($accopany_filter_List_json);
+	$forCourseSingleDetails_json_count = isset($forCourseSingleDetails_json['forCourseSingleDetails_count'])?$forCourseSingleDetails_json['forCourseSingleDetails_count']:"";
+	if($forCourseSingleDetails_json_count == 0){  
+		header("Location: http://$host/studies/techshuttle/tech-notfound.php", false);
+	}
+
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<base href='<?php echo $baseUrl; ?>' > 
     <title>Techshuttle | Home</title>    
     <link rel="stylesheet" href="css/reset.css"/>
     <link rel="stylesheet" href="css/root.css"/>
@@ -19,17 +37,68 @@
         <div class='header_con'><!--header_con Starts -->
             <?php include "header.php"; ?>
         </div><!--header_con Ends -->
+<?php
 
+	if($forCourseSingleDetails_json_count > 0){  
+		foreach ($forCourseSingleDetails_json['forCourseSingleDetails_details'] as $courseSingleRecord) {
+			$menu_ids_f  = $courseSingleRecord["parent_id"];
+			$menu_names_f = $courseSingleRecord["menu_name"];
+			$main_image = $courseSingleRecord["course_main_image"];
+			$sub_ids = $courseSingleRecord["sub_id"];
+			$categories_groups = $courseSingleRecord["categories_group"];
+		}
+	}
+
+
+?>
+<?php
+	$selectUserNav= selectUserNav("tbl_navigation_setup",$sub_ids,$categories_groups,'Active');
+	$selectUserNav_json = json_decode($selectUserNav, true);
+	//print_r($accopany_filter_List_json);
+	$selectUserNav_json_count = isset($selectUserNav_json['selectUserNav_count'])?$selectUserNav_json['selectUserNav_count']:"";
+	if($selectUserNav_json_count > 0){  
+	  foreach ($selectUserNav_json['selectUserNav_details'] as $userNav) {
+	      $menu_slug_three  = $userNav["menu_slug"];
+	      $userNavSubId_three = $userNav["sub_id"];
+
+	      $selectUserNav_three= selectUserNav("tbl_navigation_setup",$userNavSubId_three,$categories_groups,'Active');
+			$selectUserNav_three_json = json_decode($selectUserNav_three, true);
+			//print_r($accopany_filter_List_json);
+			$selectUserNav_three_json_count = isset($selectUserNav_three_json['selectUserNav_count'])?$selectUserNav_three_json['selectUserNav_count']:"";
+			if($selectUserNav_json_count > 0){  
+			  foreach ($selectUserNav_three_json['selectUserNav_details'] as $userNav_three) {
+			      $menu_slugs_two  = $userNav_three["menu_slug"];
+			      $userNavSubIds_two = $userNav_three["sub_id"];
+
+			      	$selectUserNav_two= selectUserNav("tbl_navigation_setup",$userNavSubIds_two,$categories_groups,'Active');
+					$selectUserNav_two_json = json_decode($selectUserNav_two, true);
+					//print_r($accopany_filter_List_json);
+					$selectUserNav_two_json_count = isset($selectUserNav_two_json['selectUserNav_count'])?$selectUserNav_two_json['selectUserNav_count']:"";
+					if($selectUserNav_two_json_count > 0){  
+					  foreach ($selectUserNav_two_json['selectUserNav_details'] as $userNav_two) {
+					      $menu_slugs_one  = $userNav_two["menu_slug"];
+					      $userNavSubIds_one = $userNav_two["sub_id"];
+					  	}
+
+					  }
+
+			  }
+			}
+	}
+}
+
+
+?>
         <div class="course_sec_con"><!--course_sec_con Starts -->
             <div class="course_sec_center"><!--course_sec_center Starts -->
                 <div class="course_sec"><!--course_sec Starts -->
                     <div class="user_nav"><!--user_nav Starts -->
 						<ul>
 							<li><a href="">Home</a></li>
-							<li><a href="">courses</a></li>
-							<li><a href="">sap</a></li>
-							<li><a href="">technical</a></li>
-							<li><a href="">SAP Abap</a></li>
+							<li><a href=""><?php echo $menu_slugs_one; ?></a></li>
+							<li><a href=""><?php echo $menu_slugs_two; ?></a></li>
+							<li><a href=""><?php echo $menu_slug_three; ?></a></li>
+							<li><a href=""><?php echo $menu_names_f; ?></a></li>
 						</ul>
 					</div><!--user_nav Ends -->
 
@@ -40,7 +109,7 @@
                                 <div class="product_det"><!--product_det Starts -->
                                     <div class="course_name"><!--course_name Starts -->
 										<div class="name"><!--name Starts -->
-											SAP Abap										
+											<?php echo $menu_names_f; ?>								
                                         </div><!--name Ends -->
 									</div><!--course_name Ends -->
 
@@ -92,7 +161,7 @@
                                     <div class="product_images"><!--product_images Starts -->
 										<img src="images/course/main/sap_abap.webp">
 									</div>
-
+<?php /* ?>
 									<div class="course_batch_list"><!--course_batch_list Starts -->
 										<div class="batch_list"><!--batch_list Starts -->
 											<div class="batch_header"><!--batch_header Starts -->
@@ -266,6 +335,7 @@
 											</div><!--batch_row Ends -->
 										</div><!--batch_list Ends -->
 									</div>
+<?php  */ ?>
 
 									<div class="course_overview"><!--course_overview Starts -->
 										<div class="overview"><!--overview Starts -->
@@ -275,15 +345,33 @@
 										</div><!--overview Ends -->
 
 										<div class="overview_para"><!--overview_para Starts -->
+<?php
+	$forCourseProductDescriptionDetails= forCourseProductDescriptionDetails("tbl_product_description",$menu_ids_f,'Overview','courses','Active');
+	$forCourseProductDescriptionDetails_json = json_decode($forCourseProductDescriptionDetails, true);
+	//print_r($accopany_filter_List_json);
+	$forCourseProductDescriptionDetails_json_count = isset($forCourseProductDescriptionDetails_json['forCourseProductDescriptionDetails_count'])?$forCourseProductDescriptionDetails_json['forCourseProductDescriptionDetails_count']:"";
+	if($forCourseProductDescriptionDetails_json_count > 0){  
+	  foreach ($forCourseProductDescriptionDetails_json['forCourseProductDescriptionDetails_details'] as $courseDescription) {
+	      $product_description  = $courseDescription["product_description"];
+?>
 											<p>
-												SAP Analytics Cloud (or SAP Cloud for Analytics) is a software as a service (SaaS) business intelligence (BI) platform designed by SAP specifically with the intent of providing all analytics capabilities to all users in one product. It is primarily suitable for SAP Consultants who is working with SAP BW, SAP BI, SAP BO, and SAP ECC-based Business Users, analysts who want to report and analyze using Dashboards/Visualization/Charts and Planning. This tool is generally a HANA Cloud-based Platform tool used for Reporting, Visualization/Dashboard, and Planning.											</p>
-											<p>
-												Are you wondering why SAP ABAP is a great course to join? Here are five compelling reasons why you and your team should get on board!											</p>
+												<?php echo $product_description; ?>
+											</p>
+<?php
+	}
+}
+?>
 										</div><!--overview_para Ends -->
 									</div><!--course_overview Ends -->
 
 
 									<div class="mat_inc_enq"><!--mat_inc_enq Starts -->
+<?php
+	$forCourseProductDescriptionDetails= forCourseProductDescriptionDetails("tbl_product_description",$menu_ids_f,'Material Includes','courses','Active');
+	$forCourseProductDescriptionDetails_json = json_decode($forCourseProductDescriptionDetails, true);
+	//print_r($accopany_filter_List_json);
+	$forCourseProductDescriptionDetails_json_count = isset($forCourseProductDescriptionDetails_json['forCourseProductDescriptionDetails_count'])?$forCourseProductDescriptionDetails_json['forCourseProductDescriptionDetails_count']:"";
+?>
 										<div class="material_inc"><!--material_inc Starts -->
 											<div class="material_head"><!--material_head Starts -->
 												<div class="head"><!--head Starts -->
@@ -292,36 +380,25 @@
 											</div><!--material_head Ends -->
 											<div class="material_list"><!--material_list Starts -->
 												<ul>
+<?php
+	if($forCourseProductDescriptionDetails_json_count > 0){  
+	  foreach ($forCourseProductDescriptionDetails_json['forCourseProductDescriptionDetails_details'] as $courseDescription) {
+	      $product_description  = $courseDescription["product_description"];
+?>
 													<li><!-- Loop Starts -->
 														<div class="image">
 															<img src="images/icons/tick.webp">
 														</div>
 														<div class="img_txt">
 															<div class="txt">
-																40 Hours of Live Training															
+																<?php echo $product_description; ?>														
 															</div>
 														</div>
 													</li><!-- Loop Ends -->
-													<li><!-- Loop Starts -->
-														<div class="image">
-															<img src="images/icons/tick.webp">
-														</div>
-														<div class="img_txt">
-															<div class="txt">
-																Access to the LMS															
-															</div>
-														</div>
-													</li><!-- Loop Ends -->
-													<li><!-- Loop Starts -->
-														<div class="image">
-															<img src="images/icons/tick.webp">
-														</div>
-														<div class="img_txt">
-															<div class="txt">
-																All Videos Downloadable															
-															</div>
-														</div>
-													</li><!-- Loop Ends -->
+<?php
+	}
+}
+/*
 													<li><!-- Loop Starts -->
 														<div class="image">
 															<img src="images/icons/tick.webp">
@@ -368,6 +445,16 @@
 														</div>
 														<div class="img_txt">
 															<div class="txt">
+																Access to the LMS															
+															</div>
+														</div>
+													</li><!-- Loop Ends -->
+													<li><!-- Loop Starts -->
+														<div class="image">
+															<img src="images/icons/tick.webp">
+														</div>
+														<div class="img_txt">
+															<div class="txt">
 																All Videos Downloadable															
 															</div>
 														</div>
@@ -382,7 +469,18 @@
 															</div>
 														</div>
 													</li><!-- Loop Ends -->
-												
+													<li><!-- Loop Starts -->
+														<div class="image">
+															<img src="images/icons/tick.webp">
+														</div>
+														<div class="img_txt">
+															<div class="txt">
+																All Videos Downloadable															
+															</div>
+														</div>
+													</li><!-- Loop Ends -->
+	*/	
+?>
 												</ul>
 											</div><!--material_list Ends -->
 										</div><!--material_inc Ends -->
@@ -400,15 +498,30 @@
 												</div><!--learn_head Ends -->
 												<div class="learn_list"><!--learn_list Starts -->
 													<ul>
+<?php
+	$forCourseProductDescriptionDetails= forCourseProductDescriptionDetails("tbl_product_description",$menu_ids_f,'Learning Objectives','courses','Active');
+	$forCourseProductDescriptionDetails_json = json_decode($forCourseProductDescriptionDetails, true);
+	//print_r($accopany_filter_List_json);
+	$forCourseProductDescriptionDetails_json_count = isset($forCourseProductDescriptionDetails_json['forCourseProductDescriptionDetails_count'])?$forCourseProductDescriptionDetails_json['forCourseProductDescriptionDetails_count']:"";
+	if($forCourseProductDescriptionDetails_json_count > 0){  
+	  foreach ($forCourseProductDescriptionDetails_json['forCourseProductDescriptionDetails_details'] as $courseDescription) {
+	      $product_description  = $courseDescription["product_description"];
+?>
 														<li><!-- Loop Starts -->
 															<div class="image">
 																<img src="images/icons/tick.webp">
 															</div>
 															<div class="img_txt">
 																<div class="txt">
-																	Ready to begin working on real-world data modeling projects.																</div>
+																	<?php echo $product_description; ?>																
+																</div>
 															</div>
 														</li><!-- Loop Ends -->
+														<?php
+
+}
+}
+/*
 														<li><!-- Loop Starts -->
 															<div class="image">
 																<img src="images/icons/tick.webp">
@@ -472,6 +585,8 @@
 																	Find a new position involving data modeling.																</div>
 															</div>
 														</li><!-- Loop Ends -->
+*/
+?>
 													</ul>
 												</div><!--learn_list Ends -->
 											</div><!--learn_obj Ends -->
@@ -504,12 +619,22 @@
 										</div><!--overview Ends -->
 
 										<div class="overview_para"><!--overview_para Starts -->
-											<p>
-												SAP Analytics Cloud is a cloud-based BI solution from SAP. The technology is used for business intelligence, planning, or forecasting activities. It helps business owners get insight and act accordingly for major business decisions. SAP analytics cloud training has emerged as a popular certification course owing to the increasing demand.										
-											</p>
-											<p>
-												SAP Analytics Cloud is software wherein cloud is made especially with the intention of offering all analytics, capabilities to all users in one product. The tool is usually a HANA cloud-based platform tool that is used for reporting, visualization/ dashboard, and planning.											
-											</p>
+<?php
+	$forCourseProductDescriptionDetails= forCourseProductDescriptionDetails("tbl_product_description",$menu_ids_f,'Description','courses','Active');
+	$forCourseProductDescriptionDetails_json = json_decode($forCourseProductDescriptionDetails, true);
+	//print_r($accopany_filter_List_json);
+	$forCourseProductDescriptionDetails_json_count = isset($forCourseProductDescriptionDetails_json['forCourseProductDescriptionDetails_count'])?$forCourseProductDescriptionDetails_json['forCourseProductDescriptionDetails_count']:"";
+	if($forCourseProductDescriptionDetails_json_count > 0){  
+	  foreach ($forCourseProductDescriptionDetails_json['forCourseProductDescriptionDetails_details'] as $courseDescription) {
+	      $product_description  = $courseDescription["product_description"];
+?>
+													<p>
+														<?php echo $product_description; ?>
+													</p>
+<?php
+	}
+}
+?>
 										</div><!--overview_para Ends -->
 									</div><!--course_overview Ends -->
 
@@ -525,123 +650,125 @@
 												<nav class="acnav" role="navigation">
 												<!-- start level 1 -->
 												<ul class="acnav__list acnav__list--level1">
-<?php for($i=0;$i<15; $i++){ ?>
+<?php
+      $selectMultipleListRecord= selectMultipleListRecord("tbl_product_list",$menu_ids_f,1,"Active","list");
+      $selectMultipleListRecord_json = json_decode($selectMultipleListRecord, true);
+      //print_r($accopany_filter_List_json);
+      $selectMultipleListRecord_json_count = isset($selectMultipleListRecord_json['selectMultipleListRecord_count'])?$selectMultipleListRecord_json['selectMultipleListRecord_count']:"";
+     
+
+
+if($selectMultipleListRecord_json_count > 0){
+foreach ($selectMultipleListRecord_json['selectMultipleListRecord_details'] as $menuMultipleRecord_lists) {
+  $product_list_id  = $menuMultipleRecord_lists["product_list_id"];
+  $product_primary_id = $menuMultipleRecord_lists["product_primary_id"];
+  $product_list = $menuMultipleRecord_lists["product_list"];
+  $product_type = $menuMultipleRecord_lists["product_type"];
+  $sub_id = $menuMultipleRecord_lists["sub_id"];
+  $categories_group = $menuMultipleRecord_lists["categories_group"];
+?>
+												
+                                                
 													<!-- start group 1 -->
-													<li class="has-children">
-														<div class="acnav__label">
-															Level 1 Content -  <?php echo $i; ?>
+													<li class="has-children" new="">
+														<div class="acnav__label level_one">
+															<?php echo $product_list; ?>  
 														</div>
+														
+<?php
+	$selectMultipleListLevelRecord= selectMultipleListLevelRecord("tbl_product_list",$menu_ids_f,2,"Active","list",$product_list_id);
+	$selectMultipleListLevelRecord_json = json_decode($selectMultipleListLevelRecord, true);
+	//print_r($accopany_filter_List_json);
+	$selectMultipleListLevelRecord_json_count = isset($selectMultipleListLevelRecord_json['selectMultipleListLevelRecord_count'])?$selectMultipleListLevelRecord_json['selectMultipleListLevelRecord_count']:""; 
+
+
+	if($selectMultipleListLevelRecord_json_count > 0){
+?>
 														<!-- start level 2 -->
 														<ul class="acnav__list acnav__list--level2">
-    <?php for($j=0;$j<5; $j++){ ?>
-															<li>
-																<div class="list_con">
+<?php
+	
+	foreach ($selectMultipleListLevelRecord_json['selectMultipleListLevelRecord_details'] as $menuMultipleRecord_lists) {
+	  $product_list_id_o  = $menuMultipleRecord_lists["product_list_id"];
+	  $product_primary_id_o = $menuMultipleRecord_lists["product_primary_id"];
+	  $product_list_o = $menuMultipleRecord_lists["product_list"];
+	  $product_type_o = $menuMultipleRecord_lists["product_type"];
+	  $sub_id_o = $menuMultipleRecord_lists["sub_id"];
+	  $categories_group_o = $menuMultipleRecord_lists["categories_group"];
+?>
+															<li class="has-children">
+																<div class="list_con acnav__label level_two">
 																	<div class="image">
 																		<i class="fa fa-file-text"></i>
 																	</div>
 																	<div class="img_txt">
 																		<div class="txt">
-																			Level 2 Content -  <?php echo $j; ?>																	</div>
+																		<?php echo $product_list_o; ?>																	</div>
 																	</div>
 																</div>
+<?php
+	$selectMultipleListLevelRecord= selectMultipleListLevelRecord("tbl_product_list",$menu_ids_f,3,"Active","list",$product_list_id_o);
+	$selectMultipleListLevelRecord_json = json_decode($selectMultipleListLevelRecord, true);
+	//print_r($accopany_filter_List_json);
+	$selectMultipleListLevelRecord_json_count = isset($selectMultipleListLevelRecord_json['selectMultipleListLevelRecord_count'])?$selectMultipleListLevelRecord_json['selectMultipleListLevelRecord_count']:""; 
+
+
+	if($selectMultipleListLevelRecord_json_count > 0){
+?>
+																<ul class="acnav__list acnav__list--level3">
+<?php
+	
+	foreach ($selectMultipleListLevelRecord_json['selectMultipleListLevelRecord_details'] as $menuMultipleRecord_lists) {
+	  $product_list_id_t  = $menuMultipleRecord_lists["product_list_id"];
+	  $product_primary_id_t = $menuMultipleRecord_lists["product_primary_id"];
+	  $product_list_t = $menuMultipleRecord_lists["product_list"];
+	  $product_type_t = $menuMultipleRecord_lists["product_type"];
+	  $sub_id_t = $menuMultipleRecord_lists["sub_id"];
+	  $categories_group_t = $menuMultipleRecord_lists["categories_group"];
+?>
+																	<li>
+																	<?php echo $product_list_t; ?>
+																	</li>
+<?php
+	}
+
+?>																	
+																	
+																</ul>
+<?php
+	}
+
+?>
 															</li>
-	<?php } ?>										
+<?php
+	}
+
+?>	                                                 									
 															
 
-															<?php /* ?>
-															<li class="has-children">
-																<div class="acnav__label acnav__label--level2">
-																	Group 1.1 (level 2)
-																</div>
-																<!-- start level 3 -->
-																<ul class="acnav__list acnav__list--level3">
-																	<li>
-																		<a class="acnav__link acnav__link--level3" href="">Item (level 3)</a>
-																	</li>
-																	<li>
-																		<a class="acnav__link acnav__link--level3" href="">Item (level 3)</a>
-																	</li>
-																	<li class="has-children">
-																		<div class="acnav__label acnav__label--level3">
-																			Group 1.1.1 (level 3)
-																		</div>
-																		<!-- start level 4 -->
-																		<ul class="acnav__list acnav__list--level4">
-																			<li>
-																				<a class="acnav__link acnav__link--level4" href="">Item (level 4)</a>
-																			</li>
-																		</ul>
-																		<!-- end level 4 -->
-																	</li>
-																	<li class="has-children">
-																		<div class="acnav__label acnav__label--level3">
-																			Group 1.1.2 (level 3)
-																		</div>
-																		<!-- start level 4 -->
-																		<ul class="acnav__list acnav__list--level4">
-																			<li>
-																				<a class="acnav__link acnav__link--level4" href="">Item (level 4)</a>
-																			</li>
-																		</ul>
-																		<!-- end level 4 -->
-																	</li>
-																</ul>
-																<!-- end level 3 -->
-															</li>
-
-															<li class="has-children">
-																<div class="acnav__label acnav__label--level2">
-																	Group 1.2 (level 2)
-																</div>
-																<!-- start level 3 -->
-																<ul class="acnav__list acnav__list--level3">
-																	<li>
-																		<a class="acnav__link acnav__link--level3" href="">Item (level 3)</a>
-																	</li>
-																	<li>
-																		<a class="acnav__link acnav__link--level3" href="">Item (level 3)</a>
-																	</li>
-																	<li class="has-children">
-																		<div class="acnav__label acnav__label--level3">
-																			Group 1.2.1 (level 3)
-																		</div>
-																		<!-- start level 4 -->
-																		<ul class="acnav__list acnav__list--level4">
-																			<li>
-																				<a class="acnav__link acnav__link--level4" href="">Item (level 4)</a>
-																			</li>
-																		</ul>
-																		<!-- end level 4 -->
-																	</li>
-																	<li class="has-children">
-																		<div class="acnav__label acnav__label--level3">
-																			Group 1.2.2 (level 3)
-																		</div>
-																		<!-- start level 4 -->
-																		<ul class="acnav__list acnav__list--level4">
-																			<li>
-																				<a class="acnav__link acnav__link--level4" href="">Item (level 4)</a>
-																			</li>
-																		</ul>
-																		<!-- end level 4 -->
-																	</li>
-																</ul>
-																<!-- end level 3 -->
-															</li>
-
-															<?php */ ?>
+													
 														</ul>
-														<!-- end level 2 -->
+<?php
+	}
+?>														<!-- end level 2 -->
 													</li>
 													<!-- end group 1 -->
-<?php } ?>													
+                                               												
+<?php
+	
 
+	}
+}
+?>															
 																						
 
 												</ul>
 												<!-- end level 1 -->
 												</nav>
 											</div><!--content_acco Ends -->
+
+
+
 										</div>
 										<div class="course_right">
 											<div class="border_bar">
@@ -860,167 +987,128 @@
 											</div><!--head Ends -->
 										</div><!--content Ends -->
 
-										<div class="content_acco"><!--overview_para Starts -->
-										<nav class="acnav" role="navigation">
-											<!-- start level 1 -->
-											<ul class="acnav__list acnav__list--level1">
+										<div class="content_acco"><!--content_acco Starts -->
+												<nav class="acnav" role="navigation">
+												<!-- start level 1 -->
+												<ul class="acnav__list acnav__list--level1">
+<?php
+      $selectMultipleListRecord= selectMultipleListRecord("tbl_product_faq",$menu_ids_f,1,"Active","faq");
+      $selectMultipleListRecord_json = json_decode($selectMultipleListRecord, true);
+      //print_r($accopany_filter_List_json);
+      $selectMultipleListRecord_json_count = isset($selectMultipleListRecord_json['selectMultipleListRecord_count'])?$selectMultipleListRecord_json['selectMultipleListRecord_count']:"";
+     
 
-												<!-- start group 1 -->
-												<li class="has-children">
-													<div class="acnav__label">
-														What projects are included in this SAP course ?
-													</div>
-													<!-- start level 2 -->
-													<ul class="acnav__list acnav__list--level2">
-														<li>
-															<div class="list_con">
-																<div class="image">
-																	<i class="fa fa-question-circle" aria-hidden="true"></i>
-																</div>
-																<div class="img_txt">
-																	<div class="txt">
-																		The instructors will take care of handling the project using a single business case throughout the training. We will provide two real-time projects with a highly-skilled guide who can assist you throughout the project.																
+
+if($selectMultipleListRecord_json_count > 0){
+foreach ($selectMultipleListRecord_json['selectMultipleListRecord_details'] as $menuMultipleRecord_lists) {
+  $product_list_id  = $menuMultipleRecord_lists["product_list_id"];
+  $product_primary_id = $menuMultipleRecord_lists["product_primary_id"];
+  $product_list = $menuMultipleRecord_lists["product_faq"];
+  $product_type = $menuMultipleRecord_lists["product_type"];
+  $sub_id = $menuMultipleRecord_lists["sub_id"];
+  $categories_group = $menuMultipleRecord_lists["categories_group"];
+?>
+												
+                                                
+													<!-- start group 1 -->
+													<li class="has-children" new="">
+														<div class="acnav__label level_one">
+															<?php echo $product_list; ?>  
+														</div>
+														
+<?php
+      $selectMultipleListLevelRecord= selectMultipleListLevelRecord("tbl_product_faq",$menu_ids_f,2,"Active","faq",$product_list_id);
+      $selectMultipleListLevelRecord_json = json_decode($selectMultipleListLevelRecord, true);
+      //print_r($accopany_filter_List_json);
+      $selectMultipleListLevelRecord_json_count = isset($selectMultipleListLevelRecord_json['selectMultipleListLevelRecord_count'])?$selectMultipleListLevelRecord_json['selectMultipleListLevelRecord_count']:""; 
+
+
+if($selectMultipleListLevelRecord_json_count > 0){
+?>
+														<!-- start level 2 -->
+														<ul class="acnav__list acnav__list--level2">
+<?php
+	
+	foreach ($selectMultipleListLevelRecord_json['selectMultipleListLevelRecord_details'] as $menuMultipleRecord_lists) {
+	  $product_list_id_o  = $menuMultipleRecord_lists["product_list_id"];
+	  $product_primary_id_o = $menuMultipleRecord_lists["product_primary_id"];
+	  $product_list_o = $menuMultipleRecord_lists["product_faq"];
+	  $product_type_o = $menuMultipleRecord_lists["product_type"];
+	  $sub_id_o = $menuMultipleRecord_lists["sub_id"];
+	  $categories_group_o = $menuMultipleRecord_lists["categories_group"];
+	?>
+															<li class="has-children">
+																<div class="list_con acnav__label level_two">
+																	<div class="image">
+																		<i class="fa fa-question-circle" aria-hidden="true"></i>
+																	</div>
+																	<div class="img_txt">
+																		<div class="txt">
+																		<?php echo $product_list_o; ?>																	</div>
 																	</div>
 																</div>
-															</div>
-														</li>
-														<li>
-														<div class="list_con">
-																<div class="image">
-																	<i class="fa fa-question-circle" aria-hidden="true"></i>
-																</div>
-																<div class="img_txt">
-																	<div class="txt">
-																		Cloud Architecture &amp; Components																		</div>
-																</div>
-															</div>
-														</li>
+<?php
+/*
+	$selectMultipleListLevelRecord= selectMultipleListLevelRecord("tbl_product_list",$menu_ids_fi,3,"Active","list",$product_list_id_o);
+	$selectMultipleListLevelRecord_json = json_decode($selectMultipleListLevelRecord, true);
+	//print_r($accopany_filter_List_json);
+	$selectMultipleListLevelRecord_json_count = isset($selectMultipleListLevelRecord_json['selectMultipleListLevelRecord_count'])?$selectMultipleListLevelRecord_json['selectMultipleListLevelRecord_count']:""; 
 
-													</ul>
-													<!-- end level 2 -->
-												</li>
-												<!-- end group 1 -->
 
-												<li class="has-children">
-													<div class="acnav__label">
-														How will I practice the Labs?
-													</div>
-													<!-- start level 2 -->
-													<ul class="acnav__list acnav__list--level2">
-														<li>
-															<div class="list_con">
-																<div class="image">
-																	<i class="fa fa-question-circle" aria-hidden="true"></i>
-																</div>
-																<div class="img_txt">
-																	<div class="txt">
-																		Cloud Architecture &amp; Components																		</div>
-																</div>
-															</div>
-														</li>
-														<li>
-														<div class="list_con">
-																<div class="image">
-																	<i class="fa fa-question-circle" aria-hidden="true"></i>
-																</div>
-																<div class="img_txt">
-																	<div class="txt">
-																		Cloud Architecture &amp; Components																		</div>
-																</div>
-															</div>
-														</li>
+	if($selectMultipleListLevelRecord_json_count > 0){
+?>
+																<ul class="acnav__list acnav__list--level3">
+<?php
+	
+	foreach ($selectMultipleListLevelRecord_json['selectMultipleListLevelRecord_details'] as $menuMultipleRecord_lists) {
+	  $product_list_id_t  = $menuMultipleRecord_lists["product_list_id"];
+	  $product_primary_id_t = $menuMultipleRecord_lists["product_primary_id"];
+	  $product_list_t = $menuMultipleRecord_lists["product_list"];
+	  $product_type_t = $menuMultipleRecord_lists["product_type"];
+	  $sub_id_t = $menuMultipleRecord_lists["sub_id"];
+	  $categories_group_t = $menuMultipleRecord_lists["categories_group"];
+?>
+																	<li>
+																	<?php echo $product_list_t; ?>
+																	</li>
+<?php
+	}
 
-														<?php /* ?>
-														<li class="has-children">
-															<div class="acnav__label acnav__label--level2">
-																Group 1.1 (level 2)
-															</div>
-															<!-- start level 3 -->
-															<ul class="acnav__list acnav__list--level3">
-																<li>
-																	<a class="acnav__link acnav__link--level3" href="">Item (level 3)</a>
-																</li>
-																<li>
-																	<a class="acnav__link acnav__link--level3" href="">Item (level 3)</a>
-																</li>
-																<li class="has-children">
-																	<div class="acnav__label acnav__label--level3">
-																		Group 1.1.1 (level 3)
-																	</div>
-																	<!-- start level 4 -->
-																	<ul class="acnav__list acnav__list--level4">
-																		<li>
-																			<a class="acnav__link acnav__link--level4" href="">Item (level 4)</a>
-																		</li>
-																	</ul>
-																	<!-- end level 4 -->
-																</li>
-																<li class="has-children">
-																	<div class="acnav__label acnav__label--level3">
-																		Group 1.1.2 (level 3)
-																	</div>
-																	<!-- start level 4 -->
-																	<ul class="acnav__list acnav__list--level4">
-																		<li>
-																			<a class="acnav__link acnav__link--level4" href="">Item (level 4)</a>
-																		</li>
-																	</ul>
-																	<!-- end level 4 -->
-																</li>
-															</ul>
-															<!-- end level 3 -->
-														</li>
+?>																	
+																	
+																</ul>
+<?php
+		
+	}
+*/
+?>
+															</li>
+<?php
+	}
 
-														<li class="has-children">
-															<div class="acnav__label acnav__label--level2">
-																Group 1.2 (level 2)
-															</div>
-															<!-- start level 3 -->
-															<ul class="acnav__list acnav__list--level3">
-																<li>
-																	<a class="acnav__link acnav__link--level3" href="">Item (level 3)</a>
-																</li>
-																<li>
-																	<a class="acnav__link acnav__link--level3" href="">Item (level 3)</a>
-																</li>
-																<li class="has-children">
-																	<div class="acnav__label acnav__label--level3">
-																		Group 1.2.1 (level 3)
-																	</div>
-																	<!-- start level 4 -->
-																	<ul class="acnav__list acnav__list--level4">
-																		<li>
-																			<a class="acnav__link acnav__link--level4" href="">Item (level 4)</a>
-																		</li>
-																	</ul>
-																	<!-- end level 4 -->
-																</li>
-																<li class="has-children">
-																	<div class="acnav__label acnav__label--level3">
-																		Group 1.2.2 (level 3)
-																	</div>
-																	<!-- start level 4 -->
-																	<ul class="acnav__list acnav__list--level4">
-																		<li>
-																			<a class="acnav__link acnav__link--level4" href="">Item (level 4)</a>
-																		</li>
-																	</ul>
-																	<!-- end level 4 -->
-																</li>
-															</ul>
-															<!-- end level 3 -->
-														</li>
+?>	                                                 									
+															
 
-														<?php */ ?>
-													</ul>
-													<!-- end level 2 -->
-												</li>
-												<!-- end group 1 -->										
+													
+														</ul>
+<?php
+	}
+?>														<!-- end level 2 -->
+													</li>
+													<!-- end group 1 -->
+                                               												
+<?php
+	
 
-											</ul>
-											<!-- end level 1 -->
-										</nav>
-										</div><!--overview_para Ends -->
+	}
+}
+?>															
+																						
+
+												</ul>
+												<!-- end level 1 -->
+												</nav>
+											</div><!--content_acco Ends -->
 									</div><!--course_content Ends -->
 
 									<div class="course_overview"><!--course_overview Starts -->

@@ -30,10 +30,24 @@
                             <div class="head_list">
                                 <ul>
                                     <li>
-                                        <a href="courses/technical">SAP Basis</a>
+                                        <a href="courses/technical">
+                                            <div class="image">
+                                                <img src="images/menu_image/menu_icons/sap.png" alt="SAP Certification Training">
+                                            </div>
+                                            <div class="txt">
+                                                SAP ABAP
+                                            </div>
+                                        </a>
                                     </li>
                                     <li>
-                                        <a href="courses/sap-abap">SAP Abap</a>
+                                        <a href="courses/technical">
+                                            <div class="image">
+                                                <img src="images/menu_image/menu_icons/sap.png" alt="SAP Certification Training">
+                                            </div>
+                                            <div class="txt">
+                                                SAP Basis
+                                            </div>
+                                        </a>
                                     </li>                                                                
                                 </ul>
                             </div>
@@ -46,10 +60,24 @@
                             <div class="head_list">
                                 <ul>
                                     <li>
-                                        <a href="courses/technical">SAP FICO</a>
+                                        <a href="courses/technical">
+                                            <div class="image">
+                                                <img src="images/menu_image/menu_icons/sap.png" alt="SAP Certification Training">
+                                            </div>
+                                            <div class="txt">
+                                                SAP FICO
+                                            </div>
+                                        </a>
                                     </li>
                                     <li>
-                                        <a href="courses/sap-abap">SAP SD</a>
+                                        <a href="courses/technical">
+                                            <div class="image">
+                                                <img src="images/menu_image/menu_icons/sap.png" alt="SAP Certification Training">
+                                            </div>
+                                            <div class="txt">
+                                                SAP SD
+                                            </div>
+                                        </a>
                                     </li>                                                                
                                 </ul>
                             </div>
@@ -73,11 +101,25 @@
                             <div class="head_list">
                                 <ul>
                                     <li>
-                                        <a href="courses/technical">Workday Basis</a>
+                                        <a href="courses/technical">
+                                            <div class="image">
+                                                <img src="images/menu_image/menu_icons/sap.png" alt="SAP Certification Training">
+                                            </div>
+                                            <div class="txt">
+                                                Work Day Basis
+                                            </div>
+                                        </a>
                                     </li>
                                     <li>
-                                        <a href="courses/sap-abap">SAP Abap</a>
-                                    </li>                                                                
+                                        <a href="courses/technical">
+                                            <div class="image">
+                                                <img src="images/menu_image/menu_icons/sap.png" alt="SAP Certification Training">
+                                            </div>
+                                            <div class="txt">
+                                                Work Day FICO
+                                            </div>
+                                        </a>
+                                    </li>                                                               
                                 </ul>
                             </div>
                         </div>    
@@ -89,11 +131,25 @@
                             <div class="head_list">
                                 <ul>
                                     <li>
-                                        <a href="courses/technical">SAP FICO</a>
+                                        <a href="courses/technical">
+                                            <div class="image">
+                                                <img src="images/menu_image/menu_icons/sap.png" alt="SAP Certification Training">
+                                            </div>
+                                            <div class="txt">
+                                                Work Day FICO
+                                            </div>
+                                        </a>
                                     </li>
                                     <li>
-                                        <a href="courses/sap-abap">SAP SD</a>
-                                    </li>                                                                
+                                        <a href="courses/technical">
+                                            <div class="image">
+                                                <img src="images/menu_image/menu_icons/sap.png" alt="SAP Certification Training">
+                                            </div>
+                                            <div class="txt">
+                                                Work Day FICO
+                                            </div>
+                                        </a>
+                                    </li>                                                               
                                 </ul>
                             </div>
                         </div>    
