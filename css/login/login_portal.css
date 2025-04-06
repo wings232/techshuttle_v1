@@ -185,7 +185,7 @@
 
 .login_form .form_head .form_ajax .form_feild .login_feild .feild input {
     width: 100%;
-    padding: 12px 10px 9px 10px;
+    padding: 17px 10px 9px 10px;
     font-size: 14px;
     box-sizing: border-box;
     color: var(--black);
@@ -196,6 +196,7 @@
     background: transparent;
     font-family: "Poppins_regular";
     transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
+    font-family: var(--font_regular);
 }
 
 .login_form .form_head .form_ajax .form_feild .login_feild .feild .feild_box .age_count {
@@ -220,6 +221,7 @@
     left: 8px;
     top: 110%;
     font-size: 12px;
+    font-family: var(--font_regular);
 }
 
 .login_form .form_head .form_ajax .form_feild .login_feild .feild .feild_box .gender_drop{
@@ -266,6 +268,7 @@
     float: left;
     text-align: center;
     line-height: 30px;
+    font-family: var(--font_regular);
 }
 
 .container .login_portal .login_form .form_head .form_ajax  .verify_para {
@@ -295,6 +298,7 @@
     border-radius: 5px;
     cursor: pointer;
     margin-left: 30px;
+    font-family: var(--font_regular);
 }
 
 .container .login_portal .login_form .form_head .form_ajax .multiple_button ul li:nth-child(2){
@@ -305,6 +309,7 @@
     border-radius: 5px;
     cursor: pointer;
     margin-right: 30px;
+    font-family: var(--font_regular);
 }
 
 .container .login_portal .login_form .form_head .form_ajax  .verify_para p span {
@@ -449,6 +454,7 @@
     background: none;
     box-shadow: none;
     color: var(--error);
+    font-family: var(--font_regular);
 }
 
 .squaredThree label {

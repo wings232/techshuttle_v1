@@ -91,16 +91,19 @@
 		$forCourseSingleDetails_query = $conn->query($forCourseSingleDetails_sql);
 		//return $login_result = $login_query->fetch_assoc();
 		$forCourseSingleDetails_row = $forCourseSingleDetails_query->num_rows;
+		$data = array();
 		if($forCourseSingleDetails_row != 0){
 			while($forCourseSingleDetails_result = $forCourseSingleDetails_query->fetch_assoc()) { //loop the rows returned from db
 	        	$forCourseSingleDetailsArr[] = $forCourseSingleDetails_result; //add row to array
 	    	}
 	    	//return $mediaArr; 
-	    	$data = array();
-			$data['forCourseSingleDetails_count'] = $forCourseSingleDetails_row;
+	    	
+			
 			$data['forCourseSingleDetails_details'] = $forCourseSingleDetailsArr;
-			return json_encode($data);
+			
 		}
+		$data['forCourseSingleDetails_count'] = $forCourseSingleDetails_row;
+		return json_encode($data);
 	}
 
 	function forCourseProductDescriptionDetails($table_name,$product_primary_id,$product_type,$menu_group,$menu_status){
@@ -225,16 +228,19 @@
 		$selectLoginCheck_query = $conn->query($selectLoginCheck_sql);
 		//return $login_result = $login_query->fetch_assoc();
 		$selectLoginCheck_row = $selectLoginCheck_query->num_rows;
+		$data = array();
 		if($selectLoginCheck_row != 0){
 			while($selectLoginCheck_result = $selectLoginCheck_query->fetch_assoc()) { //loop the rows returned from db
 	        	$selectLoginCheckArr[] = $selectLoginCheck_result; //add row to array
 	    	}
 	    	//return $mediaArr; 
-	    	$data = array();
-			$data['selectLoginCheck_count'] = $selectLoginCheck_row;
+	    	
+			
 			$data['selectLoginCheck_details'] = $selectLoginCheckArr;
-			return json_encode($data);
+			
 		}
+		$data['selectLoginCheck_count'] = $selectLoginCheck_row;
+		return json_encode($data);
 	}
 
 	function selectLoginDetails($table_name,$loginId){
@@ -359,16 +365,19 @@
 		$forCourseSingleDetailsId_query = $conn->query($forCourseSingleDetailsId_sql);
 		//return $login_result = $login_query->fetch_assoc();
 		$forCourseSingleDetailsId_row = $forCourseSingleDetailsId_query->num_rows;
+		$data = array();
 		if($forCourseSingleDetailsId_row != 0){
 			while($forCourseSingleDetailsId_result = $forCourseSingleDetailsId_query->fetch_assoc()) { //loop the rows returned from db
 	        	$forCourseSingleDetailsIdArr[] = $forCourseSingleDetailsId_result; //add row to array
 	    	}
 	    	//return $mediaArr; 
-	    	$data = array();
-			$data['forCourseSingleDetailsId_count'] = $forCourseSingleDetailsId_row;
+	    	
+			
 			$data['forCourseSingleDetailsId_details'] = $forCourseSingleDetailsIdArr;
-			return json_encode($data);
+			
 		}
+		$data['forCourseSingleDetailsId_count'] = $forCourseSingleDetailsId_row;
+		return json_encode($data);
 	}
 
 	//SELECT * FROM `tbl_adminission_form` where register_id = 12 and course_id = 4 and admin_gen_id = "TSSA4600380"

@@ -18,70 +18,91 @@
 <div class="tech_menu">                                
     <div class="cate_sub">
         <ul>
-            <li>SAP  <!--Menu First Child Starts -->
+<?php
+    $menu_id = 1;
+	$selectMultipleMenuLevelRecord= selectMultipleMenuLevelRecord("tbl_navigation_setup",2,$menu_id,'Active');
+	$selectMultipleMenuLevelRecord_json = json_decode($selectMultipleMenuLevelRecord, true);
+	//print_r($accopany_filter_List_json);
+	$selectMultipleMenuLevelRecord_json_count = isset($selectMultipleMenuLevelRecord_json['menuMultipleLevelRecord_count'])?$selectMultipleMenuLevelRecord_json['menuMultipleLevelRecord_count']:"";
+	if($selectMultipleMenuLevelRecord_json_count > 0){                     
+
+	  foreach ($selectMultipleMenuLevelRecord_json['menuMultipleLevelRecord_details'] as $menuMultipleRecords_lists) {
+	      $menu_ids  = $menuMultipleRecords_lists["menu_id"];
+	      $menu_names = $menuMultipleRecords_lists["menu_name"];
+	      $menu_sub_ids = $menuMultipleRecords_lists["sub_id"];
+	      $menu_url = $menuMultipleRecords_lists["menu_url"];
+	      $menu_slug = $menuMultipleRecords_lists["menu_slug"];
+	      $menu_banner = $menuMultipleRecords_lists["banner"];
+	      $categories_groups = $menuMultipleRecords_lists["categories_group"];
+?>
+            <li>
+                <?php if($categories_groups != 'courses'){ ?> <a href="<?php echo $menu_url; ?>"><?php echo $menu_names; ?></a> <?php } else { echo $menu_names; }?>
+                <!--Menu First Child Starts -->
                 <div class="sub_cate">
                     <div class="sub_level">
+<?php
+	$selectMultipleMenuLevelRecord= selectMultipleMenuLevelRecord("tbl_navigation_setup",3,$menu_ids,'Active');
+	$selectMultipleMenuLevelRecord_json = json_decode($selectMultipleMenuLevelRecord, true);
+	//print_r($accopany_filter_List_json);
+	$selectMultipleMenuLevelRecord_json_count = isset($selectMultipleMenuLevelRecord_json['menuMultipleLevelRecord_count'])?$selectMultipleMenuLevelRecord_json['menuMultipleLevelRecord_count']:"";
+	if($selectMultipleMenuLevelRecord_json_count > 0){                     
 
-                        <div class="course_head">
+	  foreach ($selectMultipleMenuLevelRecord_json['menuMultipleLevelRecord_details'] as $menuMultipleRecords_lists) {
+	      $menu_ids_t  = $menuMultipleRecords_lists["menu_id"];
+	      $menu_names_t = $menuMultipleRecords_lists["menu_name"];
+	      $menu_sub_ids_t = $menuMultipleRecords_lists["sub_id"];
+	      $menu_url_t = $menuMultipleRecords_lists["menu_url"];
+	      $menu_slug_t = $menuMultipleRecords_lists["menu_slug"];
+	      $menu_banner_t = $menuMultipleRecords_lists["banner"];
+	      $categories_groups_t = $menuMultipleRecords_lists["categories_group"];
+?>
+                        <div class="course_head"><!--course_head Starts-->
 
                             <div class="head">
-                                <a href="course_catalogue.php?key_one=courses&key_two=technical">Technical</a>
+                                <a href="<?php echo $menu_url_t;?>?key_one=<?php echo $categories_groups_t;?>&key_two=<?php echo $menu_slug_t;?>">
+									<?php echo $menu_names_t;?>
+                                </a>
                             </div>
                             <div class="head_list">
                                 <ul>
-                                    <li>
-                                        <a href="courses/technical">
-                                            <div class="image">
-                                                <img src="images/menu_image/menu_icons/sap.png" alt="SAP Certification Training">
-                                            </div>
-                                            <div class="txt">
-                                                SAP ABAP
-                                            </div>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="courses/technical">
-                                            <div class="image">
-                                                <img src="images/menu_image/menu_icons/sap.png" alt="SAP Certification Training">
-                                            </div>
-                                            <div class="txt">
-                                                SAP Basis
-                                            </div>
-                                        </a>
-                                    </li>                                                                
-                                </ul>
-                            </div>
-                        </div>    
-                        <div class="course_head">
+<?php
+	$selectMultipleMenuLevelRecord= selectMultipleMenuLevelRecord("tbl_navigation_setup",4,$menu_ids_t,'Active');
+	$selectMultipleMenuLevelRecord_json = json_decode($selectMultipleMenuLevelRecord, true);
+	//print_r($accopany_filter_List_json);
+	$selectMultipleMenuLevelRecord_json_count = isset($selectMultipleMenuLevelRecord_json['menuMultipleLevelRecord_count'])?$selectMultipleMenuLevelRecord_json['menuMultipleLevelRecord_count']:"";
+	if($selectMultipleMenuLevelRecord_json_count > 0){                     
 
-                            <div class="head">
-                                <a href="course_catalogue.php?key_one=courses&key_two=technical">Functional</a>
-                            </div>
-                            <div class="head_list">
-                                <ul>
+	  foreach ($selectMultipleMenuLevelRecord_json['menuMultipleLevelRecord_details'] as $menuMultipleRecords_lists) {
+	      $menu_ids_f  = $menuMultipleRecords_lists["menu_id"];
+	      $menu_names_f = $menuMultipleRecords_lists["menu_name"];
+	      $menu_sub_ids_f = $menuMultipleRecords_lists["sub_id"];
+	      $menu_url_f = $menuMultipleRecords_lists["menu_url"];
+	      $menu_slug_f = $menuMultipleRecords_lists["menu_slug"];
+	      $menu_banner_f = $menuMultipleRecords_lists["banner"];
+	      $categories_groups_f = $menuMultipleRecords_lists["categories_group"];
+?>
                                     <li>
-                                        <a href="courses/technical">
+                                        <a href="<?php echo $categories_groups_f;?>/<?php echo $menu_slug_f;?>">
                                             <div class="image">
                                                 <img src="images/menu_image/menu_icons/sap.png" alt="SAP Certification Training">
                                             </div>
                                             <div class="txt">
-                                                SAP FICO
+                                                <?php echo $menu_names_f;?>
                                             </div>
                                         </a>
                                     </li>
-                                    <li>
-                                        <a href="courses/technical">
-                                            <div class="image">
-                                                <img src="images/menu_image/menu_icons/sap.png" alt="SAP Certification Training">
-                                            </div>
-                                            <div class="txt">
-                                                SAP SD
-                                            </div>
-                                        </a>
-                                    </li>                                                                
+<?php
+	}
+}
+?>                                                                
                                 </ul>
                             </div>
-                        </div>    
+                        </div><!--course_head Ends-->
+<?php
+	}
+}
+?> 
+                            
                         <div class="course_img">
                             <img src="images/menu_image/course_bar_image3.webp">
                         </div>
@@ -89,77 +110,10 @@
                     </div>
                 </div>    
             </li><!--Menu First Child Ends -->
-            <li>Workday  <!--Menu First Child Starts -->
-                <div class="sub_cate">
-                    <div class="sub_level">
-
-                        <div class="course_head">
-
-                            <div class="head">
-                                <a href="course_catalogue.php?key_one=courses&key_two=technical">Technical</a>
-                            </div>
-                            <div class="head_list">
-                                <ul>
-                                    <li>
-                                        <a href="courses/technical">
-                                            <div class="image">
-                                                <img src="images/menu_image/menu_icons/sap.png" alt="SAP Certification Training">
-                                            </div>
-                                            <div class="txt">
-                                                Work Day Basis
-                                            </div>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="courses/technical">
-                                            <div class="image">
-                                                <img src="images/menu_image/menu_icons/sap.png" alt="SAP Certification Training">
-                                            </div>
-                                            <div class="txt">
-                                                Work Day FICO
-                                            </div>
-                                        </a>
-                                    </li>                                                               
-                                </ul>
-                            </div>
-                        </div>    
-                        <div class="course_head">
-
-                            <div class="head">
-                                <a href="course_catalogue.php?key_one=courses&key_two=technical">Functional</a>
-                            </div>
-                            <div class="head_list">
-                                <ul>
-                                    <li>
-                                        <a href="courses/technical">
-                                            <div class="image">
-                                                <img src="images/menu_image/menu_icons/sap.png" alt="SAP Certification Training">
-                                            </div>
-                                            <div class="txt">
-                                                Work Day FICO
-                                            </div>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="courses/technical">
-                                            <div class="image">
-                                                <img src="images/menu_image/menu_icons/sap.png" alt="SAP Certification Training">
-                                            </div>
-                                            <div class="txt">
-                                                Work Day FICO
-                                            </div>
-                                        </a>
-                                    </li>                                                               
-                                </ul>
-                            </div>
-                        </div>    
-                        <div class="course_img">
-                            <img src="images/menu_image/course_bar_image3.webp">
-                        </div>
-                    
-                    </div>
-                </div>    
-            </li><!--Menu First Child Ends -->
+<?php
+	}
+}
+?>   
             
         </ul>
     </div>

@@ -318,6 +318,87 @@ body{
     cursor: pointer;
 }
 
+.header .logo_search .login .login_b  > ul > li:last-child{
+    float: right;
+    position: relative;
+    max-width: 200px;
+    min-width: 150px;
+}
+
+.header .logo_search .login .login_b  > ul > li .head_ellipsis{
+    width: 100%;
+    float:left;
+    padding: 12px 10px;
+    white-space: nowrap;
+    display:block;
+    overflow-x: hidden;
+    box-sizing: border-box;
+    text-overflow: ellipsis; 
+    color:white;
+    border-radius: 5px;
+    cursor: pointer;
+    /*background: #ee344e;*/
+    background:var(--primary_color);
+}
+
+.header .logo_search .login .login_b   > ul > li:hover .head_ellipsis{
+    border-radius: 5px 5px 0px 0px;
+}
+
+.header .logo_search .login .login_b   > ul > li:hover > .head_ellipsis{
+    background:var(--primary_color);
+}
+
+.header .logo_search .login .login_b   > ul > li > .head_ellipsis i{
+    padding: 5px;
+    color: var(--white-color);
+    border: 1px solid;
+    border-radius: 100px;
+    margin-right: 15px;
+}
+
+.header .logo_search .login .login_b   > ul > li.login_list:hover .kmh_headbar_sublist{
+    display: block;
+}
+
+.header .logo_search .login .login_b   > ul > li .kmh_headbar_sublist{
+    position: absolute;
+    background: #fff;
+    width: 99%;
+    z-index: 999999;
+    display: none;
+    top: 100%;
+    border-radius: 0px 0px 5px 5px;
+    border: 1px solid #eee;
+}
+
+.header .logo_search .login .login_b   > ul > li .kmh_headbar_sublist > ul > li{
+    width: 100%;
+    float: left;
+    border-bottom: 1px solid #ebe8e8;
+}
+
+.header .logo_search .login .login_b   > ul > li .kmh_headbar_sublist > ul > li:last-child{
+    border-bottom: none;
+}
+
+.header .logo_search .login .login_b   > ul > li .kmh_headbar_sublist > ul > li > a{
+    padding: 10px;
+    width: 100%;
+    float: left;
+    color: black;
+    box-sizing: border-box;
+    font-family: 'Roboto Regular';
+}
+
+.header .logo_search .login .login_b  > ul > li .kmh_headbar_sublist > ul > li > a:hover{
+    background: #e3dff5;
+}
+
+.header .logo_search .login .login_b  > ul > li .kmh_headbar_sublist > ul > li:last-child > a:hover{
+    border-radius: 0px 0px 5px 5px;
+}
+
 .header .logo_search .login .login_b .image{
     float: left;
     padding: 12px 10px;

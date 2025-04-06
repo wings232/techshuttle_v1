@@ -128,3 +128,61 @@ $(document).on("click",".acnav__label",function(){
 		parent.addClass('is-open');
 	} */
 });
+
+$(document).on("click",".header .logo_search .login .login_b .login_tabs",function(){
+        //$(this).parent().hide();
+        /*$('.login_tab').css({"display":"block"});
+        $('.login_overlay').css({"display":"block"});*/
+        window.location.href ="student_portal.php";
+});
+
+$(document).on("click",".course_content .course_right .border_bar .button .enroll_login",function(){
+	$(this).next().slideToggle(200);
+});
+
+$(document).ready(function(){
+	/*if($('.batch_c').is(':checked') ){
+	    $('.enroll_admission').addClass('batch_mapped');
+	}
+
+	$('.batch_c').click(function(){
+		$('.enroll_admission').addClass('batch_mapped');
+		$('.float_batch').css({'display':'none'});
+	});*/
+	$('.enroll_admission').click(function(){
+			window.location.href ="admission_form.php";
+		//if($('.batch_c').is(':checked') ){
+		    // var batch_map_id = document.querySelector('input[name="user"]:checked').value;
+		    // var price_id_ilt = document.getElementById('price_id_ilt').value;
+		    // var price_id_key = $(this).attr('key');
+		    // var price_id_slv = document.getElementById('price_id_slv').value;
+		    // var course_ids = document.getElementById('course_ids').value;
+			// //alert(name + "-" + price_id_ilt + "-" + price_id_key );
+			// $.ajax({
+		    // 	url:'ajax/portal/adms_form.php',
+		    //     type:'post',
+		    //     data:{
+			//         	batch_map_id:batch_map_id,
+			//         	price_id_ilt:price_id_ilt,
+			//         	course_ids:course_ids,
+			//         	price_id_slv:price_id_slv,
+			//         	price_id_key:price_id_key,
+			//         },
+		    //     success:function(result){
+		    //       //$(".right_container .levels_create").show();
+		    //       //$('.levels_create').html(result);
+		    //       //levels_create_center();
+		    //       //close_but();
+		    //       //alert(result);
+		    //       
+		    //     }
+			// });
+		//}else{
+			//$(this).next('.float_batch').css({'display':'block'});
+			//$(this).next('.float_batch').html('Please Select the batch');
+		//}
+	});
+	/*$(document).on("click",".batch_mapped",function(){
+    	
+	});*/
+});

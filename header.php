@@ -18,14 +18,41 @@
                 </div>
             </div>
             <div class='login'>
+<?php
+//$flag = 0;
+    if($user_session == ""){
+?>
                 <div class="login_b">
-                    <div class="image">
-                        <i class='fas fa-user-alt'></i>
-                    </div>
-                    <div class="name">
-                        Login
+                    <div class='login_tabs'>
+                        <div class="image">
+                            <i class='fas fa-user-alt'></i>
+                        </div>
+                        <div class="name">
+                            Login
+                        </div>
                     </div>
                 </div>
+<?php
+    }  
+    if($user_session != ""){
+
+?>
+
+                <div class="login_b">
+                    <ul>
+                        <li class="login_list"><span class='head_ellipsis'><i class='fas fa-user-alt'></i><?php echo $user_name; ?></span>
+                            <div class='kmh_headbar_sublist'><!--fz_headbar_sublist Starts-->
+                                <ul>                                
+                                    <li><a href='students_portal.php'>Dashboard</a></li>
+                                    <li><a class='last' href='ajax/portal/sign_off.php'>Log Out</a></li>
+                                </ul>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <?php
+    }  
+?>
             </div>
         </div><!--logo_search Ends -->
     </div><!--header Ends -->

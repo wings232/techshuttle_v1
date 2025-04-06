@@ -68,6 +68,7 @@ function verify_mob_num(){
 	              	//response = await fetch(window.history.go(-2));       
 	              	//window.history.go(-1);
 	              	lastPageUrl = document.referrer
+					//alert(lastPageUrl);
 	              	window.location.href = lastPageUrl;
 	              	//console.log(`Last visited page URL is ${lastPageUrl}`)
 	              	

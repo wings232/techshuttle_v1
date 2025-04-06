@@ -1038,11 +1038,50 @@
     margin: 20px 0;
     border-bottom: 1px solid #dde0e3;
     padding-bottom: 20px;
+    position: relative;
 }
 
 .course_content .course_right .border_bar .button .sec-btn{
     cursor: pointer;
     padding: 21px 59px;
+}
+
+.course_content .course_right .border_bar .button .float_type{
+    position: absolute;
+    width: 50%;
+    padding:10px;
+    border:1px solid #ddd;
+    top:-60px;
+    text-align: center;
+    background: white;
+    border-radius: 5px;
+    display: none;
+    z-index: 9;
+}
+
+.course_content .course_right .border_bar .button .float_type:after{
+    position: absolute;
+    content: "";
+    border-top: 20px solid #fff;
+    border-left: 20px solid transparent;
+    border-right: 20px solid transparent;
+    top: 100%;
+    left: 50%;
+}
+
+.course_content .course_right .border_bar .button .float_type:before{
+    position: absolute;
+    content: "";
+    border-top: 20px solid #ddd;
+    border-left: 20px solid transparent;
+    border-right: 20px solid transparent;
+    top: 102%;
+    left: 50%;
+}
+
+.course_content .course_right .border_bar .button .float_type a{
+    color: var(--primary_color);
+    text-decoration: underline;
 }
 
 .course_content .course_right .border_bar .other_details{

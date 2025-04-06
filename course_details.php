@@ -777,7 +777,28 @@ foreach ($selectMultipleListRecord_json['selectMultipleListRecord_details'] as $
 												</div>
 												<div class="button">
 													<div class="banner-btn wow fadeup-animation animated" data-wow-duration="0.8s" data-wow-delay="0.5s" style="visibility: visible; animation-duration: 0.8s; animation-delay: 0.5s;">
-														<div class="sec-btn"><span>Enroll Now</span></div>
+<?php
+//$flag = 0;
+    if($user_session == ""){
+?>
+														<div class="sec-btn but enroll_login"><span>Enroll Now</span></div>
+														<div class="float_type">
+															Click here to <a href="student_portal.php">login</a>
+														</div>
+<?php
+    }  
+    if($user_session != ""){
+
+?>
+														<div class="sec-btn but enroll_admission"><span>Enroll Now</span></div>
+														<div class="float_batch">
+												
+														</div>
+														<?php
+    }  
+
+
+?>
 													</div>
 												</div>
 												<div class="other_details">

@@ -1,3 +1,9 @@
+<?php
+	include "dbconn.php";
+	include_once "func_templates/func_code.php";
+	include "check_ses_list.php";
+	//include "constantconfig.php";
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
