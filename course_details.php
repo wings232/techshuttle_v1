@@ -364,171 +364,49 @@
 										</div><!--overview_para Ends -->
 									</div><!--course_overview Ends -->
 
-
-									<div class="mat_inc_enq"><!--mat_inc_enq Starts -->
-<?php
-	$forCourseProductDescriptionDetails= forCourseProductDescriptionDetails("tbl_product_description",$menu_ids_f,'Material Includes','courses','Active');
-	$forCourseProductDescriptionDetails_json = json_decode($forCourseProductDescriptionDetails, true);
-	//print_r($accopany_filter_List_json);
-	$forCourseProductDescriptionDetails_json_count = isset($forCourseProductDescriptionDetails_json['forCourseProductDescriptionDetails_count'])?$forCourseProductDescriptionDetails_json['forCourseProductDescriptionDetails_count']:"";
-?>
-										<div class="material_inc"><!--material_inc Starts -->
-											<div class="material_head"><!--material_head Starts -->
-												<div class="head"><!--head Starts -->
-													Material Includes
-												</div><!--head Ends -->
-											</div><!--material_head Ends -->
-											<div class="material_list"><!--material_list Starts -->
-												<ul>
-<?php
-	if($forCourseProductDescriptionDetails_json_count > 0){  
-	  foreach ($forCourseProductDescriptionDetails_json['forCourseProductDescriptionDetails_details'] as $courseDescription) {
-	      $product_description  = $courseDescription["product_description"];
-?>
-													<li><!-- Loop Starts -->
-														<div class="image">
-															<img src="images/icons/tick.webp">
-														</div>
-														<div class="img_txt">
-															<div class="txt">
-																<?php echo $product_description; ?>														
-															</div>
-														</div>
-													</li><!-- Loop Ends -->
-<?php
-	}
-}
-/*
-													<li><!-- Loop Starts -->
-														<div class="image">
-															<img src="images/icons/tick.webp">
-														</div>
-														<div class="img_txt">
-															<div class="txt">
-																Access to the LMS															
-															</div>
-														</div>
-													</li><!-- Loop Ends -->
-													<li><!-- Loop Starts -->
-														<div class="image">
-															<img src="images/icons/tick.webp">
-														</div>
-														<div class="img_txt">
-															<div class="txt">
-																All Videos Downloadable															
-															</div>
-														</div>
-													</li><!-- Loop Ends -->
-													<li><!-- Loop Starts -->
-														<div class="image">
-															<img src="images/icons/tick.webp">
-														</div>
-														<div class="img_txt">
-															<div class="txt">
-																Access to the LMS															
-															</div>
-														</div>
-													</li><!-- Loop Ends -->
-													<li><!-- Loop Starts -->
-														<div class="image">
-															<img src="images/icons/tick.webp">
-														</div>
-														<div class="img_txt">
-															<div class="txt">
-																All Videos Downloadable															
-															</div>
-														</div>
-													</li><!-- Loop Ends -->
-													<li><!-- Loop Starts -->
-														<div class="image">
-															<img src="images/icons/tick.webp">
-														</div>
-														<div class="img_txt">
-															<div class="txt">
-																Access to the LMS															
-															</div>
-														</div>
-													</li><!-- Loop Ends -->
-													<li><!-- Loop Starts -->
-														<div class="image">
-															<img src="images/icons/tick.webp">
-														</div>
-														<div class="img_txt">
-															<div class="txt">
-																All Videos Downloadable															
-															</div>
-														</div>
-													</li><!-- Loop Ends -->
-													<li><!-- Loop Starts -->
-														<div class="image">
-															<img src="images/icons/tick.webp">
-														</div>
-														<div class="img_txt">
-															<div class="txt">
-																All Videos Downloadable															
-															</div>
-														</div>
-													</li><!-- Loop Ends -->
-													<li><!-- Loop Starts -->
-														<div class="image">
-															<img src="images/icons/tick.webp">
-														</div>
-														<div class="img_txt">
-															<div class="txt">
-																All Videos Downloadable															
-															</div>
-														</div>
-													</li><!-- Loop Ends -->
-	*/	
-?>
-												</ul>
-											</div><!--material_list Ends -->
-										</div><!--material_inc Ends -->
-										<div class="enq_learn"><!--enq_learn Starts -->
-											<div class="enq_button"><!--enq_button Starts -->
-												<div class="banner-btn wow fadeup-animation animated" data-wow-duration="0.8s" data-wow-delay="0.5s" style="visibility: visible; animation-duration: 0.8s; animation-delay: 0.5s;">
-													<a href="" class="sec-btn" title="Get Started"><span>For Enquire</span></a>
-												</div>
-											</div><!--enq_button Ends -->
-											<div class="learn_obj"><!--learn_obj Starts -->
-												<div class="learn_head"><!--learn_head Starts -->
+									<div class='mat_enquiry'><!--mat_enquiry Starts -->
+										<div class="mat_inc_enq"><!--mat_inc_enq Starts -->
+	<?php
+		$forCourseProductDescriptionDetails= forCourseProductDescriptionDetails("tbl_product_description",$menu_ids_f,'Material Includes','courses','Active');
+		$forCourseProductDescriptionDetails_json = json_decode($forCourseProductDescriptionDetails, true);
+		//print_r($accopany_filter_List_json);
+		$forCourseProductDescriptionDetails_json_count = isset($forCourseProductDescriptionDetails_json['forCourseProductDescriptionDetails_count'])?$forCourseProductDescriptionDetails_json['forCourseProductDescriptionDetails_count']:"";
+	?>
+											<div class="material_inc"><!--material_inc Starts -->
+												<div class="material_head"><!--material_head Starts -->
 													<div class="head"><!--head Starts -->
-														Learning Objectives
+														Material Includes
 													</div><!--head Ends -->
-												</div><!--learn_head Ends -->
-												<div class="learn_list"><!--learn_list Starts -->
+												</div><!--material_head Ends -->
+												<div class="material_list"><!--material_list Starts -->
 													<ul>
-<?php
-	$forCourseProductDescriptionDetails= forCourseProductDescriptionDetails("tbl_product_description",$menu_ids_f,'Learning Objectives','courses','Active');
-	$forCourseProductDescriptionDetails_json = json_decode($forCourseProductDescriptionDetails, true);
-	//print_r($accopany_filter_List_json);
-	$forCourseProductDescriptionDetails_json_count = isset($forCourseProductDescriptionDetails_json['forCourseProductDescriptionDetails_count'])?$forCourseProductDescriptionDetails_json['forCourseProductDescriptionDetails_count']:"";
-	if($forCourseProductDescriptionDetails_json_count > 0){  
-	  foreach ($forCourseProductDescriptionDetails_json['forCourseProductDescriptionDetails_details'] as $courseDescription) {
-	      $product_description  = $courseDescription["product_description"];
-?>
+	<?php
+		if($forCourseProductDescriptionDetails_json_count > 0){  
+		foreach ($forCourseProductDescriptionDetails_json['forCourseProductDescriptionDetails_details'] as $courseDescription) {
+			$product_description  = $courseDescription["product_description"];
+	?>
 														<li><!-- Loop Starts -->
 															<div class="image">
 																<img src="images/icons/tick.webp">
 															</div>
 															<div class="img_txt">
 																<div class="txt">
-																	<?php echo $product_description; ?>																
+																	<?php echo $product_description; ?>														
 																</div>
 															</div>
 														</li><!-- Loop Ends -->
-														<?php
-
-}
-}
-/*
+	<?php
+		}
+	}
+	/*
 														<li><!-- Loop Starts -->
 															<div class="image">
 																<img src="images/icons/tick.webp">
 															</div>
 															<div class="img_txt">
 																<div class="txt">
-																	Expanded responsibilities as part of an existing role.																</div>
+																	Access to the LMS															
+																</div>
 															</div>
 														</li><!-- Loop Ends -->
 														<li><!-- Loop Starts -->
@@ -537,7 +415,8 @@
 															</div>
 															<div class="img_txt">
 																<div class="txt">
-																	Find a new position involving data modeling.																</div>
+																	All Videos Downloadable															
+																</div>
 															</div>
 														</li><!-- Loop Ends -->
 														<li><!-- Loop Starts -->
@@ -546,7 +425,8 @@
 															</div>
 															<div class="img_txt">
 																<div class="txt">
-																	Find a new position involving data modeling.																</div>
+																	Access to the LMS															
+																</div>
 															</div>
 														</li><!-- Loop Ends -->
 														<li><!-- Loop Starts -->
@@ -555,7 +435,8 @@
 															</div>
 															<div class="img_txt">
 																<div class="txt">
-																	Find a new position involving data modeling.																</div>
+																	All Videos Downloadable															
+																</div>
 															</div>
 														</li><!-- Loop Ends -->
 														<li><!-- Loop Starts -->
@@ -564,7 +445,8 @@
 															</div>
 															<div class="img_txt">
 																<div class="txt">
-																	Find a new position involving data modeling.																</div>
+																	Access to the LMS															
+																</div>
 															</div>
 														</li><!-- Loop Ends -->
 														<li><!-- Loop Starts -->
@@ -573,7 +455,8 @@
 															</div>
 															<div class="img_txt">
 																<div class="txt">
-																	Find a new position involving data modeling.																</div>
+																	All Videos Downloadable															
+																</div>
 															</div>
 														</li><!-- Loop Ends -->
 														<li><!-- Loop Starts -->
@@ -582,16 +465,197 @@
 															</div>
 															<div class="img_txt">
 																<div class="txt">
-																	Find a new position involving data modeling.																</div>
+																	All Videos Downloadable															
+																</div>
 															</div>
 														</li><!-- Loop Ends -->
-*/
-?>
+														<li><!-- Loop Starts -->
+															<div class="image">
+																<img src="images/icons/tick.webp">
+															</div>
+															<div class="img_txt">
+																<div class="txt">
+																	All Videos Downloadable															
+																</div>
+															</div>
+														</li><!-- Loop Ends -->
+		*/	
+	?>
 													</ul>
-												</div><!--learn_list Ends -->
-											</div><!--learn_obj Ends -->
-										</div><!--enq_learn Ends -->
-									</div><!--mat_inc_enq Ends -->
+												</div><!--material_list Ends -->
+											</div><!--material_inc Ends -->
+											<div class="enq_learn"><!--enq_learn Starts -->
+												<div class="enq_button"><!--enq_button Starts -->
+													<div class="banner-btn wow fadeup-animation animated" data-wow-duration="0.8s" data-wow-delay="0.5s" style="visibility: visible; animation-duration: 0.8s; animation-delay: 0.5s;">
+														<a href="" class="sec-btn" title="Get Started"><span>For Enquire</span></a>
+													</div>
+												</div><!--enq_button Ends -->
+												<div class="learn_obj"><!--learn_obj Starts -->
+													<div class="learn_head"><!--learn_head Starts -->
+														<div class="head"><!--head Starts -->
+															Learning Objectives
+														</div><!--head Ends -->
+													</div><!--learn_head Ends -->
+													<div class="learn_list"><!--learn_list Starts -->
+														<ul>
+	<?php
+		$forCourseProductDescriptionDetails= forCourseProductDescriptionDetails("tbl_product_description",$menu_ids_f,'Learning Objectives','courses','Active');
+		$forCourseProductDescriptionDetails_json = json_decode($forCourseProductDescriptionDetails, true);
+		//print_r($accopany_filter_List_json);
+		$forCourseProductDescriptionDetails_json_count = isset($forCourseProductDescriptionDetails_json['forCourseProductDescriptionDetails_count'])?$forCourseProductDescriptionDetails_json['forCourseProductDescriptionDetails_count']:"";
+		if($forCourseProductDescriptionDetails_json_count > 0){  
+		foreach ($forCourseProductDescriptionDetails_json['forCourseProductDescriptionDetails_details'] as $courseDescription) {
+			$product_description  = $courseDescription["product_description"];
+	?>
+															<li><!-- Loop Starts -->
+																<div class="image">
+																	<img src="images/icons/tick.webp">
+																</div>
+																<div class="img_txt">
+																	<div class="txt">
+																		<?php echo $product_description; ?>																
+																	</div>
+																</div>
+															</li><!-- Loop Ends -->
+															<?php
+
+	}
+	}
+	/*
+															<li><!-- Loop Starts -->
+																<div class="image">
+																	<img src="images/icons/tick.webp">
+																</div>
+																<div class="img_txt">
+																	<div class="txt">
+																		Expanded responsibilities as part of an existing role.																</div>
+																</div>
+															</li><!-- Loop Ends -->
+															<li><!-- Loop Starts -->
+																<div class="image">
+																	<img src="images/icons/tick.webp">
+																</div>
+																<div class="img_txt">
+																	<div class="txt">
+																		Find a new position involving data modeling.																</div>
+																</div>
+															</li><!-- Loop Ends -->
+															<li><!-- Loop Starts -->
+																<div class="image">
+																	<img src="images/icons/tick.webp">
+																</div>
+																<div class="img_txt">
+																	<div class="txt">
+																		Find a new position involving data modeling.																</div>
+																</div>
+															</li><!-- Loop Ends -->
+															<li><!-- Loop Starts -->
+																<div class="image">
+																	<img src="images/icons/tick.webp">
+																</div>
+																<div class="img_txt">
+																	<div class="txt">
+																		Find a new position involving data modeling.																</div>
+																</div>
+															</li><!-- Loop Ends -->
+															<li><!-- Loop Starts -->
+																<div class="image">
+																	<img src="images/icons/tick.webp">
+																</div>
+																<div class="img_txt">
+																	<div class="txt">
+																		Find a new position involving data modeling.																</div>
+																</div>
+															</li><!-- Loop Ends -->
+															<li><!-- Loop Starts -->
+																<div class="image">
+																	<img src="images/icons/tick.webp">
+																</div>
+																<div class="img_txt">
+																	<div class="txt">
+																		Find a new position involving data modeling.																</div>
+																</div>
+															</li><!-- Loop Ends -->
+															<li><!-- Loop Starts -->
+																<div class="image">
+																	<img src="images/icons/tick.webp">
+																</div>
+																<div class="img_txt">
+																	<div class="txt">
+																		Find a new position involving data modeling.																</div>
+																</div>
+															</li><!-- Loop Ends -->
+	*/
+	?>
+														</ul>
+													</div><!--learn_list Ends -->
+												</div><!--learn_obj Ends -->
+											</div><!--enq_learn Ends -->
+										</div><!--mat_inc_enq Ends -->
+										<div class='inquiry'>
+											<div class='inq_con'>
+												<div class='feild_head'>
+													<div class='head'>Book online class</div>
+												</div>
+												<div class='input_box'>
+													<div class='feild_b'>
+														<div class='box_name'>
+															Name
+														</div>
+														<div class='box_feild'>
+															<input type='text' id="name" name='name' placeholder='Name'/>
+														</div>
+													</div>
+													<div class='feild_b'>
+														<div class='box_name'>
+															Email Id
+														</div>
+														<div class='box_feild'>
+															<input type='email' id="email" name='email' placeholder='Email Id'/>
+														</div>
+													</div>
+													<div class='feild_b'>
+														<div class='box_name'>
+															Mobile
+														</div>
+														<div class='box_feild'>
+															<div class="cty_code">
+																<div class='code'>
+																	<select>
+																		<option value=''>Code</option>
+																	</select>
+																</div>
+																<div class='c_val'>+91</div>
+															</div>
+															<div class="box">
+																<input type='text' id="mobile" name='mobile' placeholder='Mobile No'/>
+															</div>														
+														</div>
+														<div class='feild_b'>														
+															<div class='box_feild'>
+																<input type='button' value="Request a demo"/>
+															</div>
+														</div>
+													</div>
+												</div>
+											</div>
+											<div class="cor">
+												<div class="cor_head">
+													Corporate Training
+												</div>
+												<div class='sub_head'>
+													<p>Enterprise training for teams</p>
+												</div>
+												<div class="enq_button"><!--enq_button Starts -->
+													<div class="banner-btn wow fadeup-animation animated" data-wow-duration="0.8s" data-wow-delay="0.5s" style="visibility: visible; animation-duration: 0.8s; animation-delay: 0.5s;">
+														<a href="" class="sec-btn" title="Get Started"><span>For Enquire</span></a>
+													</div>
+												</div>
+											</div>
+										</div>
+										
+									</div><!--mat_enquiry Ends -->
+									
 
 									<div class="course_bgs">
 										<div class="image">

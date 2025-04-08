@@ -762,8 +762,13 @@
     box-sizing: border-box;
 }
 
-.product_details_con .product_leftbar .product_det .mat_inc_enq{
+.product_details_con .product_leftbar .product_det .mat_enquiry{
     width: 100%;
+    float: left;
+}
+
+.product_details_con .product_leftbar .product_det .mat_inc_enq{
+    width: 70%;
     float: left;
     background: #f0f0f0;
     padding: 15px;
@@ -950,6 +955,154 @@
     font-family: "rubik_regular";
 }
 
+.product_details_con .product_leftbar .product_det .mat_enquiry .inquiry{
+    width: 30%;
+    float: left;
+    padding: 15px;
+    box-sizing: border-box;
+    border-radius: 10px;
+}
+
+.product_details_con .product_leftbar .product_det .mat_enquiry .inquiry .inq_con{
+    width: 100%;
+    float: left;
+}
+
+.product_det .mat_enquiry .inquiry .feild_head{
+    width: 100%;
+    float: left;
+}
+
+.product_det .mat_enquiry .inquiry .feild_head .head{
+    width: 100%;
+    float: left;
+    font-family: var(--font_bold);
+    text-align: center;
+}
+
+.product_det .mat_enquiry .inquiry .input_box{
+    width: 100%;
+    float: left;
+}
+
+.product_det .mat_enquiry .inquiry .input_box .feild_b{
+    width: 100%;
+    float: left;
+}
+
+.product_det .mat_enquiry .inquiry .input_box .feild_b .box_name{
+    width: 100%;
+    float: left;
+    font-family: var(--font_regular);
+    padding: 5px;
+    box-sizing: border-box;
+}
+
+.product_det .mat_enquiry .inquiry .input_box .feild_b .box_feild{
+    width: 100%;
+    float: left;
+    margin-bottom: 10px;
+}
+
+.product_det .mat_enquiry .inquiry .input_box .feild_b .box_feild input{
+    width: 100%;
+    float: left;
+    padding: 10px;
+    box-sizing: border-box;
+    outline: none;
+    border: 1px solid #ccc;
+    font-family: var(--font_regular);
+}
+
+.product_det .mat_enquiry .inquiry .input_box .feild_b .box_feild .cty_code{
+    width: 35%;
+    float: left;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+}
+
+.product_det .mat_enquiry .inquiry .input_box .feild_b .box_feild .cty_code .code{
+    width: 65%;
+    float: left;
+    
+}
+
+.product_det .mat_enquiry .inquiry .input_box .feild_b .box_feild .cty_code .code select{
+    width: 100%;
+    float: left;
+    padding: 9px;
+    box-sizing: border-box;
+    border: none;
+    outline: none;
+}
+
+.product_det .mat_enquiry .inquiry .input_box .feild_b .box_feild .cty_code .c_val{
+    width: 35%;
+    float: left;
+    padding: 5px;
+    box-sizing: border-box;
+}
+
+.product_det .mat_enquiry .inquiry .input_box .feild_b .box_feild .box{
+    width: 65%;
+    float: left;
+}
+
+.product_det .mat_enquiry .inquiry .input_box .feild_b .box_feild .box input{
+    width: 100%;
+    float: left;
+    padding: 10.5px;
+    border-left: none;
+}
+
+.product_det .mat_enquiry .inquiry .input_box .feild_b .box_feild input[type='button']{
+    width: 100%;
+    float: left;
+    padding: 15px;
+    box-sizing: border-box;
+    outline: none;
+    border: 1px solid #ccc;
+    background: var(--primary_color);
+    color: white;
+    font-family: var(--font_medium);
+    font-size: 16px;
+    text-transform: uppercase;
+}
+
+.product_details_con .product_leftbar .product_det .mat_enquiry .inquiry .cor{
+    width: 100%;
+    float: left;
+    margin-top: 20px;
+}
+
+.product_det .mat_enquiry .inquiry .cor .cor_head{
+    width: 100%;
+    float: left;
+    font-family: var(--font_bold);
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.product_det .mat_enquiry .inquiry .cor .sub_head{
+    width: 100%;
+    float: left;
+    margin-bottom: 10px;
+}
+
+.product_det .mat_enquiry .inquiry .cor .sub_head p{
+    font-family: var(--font_regular);
+    text-align: center;
+}
+
+.product_det .mat_enquiry .inquiry .cor .enq_button{
+    width: 100%;
+    float: left;
+}
+
+.product_det .mat_enquiry .inquiry .cor .enq_button .sec-btn{
+    width: 100%;
+    box-sizing: border-box;
+} 
 
 .product_leftbar .product_det .course_content{
     width: 100%;
