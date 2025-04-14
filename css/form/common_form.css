@@ -1,0 +1,229 @@
+.enquiry_form {
+    position: fixed;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(94, 110, 141, 0.9);
+    opacity: 1;
+    visibility: visible;
+    -webkit-transition: opacity 0.3s 0s, visibility 0s 0.3s;
+    -moz-transition: opacity 0.3s 0s, visibility 0s 0.3s;
+    transition: opacity 0.3s 0s, visibility 0s 0.3s;
+    overflow-y: auto;
+    z-index: 10000;  
+    display: none;
+    
+  }
+.common_form {
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 350px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    position: relative;
+    padding: 40px;
+    box-sizing: border-box;
+}
+
+.common_form .close_button {
+    background: none;
+    color: var(--primary_color);
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    top: 5px;
+    right: 7px;
+    border: solid 1px var(--primary_color);
+    border-radius: 5px;
+    cursor: pointer;
+  }
+
+  .common_form .close_button i{
+    margin-top: 50%;
+    transform: translate(-50%, -50%);
+    margin-left: 50%;
+  }
+
+  .common_form .close_button:hover{
+    color:var(--white);
+    background-color: var(--primary_color);
+  }
+
+.common_form .feild_head{
+    width: 100%;
+    float: left;
+}
+
+.common_form .feild_head .head{
+    width: 100%;
+    float: left;
+    font-family: var(--font_bold);
+    text-align: center;
+    color: var(--black);
+    margin-bottom: 15px;
+}
+
+.common_form .input_box .spinner{
+    width: 100%;
+    float: left;
+    position: absolute;
+    left: 0;
+    z-index: 9;
+    /* display: flex; */
+    justify-content: center;
+    align-items: center;
+    height: 86%;
+    top: 37px;
+    background: rgba(255, 255, 255, 0.8);
+    display: none;
+}
+
+.common_form .input_box .spinner img{
+    width: 100px;
+    margin-top: 50%;
+    transform: translate(-50%, -50%);
+    margin-left: 50%;
+}
+
+.common_form .input_box .result{
+    width: 100%;
+    float: left;
+    position: absolute;
+    left: 0;
+    z-index: 9;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 86%;
+    top: 37px;
+    background: rgba(255, 255, 255, 0.8);
+    display: none;
+    /* margin-top: 50%; */
+    /* transform: translate(-50%, -50%); */
+    /* margin-left: 50%; */
+    text-align: center;
+    padding-top: 200px;
+    box-sizing: border-box;
+}
+
+
+
+.common_form .input_box .feild_b{
+    width: 100%;
+    float: left;
+}
+
+
+.common_form .input_box .feild_b .box_name{
+    width: 100%;
+    float: left;
+    font-family: var(--font_regular);
+    padding: 5px;
+    box-sizing: border-box;
+    color: var(--black);
+    display: none;
+}
+
+.common_form .input_box .feild_b .box_feild{
+    width: 100%;
+    float: left;
+    margin-bottom: 30px;
+    position: relative;
+}
+
+.common_form .input_box .feild_b:last-child .box_feild{
+    margin-bottom: 0;
+}
+
+.common_form .input_box .feild_b .box_feild label.error{
+    color:var(--error);
+    position: absolute;
+    left: 8px;
+    top: 100%;
+    font-size: 12px;
+    font-family: var(--font_regular);   
+}
+
+.common_form .input_box .feild_b .box_feild input{
+    width: 100%;
+    float: left;
+    padding: 10px;
+    box-sizing: border-box;
+    outline: none;
+    border: 1px solid #ccc;
+    font-family: var(--font_regular);
+}
+
+.common_form .input_box .feild_b .box_feild .cty_code{
+    width: 45%;
+    float: left;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+}
+
+.common_form .input_box .feild_b .box_feild .cty_code .code{
+    width: 60%;
+    float: left;
+    
+}
+
+.common_form .input_box .feild_b .box_feild .cty_code .code select{
+    width: 100%;
+    float: left;
+    padding: 9px;
+    box-sizing: border-box;
+    border: none;
+    outline: none;
+}
+
+.common_form .input_box .feild_b .box_feild .cty_code .c_val{
+    width: 40%;
+    float: left;
+    padding: 5px;
+    box-sizing: border-box;
+    color: var(--black);
+}
+
+.common_form .input_box .feild_b .box_feild .box{
+    width: 55%;
+    float: left;
+}
+
+.common_form .input_box .feild_b .box_feild .box input{
+    width: 100%;
+    float: left;
+    padding: 10.5px;
+    border-left: none;
+}
+
+.common_form .input_box .feild_b .box_feild textarea{
+    width: 100%;
+    float: left;
+    padding: 10.5px;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    outline: none;
+    height: 100px;
+}
+
+.common_form .input_box .feild_b .box_feild input[type='button']{
+    width: 100%;
+    float: left;
+    padding: 15px;
+    box-sizing: border-box;
+    outline: none;
+    border: 1px solid #ccc;
+    background: var(--primary_color);
+    color: white;
+    font-family: var(--font_medium);
+    font-size: 16px;
+    text-transform: uppercase;
+    
+    cursor: pointer;
+}

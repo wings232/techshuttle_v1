@@ -106,6 +106,28 @@
 		return json_encode($data);
 	}
 
+	function countryCodeLoad($table_name){
+		global $conn;
+		//echo $user_session = isset($_SESSION['user_id'])?$_SESSION['user_id']:"";
+		$countryCodeLoad_sql = "SELECT * FROM $table_name" ;		
+		$countryCodeLoad_query = $conn->query($countryCodeLoad_sql);
+		//return $login_result = $login_query->fetch_assoc();
+		$countryCodeLoad_row = $countryCodeLoad_query->num_rows;
+		$data = array();
+		if($countryCodeLoad_row != 0){
+			while($countryCodeLoad_result = $countryCodeLoad_query->fetch_assoc()) { //loop the rows returned from db
+	        	$countryCodeLoadArr[] = $countryCodeLoad_result; //add row to array
+	    	}
+	    	
+			$data['countryCodeLoad_details'] = $countryCodeLoadArr;
+			
+		}
+		$data['countryCodeLoad_count'] = $countryCodeLoad_row;
+		return json_encode($data);
+	}
+
+	
+
 	function forCourseProductDescriptionDetails($table_name,$product_primary_id,$product_type,$menu_group,$menu_status){
 		global $conn;
 		//echo $user_session = isset($_SESSION['user_id'])?$_SESSION['user_id']:"";

@@ -186,3 +186,8 @@ $(document).ready(function(){
     	
 	});*/
 });
+
+
+$(document).on("click",".common_form .close_button",function(){
+	$('.enquiry_form').hide();
+});

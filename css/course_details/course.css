@@ -770,10 +770,30 @@
 .product_details_con .product_leftbar .product_det .mat_inc_enq{
     width: 70%;
     float: left;
-    background: #f0f0f0;
+    /* background: #f0f0f0; */
     padding: 15px;
     box-sizing: border-box;
     border-radius: 10px;
+}
+
+.product_details_con .product_leftbar .product_det .mat_inc_enq .train_head{
+    width: 100%;
+    float: left;
+}
+
+.product_details_con .product_leftbar .product_det .mat_inc_enq .train_head .head{
+    font-family: var(--font_bold);
+    font-size: 20px;
+    text-align: center;
+    color: var(--primary_color);
+    margin-bottom: 20px;
+}
+
+.product_details_con .product_leftbar .product_det .mat_inc_enq .train_option{
+    width: 100%;
+    float: left;
+    display: flex;
+    gap: 10px;
 }
 
 .product_details_con .product_leftbar .product_det .mat_inc_enq .material_inc{
@@ -781,6 +801,8 @@
     float: left;
     padding: 15px;
     box-sizing: border-box;
+    border: 1px solid rgba(51,51,51,0.5);
+    border-radius: 10px;
 }
 
 .product_leftbar .product_det .mat_inc_enq .material_inc .material_head{
@@ -793,18 +815,42 @@
     float: left;
     font-family: var(--font_medium);
     font-size: 20px;
-    padding: 20px 5px;
+    padding: 5px;
     box-sizing: border-box;
     text-transform: uppercase;
+    margin-bottom: 5px;
+    text-align: center;
     color: var(--black);
+}
+
+.product_leftbar .product_det .mat_inc_enq .material_inc .material_head .sub_h{
+    width: 100%;
+    float: left;
+    font-family: var(--font_regular);
+    font-size: 16px;
+    padding: 5x;
+    box-sizing: border-box;
+    color: var(--black);
+    text-align: center;
+    margin-bottom: 20px;
 }
 
 .product_leftbar .product_det .mat_inc_enq .material_inc .material_list{
     width: 100%;
     float: left;
-    min-height: 400px;
-    max-height: 400px;
+    /* min-height: 400px;
+    max-height: 400px; */
     overflow-y: auto;
+    border-top: 1px solid rgba(51,51,51,0.1);
+    padding-top: 10px;
+    position: relative;
+}
+
+.product_leftbar .product_det .mat_inc_enq .material_inc .enqi{
+    display: flex;
+    width: 100%;
+    float: left;
+    justify-content: center;
 }
 
 .product_leftbar .product_det .mat_inc_enq .material_inc .material_list::-webkit-scrollbar {
@@ -854,11 +900,21 @@
 .product_details_con .product_leftbar .product_det .mat_inc_enq .enq_learn{
     width: 50%;
     float: left;
+    border: 1px solid var(--black);
+    border-radius: 10px;
+}
+
+.product_leftbar .product_det .mat_inc_enq .enq_learn .enqi{
+    display: flex;
+    width: 100%;
+    float: left;
+    justify-content: center;
 }
 
 .product_leftbar .product_det .mat_inc_enq .enq_learn .enq_button{
     float: right;
     margin: 20px 0px;
+    
 }
 
 .product_leftbar .product_det .mat_inc_enq .enq_learn .enq_button .button{
@@ -897,10 +953,24 @@
     float: left;
     font-family: var(--font_medium);
     font-size: 20px;
-    padding: 20px 5px;
+    padding: 5px;
+    margin-bottom: 5px;
     box-sizing: border-box;
     text-transform: uppercase;
+    text-align: center;
     color: var(--black);
+}
+
+.product_leftbar .product_det .mat_inc_enq .enq_learn .learn_obj .learn_head .sub_h{
+    width: 100%;
+    float: left;
+    font-family: var(--font_regular);
+    font-size: 16px;
+    padding: 5x;
+    box-sizing: border-box;
+    margin-bottom: 20px;
+    color: var(--black);
+    text-align: center;
 }
 
 .product_leftbar .product_det .mat_inc_enq .enq_learn .learn_obj .learn_list{
@@ -909,6 +979,8 @@
     min-height: 305px;
     max-height: 305px;
     overflow-y: auto;
+    border-top: 1px solid rgba(51,51,51,0.1);
+    padding-top: 10px;
 }
 
 .product_leftbar .product_det .mat_inc_enq .enq_learn .learn_obj .learn_list::-webkit-scrollbar {
