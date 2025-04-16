@@ -78,6 +78,47 @@ function verify_mob_num(){
     }
 }
 
+function verify_mob_num_one(){
+	
+	var username = document.getElementById('username').value;
+	var password = document.getElementById('password').value;
+    //var patient_gender_pt = document.getElementById('gender').options[document.getElementById('gender').selectedIndex].text;
+    login_verify();
+    
+
+    if($('.login_feild').valid() == true){
+    	$('.login_form .form_spinner').css({"display":"block"});
+    	//alert(mobileNumber);
+    	$.ajax({
+            url:"ajax/admission/login_check.php",
+            type:'post',
+            data:{
+                username:username,    
+                password:password,               
+            },
+            success:function(result){      
+              $('.login_form .form_spinner').css({"display":"none"});         
+              $('.container .login_portal .login_form .form_head .form_ajax').html(result);
+              /*alert(result);
+              if(result == 'correct'){
+                window.location.href = "http://192.168.0.34/kmh_new_v1/patient_portal.php";
+              }*/
+              	re = result.trim();
+	          	if(re == 'valid'){
+	              	//window.location.href = "http://192.168.0.34/kmh_new_v1/patient_portal.php";     
+	              	//response = await fetch(window.history.go(-2));       
+	              	//window.history.go(-1);
+	              	//lastPageUrl = document.referrer 
+					//alert(lastPageUrl);
+	              	window.location.href = "http://192.168.0.34/studies/techshuttle_v1/admission_form.php";
+	              	//console.log(`Last visited page URL is ${lastPageUrl}`)
+	              	
+	            }
+            }
+        });
+    }
+}
+
 function sign_up(){
 	/*var genders = document.getElementById('gender').value;
     var patient_gender_pt = document.getElementById('gender').options[document.getElementById('gender').selectedIndex].text;*/
@@ -122,6 +163,42 @@ function sign_up(){
     }
 }
 
+function sign_up_one(){	
+    var patname = document.getElementById('name').value;	
+	var patmobile = document.getElementById('mobile_number').value;
+	var patemail = document.getElementById('email').value;
+	var password = document.getElementById('password').value;
+	
+    login_verify();    
+
+    if($('.login_feild').valid() == true){
+    	$('.login_form .form_spinner').css({"display":"block"});
+    	login_verify();
+    	$.ajax({
+            url:"ajax/portal/sign_insert.php",
+            type:'post',
+            data:{
+                patName:patname,
+                patMobile:patmobile,
+                patEmail:patemail,
+                password:password
+            },
+            success:function(result){  
+             	$('.login_form .form_spinner').css({"display":"none"});  
+             	$('.container .login_portal .login_form .form_head .form_ajax').html(result);
+              	re = result.trim()
+              	if(re == 'valid'){
+	              	//window.location.href = "http://192.168.0.34/kmh_new_v1/patient_portal.php";            
+					  forLogin_ad();
+	              	//window.history.go(-1);
+
+	            }
+
+            }
+        }); 
+    }
+}
+
 function forRegisteration(){
   //alert();
   $('.login_form .form_spinner').css({"display":"block"});
@@ -148,6 +225,34 @@ function forLogin(){
         } 
     });
 }
+
+
+function forRegisteration_ad(){
+	//alert();
+	$('.login_form .form_spinner').css({"display":"block"});
+	$.ajax({
+		  url:"ajax/admission/sign_up.php",
+		  type:'post',          
+		  
+		  success:function(result){         
+			$('.login_form .form_spinner').css({"display":"none"});
+			$('.container .login_portal .login_form .form_head .form_ajax').html(result);
+		  } 
+		});
+  }
+  
+  function forLogin_ad(){
+	//alert();
+	$('.login_form .form_spinner').css({"display":"block"});
+	  $.ajax({
+		  url:"ajax/admission/login_page.php",
+		  type:'post',  
+		  success:function(result){         
+			$('.login_form .form_spinner').css({"display":"none"});
+			$('.container .login_portal .login_form .form_head .form_ajax').html(result);
+		  } 
+	  });
+  }
 
 
 login_verify();

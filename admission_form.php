@@ -6,8 +6,8 @@
 	if($user_session == ""){
 		header("Location:index.php");
 	}	
-	$user_session;
-	$user_name;
+	echo $user_session;
+	echo $user_name;
 	// $batch_map_id = $_SESSION['batch_map_id'];
 	// $price_itl = $_SESSION['price_id_ilt'];
 	// $course_id = $_SESSION['course_ids'];
@@ -31,9 +31,8 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<meta charset="UTF-8">
+<meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<base href='<?php echo $baseUrl; ?>' > 
     <title>Techshuttle | Home</title>    
     <link rel="stylesheet" href="css/reset.css"/>
     <link rel="stylesheet" href="css/root.css"/>
@@ -42,7 +41,7 @@
     <link rel="stylesheet" href="css/fonts.css"/>    
     <link rel="stylesheet" href="css/animation.css"/> 
     <link rel="stylesheet" href="css/style.css"/>
-	<script type="text/javascript" src="js/jquery.js"></script>
+    <script type="text/javascript" src="js/jquery.js"></script>
 	<script src='js/jquery.validate.js'></script>
     <script src='js/additional-methods.min.js'></script>
     <script src='js/page_valid.js'></script>
@@ -55,11 +54,13 @@
 
 	
 
-	<div class="header_con"><!--header_con Starts -->
-		<?php
-			include "header.php";
-		?>
+	<div class='header_con'><!--header_con Starts -->
+		<?php include "header.php"; ?>
 	</div><!--header_con Ends -->
+
+       
+
+
 
 	
 
