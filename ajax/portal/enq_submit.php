@@ -33,7 +33,7 @@
     //Load Composer's autoloader
     require '../../mail/phpmailer/vendor/autoload.php';
 
-	$admission_insert = array(
+		$admission_insert = array(
 			"name" => $name,
 			"email" => $email,
 			"course" => $course,
