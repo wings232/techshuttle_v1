@@ -162,6 +162,14 @@
 			<div class="details_fil">
 				<form method="post" enctype="multipart/form-data" class="course_check">
 					<div class="feild_box">
+                            <div class="input_box"><!-- input_box loop Start-->
+								<div class="feild_head">
+									<div class="head">Name</div>
+								</div>
+								<div class="feild_action">
+									<input type="text" name="name" id="name">
+								</div>
+							</div><!-- input_box loop Ends-->
 							<div class="input_box"><!-- input_box loop Start-->
 								<div class="feild_head">
 									<div class="head">Email Id</div>
@@ -180,14 +188,7 @@
 								</div>
 							</div><!-- input_box loop Ends-->
 
-							<div class="input_box"><!-- input_box loop Start-->
-								<div class="feild_head">
-									<div class="head">Overall Priority</div>
-								</div>
-								<div class="feild_action">
-									<input type="text" name="overall_priority" id="overall_priority">
-								</div>
-							</div><!-- input_box loop Ends-->
+							
 
 							<div class="input_box"><!-- input_box loop Start-->
 								<div class="feild_head">
