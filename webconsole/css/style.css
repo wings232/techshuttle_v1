@@ -969,6 +969,7 @@
   cursor: pointer;
   margin-right: 10px;
   color: white;
+  font-family: 'rubik_regular';
 }
 
 .dash_rightsidebar .dashboard_content .right_container .bread_crumbs{
@@ -2287,6 +2288,10 @@
   padding-left: 30px;
 }
 
+.right_container .department_head .select_design .filter_drop .filter_select >  ul > li > ul > li > ul > li.third_child{
+  padding-left: 10px;
+}
+
 .right_container .department_head .select_design .filter_drop .filter_select >  ul > li > ul > li > ul > li:hover{
   color:#7e6969;
 }
@@ -2299,6 +2304,13 @@
   padding-left: 40px;
 }
 
+.filter_drop .filter_select >  ul > li > ul > li > ul > li > ul > li.fourth_child{
+    padding: 5px 0 !important;
+    padding-left: 0 !important;
+    text-transform: uppercase;
+    font-size: 14px;
+}
+
  .right_container .department_head .select_design .filter_drop .filter_select >  ul > li .first_con{
   width:100%;
   float: left;
@@ -2308,6 +2320,7 @@
 .right_container .department_head .select_design .filter_drop .filter_select >  ul > li .first_l{
   width:100%;
   float: left;
+  font-family: 'rubik_regular';
 }
 
 .right_container .department_head .select_design .filter_drop .filter_select >  ul > li .menu_groups{
