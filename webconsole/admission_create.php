@@ -15,7 +15,7 @@
 		<div class="bread_crumbs">
 			<?php include 'breadcrumbs.php'; ?>
 		</div>
-
+		
 		<!-- <input type="button" value='views' onclick="url_pass('menu_setup.php')" /> -->
 		<div class="department_head">
 			<div class="social_overlay">
@@ -160,7 +160,7 @@
 			</div>	
 
 			<div class="details_fil">
-				<form method="post" enctype="multipart/form-data" class="course_check">
+				<form method="post" enctype="multipart/form-data" class="admission_check">
 					<div class="feild_box">
                             <div class="input_box"><!-- input_box loop Start-->
 								<div class="feild_head">
@@ -188,71 +188,57 @@
 								</div>
 							</div><!-- input_box loop Ends-->
 
+							<div class="input_box"><!-- input_box loop Start-->
+								<div class="feild_head">
+									<div class="head">Select Product Type</div>
+								</div>
+								<div class="feild_action">
+									<div class="new_select">
+										<select id='pro_type' name="pro_type">
+											<option value=''>Select Product Type</option>	
+											<?php
+												
+									$selectCategoriesRecordMultilevel = selectCategoriesRecordMultilevel('tbl_categories_groups',3,4);
+									$selectCategoriesRecordMultilevel_json = json_decode($selectCategoriesRecordMultilevel, true);
+									$selectCategoriesRecordMultilevel_json_count = isset($selectCategoriesRecordMultilevel_json['categories_levelmul_count'])?$selectCategoriesRecordMultilevel_json['categories_levelmul_count']:"";
+
+										if($selectCategoriesRecordMultilevel_json_count != ""){
+											foreach ($selectCategoriesRecordMultilevel_json['categories_levelmul_details'] as $cate_group_details) {
+													
+													$menu_name = $cate_group_details['menu_name'];
+													$menu_name = $cate_group_details['menu_name'];
+												
+											?>							
+											<option value='<?php echo $menu_name; ?>'><?php echo $menu_name; ?></option>
+											<?php
+											}
+										}		
+										
+											?>
+																	
+										</select>
+									</div>
+								</div>
+							</div><!-- input_box loop Ends-->
+
 							
 
 							<div class="input_box"><!-- input_box loop Start-->
 								<div class="feild_head">
-									<div class="head">Department Priority</div>
+									<div class="head">Discount</div>
 								</div>
 								<div class="feild_action">
-									<input type="text" name="dept_priority" id="dept_priority">
+									<input type="text" name="course_discount" id="course_discount">
 								</div>
 							</div><!-- input_box loop Ends-->
 
 
-							<div class="input_box"><!-- input_box loop Start-->
-								<div class="feild_head">
-									<div class="head">Meta Title</div>
-								</div>
-								<div class="feild_action">
-									<input type="text" name="meta_title" id="meta_title">
-								</div>
-							</div><!-- input_box loop Ends-->
-							<div class="input_box"><!-- input_box loop Start-->
-								<div class="feild_head">
-									<div class="head">Meta Description</div>
-								</div>
-								<div class="feild_action">
-									<textarea name='meta_description' id='meta_description' placeholder=""></textarea>
-								</div>
-							</div><!-- input_box loop Ends-->
-							<div class="input_box"><!-- input_box loop Start-->
-								<div class="feild_head">
-									<div class="head">Meta keywords</div>
-								</div>
-								<div class="feild_action">
-									<textarea name='meta_keyword' id='meta_keyword' placeholder=""></textarea>
-								</div>
-							</div><!-- input_box loop Ends-->
-
-							<div class="input_box"><!-- input_box loop Start-->
-								<div class="feild_head">
-									<div class="head">Course Thumb Image </div>
-								</div>
-								<div class="feild_action">
-									<input type="file" name="media_image_thumb" id="media_image_thumb" class="media_image_thumb">
-									<div class="file_out">
-										<input type="hidden" id="sfile_image" value="">
-									</div>
-								</div>
-							</div><!-- input_box loop Ends-->
-
-							<div class="input_box"><!-- input_box loop Start-->
-								<div class="feild_head">
-									<div class="head">Course Thumb Image </div>
-								</div>
-								<div class="feild_action">
-									<input type="file" name="media_image_banner_c" id="media_image_banner_c" class="media_image_banner_c">
-									<div class="file_out_banner">
-										<input type="hidden" id="sfile_image_banner" value="">
-									</div>
-								</div>
-							</div><!-- input_box loop Ends-->
+							<div class='shows'></div>
 
 							
 						<div class="input_box"><!-- input_box loop Start-->
 							<div class="feild_action">
-								<input type="button" name='create_button' value="Create" onclick="course_create()" />
+								<input type="button" name='create_button' value="Create" onclick="create_admission()" />
 								<input type="hidden" id='social_upost_id' value="<?php echo $user_session; ?>"/>
 								<div class="spinner_one"><img src="images/gif/loading_01.gif"></div>
 							</div>

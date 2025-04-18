@@ -293,6 +293,25 @@
 		}
 	}
 
+	function selectPriceSetup($table_name,$primary_id,$price_type,$categories_group,$status){
+		global $conn;
+		//echo $user_session = isset($_SESSION['user_id'])?$_SESSION['user_id']:"";
+		$selectPriceSetup_sql = "select * from $table_name where product_primary_id = '$primary_id' and price_type='$price_type' and categories_group = '$categories_group' and status = '$status'" ;
+		$selectPriceSetup_query = $conn->query($selectPriceSetup_sql);
+		//return $login_result = $login_query->fetch_assoc();
+		$selectPriceSetup_row = $selectPriceSetup_query->num_rows;
+		if($selectPriceSetup_row != 0){
+			while($selectPriceSetup_result = $selectPriceSetup_query->fetch_assoc()) { //loop the rows returned from db
+	        	$selectPriceSetupArr[] = $selectPriceSetup_result; //add row to array
+	    	}
+	    	//return $mediaArr; 
+	    	$data = array();
+			$data['selectPriceSetup_count'] = $selectPriceSetup_row;
+			$data['selectPriceSetup_details'] = $selectPriceSetupArr;
+			return json_encode($data);
+		}
+	}
+
 	function selectNavigationSetuplevelId($table_name,$nav_level,$nav_cate,$nav_status,$menu_id){
 		global $conn;
 		//echo $user_session = isset($_SESSION['user_id'])?$_SESSION['user_id']:"";

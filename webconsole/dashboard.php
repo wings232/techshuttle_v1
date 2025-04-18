@@ -28,6 +28,8 @@
 	<script src="//cdnjs.cloudflare.com/ajax/libs/timepicker/1.3.5/jquery.timepicker.min.js"></script>
 	<script src='js/jquery.validate.js'></script>
     <script src='js/additional-methods.min.js'></script>
+	<script src='js/tech_valid.js'></script>
+	<script type="text/javascript" src="js/validate_page.js"></script>
 	<script type="text/javascript">
 		levels_create_center();
 	</script>

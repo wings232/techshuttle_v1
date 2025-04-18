@@ -28,7 +28,7 @@
 
 	
 ?>
-<!DOCTYPE html>
+<!DOCTYPE html>904305204
 <html>
 <head>
 <meta charset="UTF-8">
@@ -56,11 +56,8 @@
 
 	<div class='header_con'><!--header_con Starts -->
 		<?php include "header.php"; ?>
-	</div><!--header_con Ends -->
-
-       
-
-
+	</div><!--header_con Ends -->    
+	
 
 	
 
