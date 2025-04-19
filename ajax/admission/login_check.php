@@ -5,6 +5,9 @@
     $username = isset($_REQUEST['username'])?$_REQUEST['username']:""; 
     $password = isset($_REQUEST['password'])?$_REQUEST['password']:"";
 	
+	$admin_ids = isset($_REQUEST['admin_id'])?$_REQUEST['admin_id']:""; 
+    $admin_ms = isset($_REQUEST['admin_m'])?$_REQUEST['admin_m']:"";
+	
 	$identity_crp = md5($password);
 	
 	$selectLoginCheck = selectLoginCheck('tbl_customer_login',$username,$identity_crp);
@@ -41,6 +44,9 @@
 		    session_start();
 			$_SESSION['tsWebUserId'] = $techIds;
 			$_SESSION['tsWebUserName'] = $techName;
+			$_SESSION['tsAdmisId'] = $admin_ids;
+			$_SESSION['tsAdmisMobile'] = $admin_ms;
+
 		}
 	/*if($submit_login == 'Login'){		
 		$login_sql = "SELECT * from login where employee_id = '$emp_id' and password = '$identity_crp'";

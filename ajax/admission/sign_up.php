@@ -184,7 +184,7 @@
 											       
 											       		
 														   <div class="banner-btn wow fadeup-animation animated" data-wow-duration="0.8s" data-wow-delay="0.5s" style="visibility: visible; animation-duration: 0.8s; animation-delay: 0.5s;">
-														   		<input  class="sec-btn" type="button" value="Sign Up" onclick="sign_up()" />
+														   		<input  class="sec-btn" type="button" value="Sign Up" onclick="sign_up_one()" />
 															</div>
 											       		<div class="btn">
 											       			<div class="btn_inner"></div>
@@ -199,7 +199,7 @@
 											</div>
 											<div class="verify_para">
 											  <p>
-											  	Already have an account? <span onclick="forLogin()">Sign In</span>
+											  	Already have an account? <span onclick="forLogin_ad()">Sign In</span>
 											  </p>
 											</div>
 										</form>

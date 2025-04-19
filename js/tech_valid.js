@@ -168,3 +168,94 @@ $(function(){
         },
     });
 });
+
+$(function(){
+	$('.admission_check').validate({
+		onfocusin: function (element) {
+		    $(element).valid();
+		  },
+
+		  onfocusout: function (element) {
+		    $(element).valid();
+		  },
+		rules:{	
+			names_admin:{
+				required: true,
+			},		
+			
+			email_id:{
+				required: true,
+				mail:true
+			},
+			mobile_no:{
+				required: true,
+				number: true,
+				minlength:10,
+				maxlength:10
+			},
+			address_proof:{				
+				required: true,				
+			},
+			address:{				
+				required: true,				
+			},
+            city:{				
+				required: true,				
+			},
+            state:{				
+				required: true,				
+			},
+            country:{				
+				required: true,				
+			},
+
+            pincode:{				
+				required: true,
+                number: true,
+				zipcode:true,
+			},
+			
+			/*user_image: { 
+			 	required: true,
+			 	extension: "docx|rtf|doc|pdf",
+			 	filesize:2
+			},*/
+		},
+		messages:{
+			names_admin:{
+				required: 'Please enter the name',
+			},	
+			
+			email_id:{
+				required: 'Please enter the email Id',
+				mail:'Please enter the valid email Id',
+			},
+			mobile_no:{
+				required: 'Please enter the Mobile Number',
+				number: 'Number only allowed'
+			},	
+
+			address_proof:{				
+				required: 'Please Select the Proof',				
+			},
+			address:{				
+				required: 'Please enter your address',				
+			},
+            city:{				
+				required: 'Enter your city',				
+			},
+            state:{				
+				required: 'Enter your state',				
+			},
+            country:{				
+				required: 'Enter your Country',				
+			},
+
+            pincode:{				
+				required: 'type your pincode',
+                number: 'Numbers only allowed',
+			},
+						
+		}
+	});
+});

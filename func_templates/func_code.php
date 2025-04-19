@@ -402,7 +402,32 @@
 		return json_encode($data);
 	}
 
+	
+
 	//SELECT * FROM `tbl_adminission_form` where register_id = 12 and course_id = 4 and admin_gen_id = "TSSA4600380"
+
+	function selectAdmissionGetDetails($table_name,$mobile,$adminssion_id,){
+		global $conn;
+		//echo $user_session = isset($_SESSION['user_id'])?$_SESSION['user_id']:"";
+		$selectAdmissionGetDetails_sql = "SELECT * from $table_name where mobile='$mobile' and admin_gen_id = '$adminssion_id' " ;
+		$selectAdmissionGetDetails_query = $conn->query($selectAdmissionGetDetails_sql);
+		//return $login_result = $login_query->fetch_assoc();
+		$selectAdmissionGetDetails_row = $selectAdmissionGetDetails_query->num_rows;
+		$data = array();
+		
+		if($selectAdmissionGetDetails_row != 0){
+			while($selectAdmissionGetDetails_result = $selectAdmissionGetDetails_query->fetch_assoc()) { //loop the rows returned from db
+	        	$selectAdmissionGetDetailsArr[] = $selectAdmissionGetDetails_result; //add row to array
+	    	}
+	    	//return $mediaArr; 
+	    	
+			
+			$data['selectAdmissionGetDetails_details'] = $selectAdmissionGetDetailsArr;
+			
+		}
+		$data['selectAdmissionGetDetails_count'] = $selectAdmissionGetDetails_row;
+		return json_encode($data);
+	}
 
 	function selectAdmissionDetails($table_name,$regId,$course_id,$adminssion_id){
 		global $conn;

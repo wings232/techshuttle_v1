@@ -23,6 +23,7 @@
 	//$part_prefix = substr($menu_name,0,2);
 	$techRegNo = strtoupper("TS".$currentDateAlone.$stamptime);
     $ref_no = base64_encode($techRegNo);	
+    $sMobile_nos = base64_encode($sMobile_no);	
 
     
 
@@ -160,7 +161,7 @@ try {
                                     </tr>
 
                                     <tr>
-                                        <td colspan='2' style='padding: 0px 5px 10px 5px; width: 50%; text-align: center; color:#e44c25; line-height: 26px; text-transform:uppercase;'><a href='".$baseUrl.$ref_no."' style='color: green;'>Click Here to Pay &#x20B9; ".$base_price."</a></td>
+                                        <td colspan='2' style='padding: 0px 5px 10px 5px; width: 50%; text-align: center; color:#e44c25; line-height: 26px; text-transform:uppercase;'><a href='".$baseUrl."admission_login.php?key=".$ref_no."~".$sMobile_nos."' style='color: green;'>Click Here to Pay &#x20B9; ".$base_price."</a></td>
                                         
                                     </tr>
                                     

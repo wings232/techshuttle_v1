@@ -82,6 +82,8 @@ function verify_mob_num_one(){
 	
 	var username = document.getElementById('username').value;
 	var password = document.getElementById('password').value;
+	var admin_id = document.getElementById('admin_id').value;
+	var admin_m = document.getElementById('admin_m').value;
     //var patient_gender_pt = document.getElementById('gender').options[document.getElementById('gender').selectedIndex].text;
     login_verify();
     
@@ -94,7 +96,9 @@ function verify_mob_num_one(){
             type:'post',
             data:{
                 username:username,    
-                password:password,               
+                password:password,   
+				admin_id:admin_id,    
+				admin_m:admin_m,                
             },
             success:function(result){      
               $('.login_form .form_spinner').css({"display":"none"});         
@@ -110,7 +114,7 @@ function verify_mob_num_one(){
 	              	//window.history.go(-1);
 	              	//lastPageUrl = document.referrer 
 					//alert(lastPageUrl);
-	              	window.location.href = "http://192.168.0.34/studies/techshuttle_v1/admission_form.php";
+	              	window.location.href = "http://localhost/techshuttle_v1/admission_form.php";
 	              	//console.log(`Last visited page URL is ${lastPageUrl}`)
 	              	
 	            }
@@ -175,7 +179,7 @@ function sign_up_one(){
     	$('.login_form .form_spinner').css({"display":"block"});
     	login_verify();
     	$.ajax({
-            url:"ajax/portal/sign_insert.php",
+            url:"ajax/admission/sign_insert.php",
             type:'post',
             data:{
                 patName:patname,
@@ -245,7 +249,7 @@ function forRegisteration_ad(){
 	//alert();
 	$('.login_form .form_spinner').css({"display":"block"});
 	  $.ajax({
-		  url:"ajax/admission/login_page.php",
+		  url:"ajax/admission/l.php",
 		  type:'post',  
 		  success:function(result){         
 			$('.login_form .form_spinner').css({"display":"none"});

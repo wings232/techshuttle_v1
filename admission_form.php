@@ -6,13 +6,19 @@
 	if($user_session == ""){
 		header("Location:index.php");
 	}	
-	echo $user_session;
-	echo $user_name;
+	$user_session;
+	$user_name;
+	$admissionId = $_SESSION['tsAdmisId'];
+	$admissionMobile = $_SESSION['tsAdmisMobile'];
 	// $batch_map_id = $_SESSION['batch_map_id'];
 	// $price_itl = $_SESSION['price_id_ilt'];
 	// $course_id = $_SESSION['course_ids'];
 	// $price_slv = $_SESSION['price_id_slv'];
 	// $price_key = $_SESSION['price_id_key'];
+	
+
+	
+
 
 	$selectLoginDetails= selectLoginDetails("tbl_customer_login",$user_session);
 	$selectLoginDetails_json = json_decode($selectLoginDetails, true);
@@ -28,7 +34,7 @@
 
 	
 ?>
-<!DOCTYPE html>904305204
+<!DOCTYPE html>
 <html>
 <head>
 <meta charset="UTF-8">
@@ -41,11 +47,13 @@
     <link rel="stylesheet" href="css/fonts.css"/>    
     <link rel="stylesheet" href="css/animation.css"/> 
     <link rel="stylesheet" href="css/style.css"/>
+	<link rel="stylesheet" href="css/admission/admission.css"/>
     <script type="text/javascript" src="js/jquery.js"></script>
 	<script src='js/jquery.validate.js'></script>
     <script src='js/additional-methods.min.js'></script>
-    <script src='js/page_valid.js'></script>
-    <script type="text/javascript" src="js/validate_page.js"></script>
+    <!-- <script src='js/page_valid.js'></script> -->
+	<script type="text/javascript" src="js/validate_page.js"></script>
+    <script type="text/javascript" src="js/tech_valid.js"></script>
     
     
 </head>
@@ -92,7 +100,7 @@
 											<div class="head">Name</div>
 										</div>
 										<div class="feild_action">
-											<input type="text" name="names_admin" id="names_admin" value="<?php echo $firstName; ?>">
+											<input type="text" name="names_admin" id="names_admin" readonly='readonly' value="<?php echo $firstName; ?>" >
 										</div>
 									</div><!-- input_box loop Ends-->
 									<div class="input_box"><!-- input_box loop Start-->
@@ -100,7 +108,7 @@
 											<div class="head">Mobile No</div>
 										</div>
 										<div class="feild_action">
-											<input type="text" name="mobile_no" id="mobile_no" value="<?php echo $mobileNo; ?>">
+											<input type="text" name="mobile_no" id="mobile_no" readonly='readonly' value="<?php echo $mobileNo; ?>">
 										</div>
 									</div><!-- input_box loop Ends-->
 
@@ -109,7 +117,7 @@
 											<div class="head">Email Id</div>
 										</div>
 										<div class="feild_action">
-											<input type="text" name="email_id" id="email_id" value="<?php echo $email; ?>">
+											<input type="text" name="email_id" id="email_id" readonly='readonly' value="<?php echo $email; ?>">
 										</div>
 									</div><!-- input_box loop Ends-->
 
@@ -171,10 +179,13 @@
 											<input type="text" name="pincode" id="pincode"/>
 										</div>
 									</div><!-- input_box loop Ends-->
-
+									<div class='shows'></div>
 									<div class="input_box"><!-- input_box loop Start-->
 										<div class="feild_action">
 											<input type="button" name="adms_form" value="Next" onclick="create_admission()" />
+											
+											<input type="hidden" name="admissionId" id='admissionId' value="<?php echo $admissionId; ?>"/>
+											<input type="hidden" name="admissionMobile" id='admissionMobile' value="<?php echo $admissionMobile; ?>"/>
 											<input type="hidden" name="social_upost_id" id='social_upost_id' value="<?php echo $user_session; ?>"/>
 											<!-- <div class="spinner_one"><img src="images/gif/loading_01.gif"></div> -->
 										</div>

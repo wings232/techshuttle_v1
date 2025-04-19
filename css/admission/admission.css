@@ -1,0 +1,233 @@
+/*Admission_form css starts*/
+.container .admin_form_con{
+    width: 100%;
+    float: left;
+    background: linear-gradient(to bottom, #fff3ea 0%, #ffffff 100%);
+}
+
+.container .admin_form_con .admin_form_center{
+    width: 1300px;
+    margin:0 auto;
+}
+
+.container .admin_form_con .admin_form_center .admin_form{
+    width: 100%;
+    float: left;
+}
+
+.admin_form_center .admin_form .admin_form_image{
+    width: 50%;
+    float: left;
+}
+
+.admin_form_center .admin_form .admin_form_image .image_form{
+    width: 100%;
+    float: left;
+    background: var(--white);
+    padding: 10px;
+    box-sizing: border-box;
+    margin-top: 100px;
+    border-radius: 10px;
+}
+
+.admin_form_center .admin_form .admin_form_image .image_form .form_head{
+    width: 100%;
+    float: left;
+}
+
+.admin_form_center .admin_form .admin_form_image .image_form .form_head .head{
+    font-family: var(--font_medium);
+    padding: 10px;
+}
+
+.admin_form_center .admin_form .admin_form_image .image_form .form_head .head span{
+    color: var(--primary_color);
+}
+
+.admin_form_center .admin_form .admin_form_image .image_form .form_para{
+    width: 100%;
+    float: left;
+}
+
+.admin_form_center .admin_form .admin_form_image .image_form .form_para .para{
+    width: 100%;
+    float: left;
+}
+
+.admin_form_center .admin_form .admin_form_image .image_form .form_para .para p{
+    font-family: var(--font_regular);
+    padding: 5px 20px;
+    text-align: justify;
+    line-height: 28px;
+    font-size: 14px;
+}
+
+.admin_form_center .admin_form .admin_form_image .image{
+    width: 100%;
+    float: left;
+}
+
+.admin_form_center .admin_form .admin_form_image .image img{
+    width: 100%;
+    float: left;
+    padding:50px 20px;
+    box-sizing: border-box;
+}
+
+.admin_form_center .admin_form .form_filling{
+    width: 50%;
+    float: left;
+    padding: 20px 0px;
+}
+
+.admin_form_center .admin_form .form_filling .filling_center{
+    width: 80%;
+    margin: 0 auto
+}
+
+.admin_form_center .admin_form .form_filling .filling_center .filling_con{
+    width: 100%;
+    float: left;
+    border:1px solid #eee;
+    background: white;
+    border-radius: 10px;
+    padding: 20px;
+    box-sizing: border-box;
+    box-shadow: 3px 2px 7px rgba(51,51,51,0.1);
+}
+
+.form_filling .filling_center .filling_con .feild_box{
+    width: 100%;
+    float: left;
+}
+
+.form_filling .filling_center .filling_con .feild_box .input_box{
+    width: 100%;
+    float: left;
+    margin-bottom: 10px;
+}
+
+.form_filling .filling_center .filling_con .feild_box .input_box .feild_head{
+    width: 100%;
+    float: left;
+}
+
+.form_filling .filling_center .filling_con .feild_box .input_box .feild_head .head{
+    font-family: var(--font_regular);
+    color: #000;
+    padding: 10px;
+}
+
+.form_filling .filling_center .filling_con .feild_box .input_box .feild_action{
+    width: 100%;
+    float: left;
+    position: relative;
+}
+
+.form_filling .filling_center .filling_con .feild_box .input_box .feild_action input{
+    width: 100%;
+    float: left;
+    padding: 10px;
+    box-sizing: border-box;
+    outline: none;
+    background: var(--white);
+    border: 1px solid #0000001a;
+    color:var(--black);
+    font-family: var(--font_regular);
+    border-radius: 5px;
+}
+
+.form_filling .filling_center .filling_con .feild_box .input_box .feild_action label.error {
+    position: absolute;
+    color: red;
+    top: 88%;
+    padding: 5px;
+    left: 0;
+    font-size: 12px;
+    font-family: var(--font_regular);
+}
+
+.form_filling .filling_center .filling_con .feild_box .input_box .feild_action .new_select {
+    position: relative;
+    width: 100%;
+    float: left;
+    border-radius: 0.25em;
+}
+
+.form_filling .filling_center .filling_con .feild_box .input_box .feild_action .new_select::after {
+    content: '\25BC';
+    position: absolute;
+    top: 1px;
+    border-radius: 0px 5px 5px 0px;
+    right: 1px;
+    padding: 10px;
+    background-color: #141b2d;
+    transition: .25s all ease;
+    pointer-events: none;
+    color:var(--white);
+}
+
+.form_filling .filling_center .filling_con .feild_box .input_box .feild_action .new_select select {
+    width: 100%;
+    float: left;
+    appearance: none;
+    outline: 0;
+    border: 0;
+    box-shadow: none;
+    padding: 10px;
+    color: var(--black);
+    background-color: var(--darkgray);
+    background-image: none;
+    cursor: pointer;
+    background: #ffffff;
+    border: 1px solid #0000001a;
+    border-radius: 5px;
+    text-transform: capitalize;
+}
+
+.form_filling .filling_center .filling_con .feild_box .input_box .feild_action textarea {
+    width: 100%;
+    height: 70px;
+    float: left;
+    padding: 10px;
+    box-sizing: border-box;
+    outline: none;
+    background: var(--white);
+    border: 1px solid #0000001a;
+    border-radius: 5px;
+    color: #000;
+    font-family: "rubik_regular";
+}
+
+.form_filling .filling_center .filling_con .feild_box .input_box .feild_action input[type='button'] {
+    float: left;
+    padding: 10px;
+    box-sizing: border-box;
+    outline: none;
+    /*background: #26af48;*/
+    background: var(--primary_color);
+    border: 1px solid #e2e8f51a;
+    color:var(--white);
+    margin-top: 20px;
+    border-radius: 5px;
+    font-family: var(--font_bold);
+    text-transform: uppercase;
+    cursor: pointer;
+}
+
+.form_filling .filling_center .filling_con .feild_box .input_box .feild_action input[type='submit'] {
+    float: left;
+    padding: 10px;
+    box-sizing: border-box;
+    outline: none;
+    /*background: #26af48;*/
+    background: var(--primary_color);
+    border: 1px solid #e2e8f51a;
+    color: var(--white);
+    margin-top: 20px;
+    border-radius: 5px;
+    font-family: var(--font_bold);
+    text-transform: uppercase;
+    cursor: pointer;
+}
+/*Admission_form css Ends*/

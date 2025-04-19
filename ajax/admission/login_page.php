@@ -1,4 +1,10 @@
-
+<?php
+	$main_cont = isset($_REQUEST['key'])?$_REQUEST['key']:"";
+	$data_one= explode('~',$main_cont);
+	
+	$admin_id = base64_decode($data_one[0]);
+ 	$admin_m = base64_decode($data_one[1]);
+?>
 <div class="login_view"><!-- Login_view starts -->
 								<div class="login_head">
 									<div class="head">
@@ -62,6 +68,8 @@
 																<div class="banner-btn wow fadeup-animation animated" data-wow-duration="0.8s" data-wow-delay="0.5s" style="visibility: visible; animation-duration: 0.8s; animation-delay: 0.5s;">
 																	
 																	<input class="sec-btn" type="button" value="Login" onclick="verify_mob_num_one()" />
+																	<input type='hidden' value='<?php echo $admin_id; ?>' id='admin_id' name='admin_id'/>
+																	<input type='hidden' value='<?php echo $admin_m; ?>' id='admin_m' name='admin_m'/>
 																</div>
 															</div>
 											       		<div class="btn">
