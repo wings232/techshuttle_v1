@@ -227,7 +227,7 @@
 	function selectEmailMobileCheck($table_name,$email,$mobileNo){
 		global $conn;
 		//echo $user_session = isset($_SESSION['user_id'])?$_SESSION['user_id']:"";
-		$selectEmailMobileCheck_sql = "select regId,email,mobileNo from $table_name where email = '$email' or mobileNo = '$mobileNo'" ;
+		$selectEmailMobileCheck_sql = "select regId,firstName,email,mobileNo from $table_name where email = '$email' or mobileNo = '$mobileNo'" ;
 		$selectEmailMobileCheck_query = $conn->query($selectEmailMobileCheck_sql);
 		//return $login_result = $login_query->fetch_assoc();
 		$selectEmailMobileCheck_row = $selectEmailMobileCheck_query->num_rows;

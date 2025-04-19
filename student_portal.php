@@ -69,4 +69,4 @@
 </div>
 </body>
 </html>
-<script type="text/javascript" src="js/login_p.js"></script>
+<script type="text/javascript" src="js/login_p.js?v1"></script>

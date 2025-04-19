@@ -1,7 +1,6 @@
 <?php
 	$main_cont = isset($_REQUEST['key'])?$_REQUEST['key']:"";
-	$data_one= explode('~',$main_cont);
-	
+	$data_one= explode('~',$main_cont);	
 	$admin_id = base64_decode($data_one[0]);
  	$admin_m = base64_decode($data_one[1]);
 ?>

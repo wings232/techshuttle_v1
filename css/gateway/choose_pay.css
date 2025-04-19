@@ -1,0 +1,357 @@
+/*Gateway choose Starts*/
+.container .choose_gateway_con{
+    width: 100%;
+    float: left;
+    background: linear-gradient(to bottom, #fff3ea 0%, #ffffff 100%);
+}
+
+.container .choose_gateway_con .choose_gateway_center{
+    width: 1300px;
+    margin:0 auto;
+}
+
+.container .choose_gateway_con .choose_gateway_center .choose_gateway{
+    width: 100%;
+    float: left;
+}
+
+.choose_gateway .gateway_head{
+    width: 100%;
+    float: left;
+}
+
+.choose_gateway .gateway_head .head{
+    text-align: center;
+    font-family:"rubik_semibold";
+    font-size: 30px;
+    padding: 20px 0px;
+}
+
+.choose_gateway .gateway_para{
+    width: 100%;
+    float: left;    
+}
+
+.choose_gateway .gateway_para .gateway_image{
+    width: 50%;
+    float: left;
+}
+
+.choose_gateway .gateway_para .gateway_image .image{
+    display: flex;
+    align-items: center;
+    justify-content: center;  
+}
+
+.choose_gateway .gateway_para .gateway_image .image img{
+    width: 70%;
+    margin-top: 10px;
+}
+
+.choose_gateway .gateway_para .gate_split{
+    width: 50%;
+    float: left;
+}
+
+.choose_gateway .gateway_para .gateway_c{
+    display: flex;
+    align-items: center;
+    justify-content: center;   
+}
+
+.choose_gateway .gateway_para .gateway_c .gate_con{
+    width: 100%;  
+}
+
+.choose_gateway .gateway_para p{
+    line-height: 30px;
+    font-family: "rubik_regular";
+    margin-bottom: 10px;
+}
+
+.choose_gateway .gateway_table{
+    width: 100%;
+    float: left;   
+    background: rgba(255,255,255,0.5); 
+    border: 1px solid rgba(51,51,51,0.1);
+    margin: 20px 0px;
+}
+
+.choose_gateway .gateway_table .gateway_left{
+    width: 30%;
+    float: left;    
+    border-right: 1px solid rgba(51,51,51,0.1);
+    box-sizing: border-box;
+}
+
+.choose_gateway .gateway_table .gateway_left .left_head{
+    width: 100%;
+    float: left;    
+    border-bottom: 1px solid rgba(51,51,51,0.1);
+}
+
+.choose_gateway .gateway_table .gateway_left .left_head .head{
+    text-align: center;
+    font-family: "rubik_semibold";
+    padding: 40px 10px 37px 10px;
+    background: #0dccc0;
+    color: white;  
+}
+
+.choose_gateway .gateway_table .gateway_left .feature_list{
+    width: 100%;
+    float: left;    
+}
+
+.choose_gateway .gateway_table .gateway_left .feature_list > ul > li{
+    width: 100%;
+    float: left;
+    border-bottom: 1px solid rgba(255,255,255,1);
+    padding: 19.5px 10px;
+    box-sizing: border-box;
+    background: #8d351f;
+    color: white;
+}
+
+.choose_gateway .gateway_table .gateway_right{
+    width: 70%;
+    float: left;    
+}
+
+.choose_gateway .gateway_table .gateway_right .left_head{
+    width: 100%;
+    float: left;    
+    border-bottom: 1px solid rgba(51,51,51,0.1);
+    background: #0dccc0; /*#0ecc75, #f1552d, #eea72b, #0dccc0*/
+    color: white;
+}
+
+.choose_gateway .gateway_table .gateway_right .left_head .head{
+    text-align: center;
+    font-family: "rubik_semibold";  
+    padding: 15px 10px;  
+}
+
+.choose_gateway .gateway_table .gateway_right .gateway_list{
+    width: 100%;
+    float: left;    
+}
+
+.choose_gateway .gateway_table .gateway_right .gateway_list > ul > li{
+    width: 100%;
+    float: left;
+    box-sizing: border-box;  
+    border-bottom: 1px solid rgba(51,51,51,0.1);  
+}
+
+.choose_gateway .gateway_table .gateway_right .gateway_list > ul > li .column_con .columns:first-child{
+    border-right: 1px solid rgba(51,51,51,0.1);  
+}
+
+.gateway_list > ul > li:last-child{
+    height: 56px;
+}
+
+.gateway_table .gateway_right .gateway_list > ul > li .column_con{
+    width: 100%;
+    float: left;
+    box-sizing: border-box;   
+
+}
+
+.gateway_list > ul > li .column_con .columns{
+    width: 50%;
+    float: left;
+    box-sizing: border-box;   
+    padding: 15px 10px; 
+    text-align: center;
+    position: relative; 
+}
+
+.gateway_right .gateway_list > ul > li:first-child .column_con .columns{
+    border-right: 1px solid rgba(51,51,51,0.1);  
+}
+
+
+
+.gateway_list > ul > li .column_con .columns .fa-check-circle-o{
+    color: green;
+    font-size: 25px;
+}
+
+.gateway_list > ul > li .column_con .columns .fa-times-circle-o{
+    color: red;
+    font-size: 25px;
+}
+
+.gateway_list > ul > li .column_con .columns .col_content  label span{
+    color: #264753;
+    font-family: 'Poppins_regular';
+    font-size: 15px;
+    text-transform: uppercase;
+}
+
+.gateway_list > ul > li .column_con .columns .col_content label:before {
+    content: "";
+    width: 14px;
+    height: 14px;
+    background: #264753;
+    position: absolute;
+    left: 34%;
+    top: 18px;
+    box-sizing: border-box;
+    border-radius: 50%;
+}
+
+.gateway_list > ul > li .column_con .columns .col_content  input[type="radio"] {
+    opacity: 0;
+    -webkit-appearance: none;
+    display: inline-block;
+    vertical-align: middle;
+    z-index: 100;
+    margin: 0;
+    padding: 0;
+    width: 80%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    cursor: pointer;
+}
+
+.gateway_list > ul > li .column_con .columns .col_content  .bullet {
+    position: relative;
+    width: 22px;
+    height: 22px;
+    left: 32.2%;
+    top: 10px;
+    border: 4px solid #264753;
+    opacity: 0;
+    border-radius: 50%;
+}
+
+.gateway_list > ul > li .column_con .columns .col_content  input[type="radio"]:checked ~ .bullet {
+    position:absolute;
+    opacity: 1;
+    animation-name: explode;
+    animation-duration: 0.350s;
+}
+
+.gateway_list > ul > li .column_con .columns .col_content .line {
+    position: absolute;
+    width: 10px;
+    height: 2px;
+    background-color: #264753;
+    opacity:0;
+}
+
+.gateway_list > ul > li .column_con .columns .col_content .line.zero {
+    left: 11px;
+    top: -21px;
+    transform: translateY(20px);
+    width: 2px;
+    height: 10px;
+}
+
+.gateway_list > ul > li .column_con .columns .col_content  .line.one {
+    right: -7px;
+    top: -11px;
+    transform: rotate(-55deg) translate(-9px);
+}
+
+.gateway_list > ul > li .column_con .columns .col_content  .line.two {
+    right: -20px;
+    top: 11px;
+    transform: translate(-9px);
+}
+
+.gateway_list > ul > li .column_con .columns .col_content  .line.three {
+    right: -8px;
+    top: 35px;
+    transform: rotate(55deg) translate(-9px);
+}
+
+.gateway_list > ul > li .column_con .columns .col_content  .line.four {
+    left: -8px;
+    top: -11px;
+    transform: rotate(55deg) translate(9px);
+}
+
+.gateway_list > ul > li .column_con .columns .col_content  .line.five {
+    left: -20px;
+    top: 11px;
+    transform: translate(9px);
+}
+
+.gateway_list > ul > li .column_con .columns .col_content  .line.six {
+    left: -8px;
+    top: 35px;
+    transform: rotate(-55deg) translate(9px);
+}
+
+.gateway_list > ul > li .column_con .columns .col_content  .line.seven {
+    left: 11px;
+    bottom: -21px;
+    transform: translateY(-20px);
+    width: 2px;
+    height: 10px;
+}
+
+.gateway_list > ul > li .column_con .columns .col_content input[type="radio"]:checked ~ .bullet .line.zero{
+    animation-name:drop-zero;
+    animation-delay: 0.100s;
+    animation-duration: 0.9s;
+    animation-fill-mode: forwards;
+}
+
+.gateway_list > ul > li .column_con .columns .col_content  input[type="radio"]:checked ~ .bullet .line.one{
+    animation-name:drop-one;
+    animation-delay: 0.100s;
+    animation-duration: 0.9s;
+    animation-fill-mode: forwards;
+}
+
+.gateway_list > ul > li .column_con .columns .col_content input[type="radio"]:checked ~ .bullet .line.two{
+    animation-name:drop-two;
+    animation-delay: 0.100s;
+    animation-duration: 0.9s;
+    animation-fill-mode: forwards;
+}
+
+.gateway_list > ul > li .column_con .columns .col_content input[type="radio"]:checked ~ .bullet .line.three{
+    animation-name:drop-three;
+    animation-delay: 0.100s;
+    animation-duration: 0.9s;
+    animation-fill-mode: forwards;
+}
+
+.gateway_list > ul > li .column_con .columns .col_content input[type="radio"]:checked ~ .bullet .line.four{
+    animation-name:drop-four;
+    animation-delay: 0.100s;
+    animation-duration: 0.9s;
+    animation-fill-mode: forwards;
+}
+
+.gateway_list > ul > li .column_con .columns .col_content input[type="radio"]:checked ~ .bullet .line.five{
+    animation-name:drop-five;
+    animation-delay: 0.100s;
+    animation-duration: 0.9s;
+    animation-fill-mode: forwards;
+}
+
+.gateway_list > ul > li .column_con .columns .col_content  input[type="radio"]:checked ~ .bullet .line.six{
+    animation-name:drop-six;
+    animation-delay: 0.100s;
+    animation-duration: 0.9s;
+    animation-fill-mode: forwards;
+}
+
+.gateway_list > ul > li .column_con .columns .col_content > input[type="radio"]:checked ~ .bullet .line.seven{
+    animation-name:drop-seven;
+    animation-delay: 0.100s;
+    animation-duration: 0.9s;
+    animation-fill-mode: forwards;
+}
+
+
+/*Gateway choose Ends*/

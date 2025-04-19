@@ -52,7 +52,7 @@
 	<script src='js/jquery.validate.js'></script>
     <script src='js/additional-methods.min.js'></script>
     <!-- <script src='js/page_valid.js'></script> -->
-	<script type="text/javascript" src="js/validate_page.js"></script>
+	<script type="text/javascript" src="js/validate_page.js?v1"></script>
     <script type="text/javascript" src="js/tech_valid.js"></script>
     
     

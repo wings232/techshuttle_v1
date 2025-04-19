@@ -114,7 +114,8 @@ function verify_mob_num_one(){
 	              	//window.history.go(-1);
 	              	//lastPageUrl = document.referrer 
 					//alert(lastPageUrl);
-	              	window.location.href = "http://localhost/techshuttle_v1/admission_form.php";
+					window.location.href = "http://192.168.0.34/studies/techshuttle_v1/admission_form.php";
+	              	//window.location.href = "http://localhost/techshuttle_v1/admission_form.php";
 	              	//console.log(`Last visited page URL is ${lastPageUrl}`)
 	              	
 	            }
@@ -247,13 +248,15 @@ function forRegisteration_ad(){
   
   function forLogin_ad(){
 	//alert();
+	location.reload();
 	$('.login_form .form_spinner').css({"display":"block"});
 	  $.ajax({
-		  url:"ajax/admission/l.php",
+		  url:"ajax/admission/login_page.php",
 		  type:'post',  
 		  success:function(result){         
 			$('.login_form .form_spinner').css({"display":"none"});
 			$('.container .login_portal .login_form .form_head .form_ajax').html(result);
+			
 		  } 
 	  });
   }

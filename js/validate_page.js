@@ -37,12 +37,49 @@ function create_admission(){
               if(re == 'valid'){
                   //window.location.href = "http://192.168.0.34/kmh_new_v1/patient_portal.php";            
                   //window.history.go(-1);
-                  
-                  window.location.href ="http://localhost/techshuttle_v1/order_summary.php";
+                  window.location.href = "http://192.168.0.34/studies/techshuttle_v1/order_summary.php";
+                  //window.location.href ="http://localhost/techshuttle_v1/order_summary.php";
               }      
             
           }
       });
    }
+}
+
+
+function choose_card(){  
+  //var social_head_select = document.getElementById('social_head_select').value;
+  //var campLoc = camp_register.camp_reg.value;
+  //camp_register
+    var sAces = document.getElementById('aces').value;
+    var sAces_no = document.getElementById('aces_no').value;
+    
+    //alert(sNames_admin,sMobile_no,sAddress);
+    $.ajax({
+          url:'ajax/portal/pay_card.php',
+          type:'post',
+          data:{
+            sAces:sAces,
+            sAces_no:sAces_no,      
+          },
+          success:function(result){
+            //$('.social_create_out').html(result);  
+            //alert(result);
+            re = result.trim()
+
+            if(re =="good"){
+              window.location.href ="http://192.168.0.34/studies/techshuttle_v1/gateway_choose.php";
+               //window.location.href ="http://localhost/techshuttle_v1/gateway_choose.php";
+            }
+            /*re = result.trim()
+              if(re == 'valid'){
+                  //window.location.href = "http://192.168.0.34/kmh_new_v1/patient_portal.php";            
+                  //window.history.go(-1);                  
+                  window.location.href ="http://192.168.0.34/studies/techshuttle/order_summary.php";
+              }  */    
+              //document.customerData.submit()   
+            
+          }
+      });   
 }
 
