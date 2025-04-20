@@ -416,7 +416,7 @@
 .container .order_success_con{
     width: 100%;
     float: left;
-    background: linear-gradient(to bottom, #fff3ea 0%, #ffffff 100%);
+    background: linear-gradient(to left, #eef2f5 0%, #ffffff 100%);
 }
 
 .container .order_success_con .order_success_center{
@@ -442,7 +442,7 @@
 
 .order_success_center .order_success .user_nav ul li{
     float: left;    
-    border-right: 1px solid #ed7117;
+    border-right: 1px solid var(--primary_color);
 }
 
 .order_success_center .order_success .user_nav ul li:last-child{
@@ -452,9 +452,9 @@
 
 .order_success_center .order_success .user_nav ul li a{
     padding:0px 10px;
-    font-family: "rubik_regular";
+    font-family: var(--font_regular);
     font-size: 11px;
-    color: #ed7117;
+    color: var(--primary_color);
     text-transform: uppercase;
 }
 
@@ -473,7 +473,7 @@
 .order_success_center .order_success .order_head_center .order_left .image_form{
     width: 100%;
     float: left;
-    background: white;
+    background:var(--white);
     padding: 10px;
     box-sizing: border-box;
     border-radius: 10px;
@@ -485,7 +485,7 @@
 }
 
 .order_success_center .order_success .order_head_center .order_left .image_form .form_head .head{
-    font-family: "rubik_semibold";
+    font-family: var(--font_medium);
     padding: 10px;
     line-height: 30px;
 }
@@ -501,7 +501,7 @@
 }
 
 .order_head_center .order_left .image_form .form_para .para p{
-    font-family: "rubik_regular";
+    font-family: var(--font_regular);
     padding: 5px 20px;
     text-align: justify;
     line-height: 28px;
@@ -509,32 +509,32 @@
 }
 
 .order_head_center .order_left .image_form .form_para .para p span{
-    color:#ed7117;
+    color:var(--primary_color);
     font-size: 17px;
 }
 
 .order_head_center .order_left .image_form .form_para .para p .name{
-    font-family: "rubik_bold";    
+    font-family: var(--font_bold);    
 }
 
 .order_head_center .order_left .image_form .form_para .para p .course{
-    font-family: "rubik_bold";   
+    font-family: var(--font_bold);   
 }
 
 .order_head_center .order_left .image_form .form_para .para p .rupee{
-    font-family: "roboto_bold";    
+    font-family: var(--font_bold);    
 }
 
 .order_head_center .order_left .image_form .form_para .para p .amount{
-    font-family: "rubik_bold";
+    font-family: var(--font_bold);
 }
 
 .order_head_center .order_left .image_form .form_para .para p .trans{
-    font-family: "rubik_bold";
+    font-family: var(--font_bold);
 }
 
 .order_head_center .order_left .image_form .form_para .para p .email{
-    font-family: "rubik_bold";
+    font-family: var(--font_bold);
 }
 
 .order_head_center .order_left .image{
@@ -560,7 +560,7 @@
     width: 100%;
     float: left;
     border: 1px solid #eee;
-    background: white;
+    background: var(--white);
     border-radius: 10px;
     padding: 20px;
     box-sizing: border-box;
@@ -589,7 +589,7 @@
 .order_success_center .order_success .order_head_con .order_head .head{
     width: 100%;
     float: left;
-    font-family: "rubik_semibold";
+    font-family: var(--font_medium);
     font-size: 25px;
     text-align: center;
     padding: 10px 0px;
@@ -603,7 +603,7 @@
 .order_success_center .order_success .order_head_con .order_head .head_para p{
     width: 100%;
     float: left;
-    font-family: "rubik_regular";
+    font-family: var(--font_regular);
     font-size: 18px;
     text-align: center;
     padding: 10px 0px;
@@ -627,7 +627,7 @@
 
 .order_success_center .order_success .order_head_con .list_details table tr td {
     padding: 15px;
-    font-family: "rubik_regular";
+    font-family: var(--font_regular);
     font-size: 14px;
     border-bottom: 1px solid rgba(210,210,210,0.2);
 }

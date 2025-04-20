@@ -114,8 +114,8 @@ function verify_mob_num_one(){
 	              	//window.history.go(-1);
 	              	//lastPageUrl = document.referrer 
 					//alert(lastPageUrl);
-					window.location.href = "http://192.168.0.34/studies/techshuttle_v1/admission_form.php";
-	              	//window.location.href = "http://localhost/techshuttle_v1/admission_form.php";
+					//window.location.href = "http://192.168.0.34/studies/techshuttle_v1/admission_form.php";
+	              	window.location.href = "http://localhost/techshuttle_v1/admission_form.php";
 	              	//console.log(`Last visited page URL is ${lastPageUrl}`)
 	              	
 	            }

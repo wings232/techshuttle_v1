@@ -64,15 +64,19 @@
             "amount"            => $amount_paid * 100,
             "name"              => $aNames,
             "description"       => "Tron Legacy",
-            "image"             => "https://s29.postimg.org/r6dj1g85z/daft_punk.jpg",
+            "image"             => "https://techshuttle.com/public/webtest/images/logo_01.png",
             "prefill"           => [
-            "name"              => "Daft Punk",
-            "email"             => $emails,
-            "contact"           => $mobiles,
+                "name"              => $aNames,
+                "email"             => $emails,
+                "contact"           => $mobiles,
+                "admission_id" => $admissions_ids,
+                "admission_no" => $admissions_Nos,
             ],
             "notes"             => [
-            "address"           => $address ,
-            "merchant_order_id" => $orderIdGen,
+                "address"           => $address ,
+                "merchant_order_id" => $orderIdGen,
+                "admission_id" => $admissions_ids,
+                "admission_no" => $admissions_Nos,
             ],
             "theme"             => [
             "color"             => "#0251af"
@@ -96,7 +100,7 @@
 
 <button id="rzp-button1">Pay with Razorpay</button>
 <script src="https://checkout.razorpay.com/v1/checkout.js"></script>
-<form name='razorpayform' action="ajax/razor/verify.php" method="POST">
+<form name='razorpayform' action="ajax/razor/order_success.php" method="POST">
     <input type="hidden" name="razorpay_payment_id" id="razorpay_payment_id">
     <input type="hidden" name="razorpay_signature"  id="razorpay_signature" >
 </form>
@@ -104,14 +108,17 @@
 // Checkout details as a json
 var options = <?php echo $json?>;
 
+//console.log(response)
 /**
  * The entire list of Checkout fields is available at
  * https://docs.razorpay.com/docs/checkout-form#checkout-fields
  */
 options.handler = function (response){
+    
     document.getElementById('razorpay_payment_id').value = response.razorpay_payment_id;
     document.getElementById('razorpay_signature').value = response.razorpay_signature;
-    document.razorpayform.submit();
+    //document.razorpayform.submit();
+    console.log(response);
 };
 
 // Boolean whether to show image inside a white frame. (default: true)
@@ -128,8 +135,17 @@ options.modal = {
     // space outside checkout form should close the form. (default: false)
     backdropclose: false
 };
-
+//pay_QLP4kZHZywsrS9
 var rzp = new Razorpay(options);
+rzp.on('payment.failed', function(response){
+    //alert(response.error.description)
+     console.log(response.error.metadata.payment_id);
+    // console.log(response.error.metadata.order_id);
+    // console.log(response.error.reason);
+    //console.log("<?php echo $orderIdGen; ?>")
+    document.getElementById('razorpay_payment_id').value = response.error.metadata.payment_id;
+    //document.razorpayform.submit()
+})
 
 document.getElementById('rzp-button1').onclick = function(e){
     rzp.open();

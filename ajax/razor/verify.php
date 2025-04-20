@@ -16,10 +16,12 @@ print_r($_POST);
 //pay_QKumKQJS31a7uo 
 //order_QKusbzskoOFHfw
 //Array ( [razorpay_payment_id] => pay_QKusiMPwHUd2sm [razorpay_signature] => 248002fb01567c9efc54fa23db6eecffb3a8ce2f1b52226a6139195a553b6004 )
-
+//order_QKxksCt34cehnz
+//Array ( [razorpay_payment_id] => pay_QKxl3YEaPfCjJV [razorpay_signature] => e871ed2dfe2f8f69601f3223925a5642c74e492eb6c93d645c2a4e350270f9fc )
 $api = new Api($keyId, $keySecret);
-
-$razorpayPayment = $api->payment->fetch('pay_QKusiMPwHUd2sm');
+$payment_ids = $_POST['razorpay_payment_id'];
+echo "<br> Correct";
+$razorpayPayment = $api->payment->fetch($payment_ids);
 echo "<pre>";
 print_r($razorpayPayment);
 

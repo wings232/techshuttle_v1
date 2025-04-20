@@ -154,7 +154,7 @@
 										</div>
 										<div class="columns">
 											<div class="col_content">
-												CC Avenue
+												Stripe  
 											</div>
 										</div>
 									</div>
@@ -268,7 +268,7 @@
 												</div>
 											</div>
 										</div>
-										<div class="columns">
+										<!-- <div class="columns">
 											<div class="col_content">
 												<input type="radio" name="gateway" onclick="user_select('ccavenue')"/> CCavenue
 												<label><span></span></label>
@@ -283,7 +283,7 @@
 													<div class="line seven"></div>
 												</div>
 											</div>
-										</div>
+										</div> -->
 									</div>
 								</li>
 							</ul>

@@ -44,6 +44,24 @@
 
 	// New addition Added 
 
+	function selectCourseName($table_name,$course_id){
+		global $conn;
+		//echo $user_session = isset($_SESSION['user_id'])?$_SESSION['user_id']:"";
+		$selectCourseName_sql = "SELECT menu_name from $table_name where menu_id ='$course_id' " ;
+		$selectCourseName_query = $conn->query($selectCourseName_sql);
+		//return $login_result = $login_query->fetch_assoc();
+		$selectCourseName_row = $selectCourseName_query->num_rows;
+		$data = array();		
+		if($selectCourseName_row != 0){
+			while($selectCourseName_result = $selectCourseName_query->fetch_assoc()) { //loop the rows returned from db
+	        	$selectCourseNameArr[] = $selectCourseName_result; //add row to array
+	    	}	   
+			$data['selectCourseName_details'] = $selectCourseNameArr;
+		}
+		$data['selectCourseName_count'] = $selectCourseName_row;
+		return json_encode($data);
+	}
+
 	function selectMultipleMenuRecord($table_name,$menu_levels,$menu_status){
 		global $conn;
 		//echo $user_session = isset($_SESSION['user_id'])?$_SESSION['user_id']:"";
@@ -418,12 +436,8 @@
 		if($selectAdmissionGetDetails_row != 0){
 			while($selectAdmissionGetDetails_result = $selectAdmissionGetDetails_query->fetch_assoc()) { //loop the rows returned from db
 	        	$selectAdmissionGetDetailsArr[] = $selectAdmissionGetDetails_result; //add row to array
-	    	}
-	    	//return $mediaArr; 
-	    	
-			
+	    	}	   
 			$data['selectAdmissionGetDetails_details'] = $selectAdmissionGetDetailsArr;
-			
 		}
 		$data['selectAdmissionGetDetails_count'] = $selectAdmissionGetDetails_row;
 		return json_encode($data);
