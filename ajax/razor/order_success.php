@@ -58,15 +58,18 @@
 	//pay_QLOZjVFZwMNtKH failed
 	$_SESSION['razorpay_order_id'];
 	$api = new Api($keyId, $keySecret);
-	echo $payment_ids = $_POST['razorpay_payment_id'];
-	$razorpayPayment = $api->payment->fetch('pay_QLOZjVFZwMNtKH');
-	echo "<pre>";
-	print_r($razorpayPayment);
-	echo "</pre>";
+	$payment_ids = $_POST['razorpay_payment_id'];
+	$razorpayPayment = $api->payment->fetch($payment_ids);
+	// echo "<pre>";
+	// print_r($razorpayPayment);
+	// echo "</pre>";
 
 	$orderid_razor = $razorpayPayment['order_id'];	
 	$amount = $razorpayPayment['amount'] / 100;	
 	$status = $razorpayPayment['status'];
+	$currency = $razorpayPayment['currency'];
+	$captured = $razorpayPayment['captured'];
+	
 	if($status == "captured"){
 		$status = 'Success'; 
 	}	
@@ -142,6 +145,8 @@
 	$formatted_decimal = sprintf('%08.2f', $course_feess);
 	$dateFormat = date('l ,m F Y', $payment_date);
 
+	date_default_timezone_set('Asia/Calcutta'); 
+	$currentdates = date("Y-m-d H:s");
 	
 	$selectCourseName= selectCourseName("tbl_navigation_setup",$course_id);
     $selectCourseName_json = json_decode($selectCourseName, true);
@@ -154,7 +159,37 @@
 	}
 	
 if($status == 'Success'){
+	$admission_insert = array(
+        
+        "student_name" => $aNames,
+        "course_slug" => $course_id,
+        "admis_id" => $admissions_ids,
+        "admis_no" => $admissions_Nos,        
+        "trans_status" => "",       
+        "trans_orderid" => $tech_orderId,
+        "gate_order_id" => $orderid_razor,
+		"gate_pay_id" => $payment_ids,
+		"trans_mid" => "",
+		"trans_amount" => $course_feess,
+		"trans_pay_mode" => $payment_method,
+		"trans_currency" => $currency,
+		"trans_date" => $payment_date,
+		"trans_resposecode" => $captured,
+		"trans_resposemsg" => "",
+		"trans_gateway" => $payment_bank,
+		"trans_bank_id" => $transaction_id,
+		"trans_bankname" => $payment_bank,
+		"insert_time" => $currentdates,        
+        "status" => "success",
+        "gateway_name" => "rp",
+		"user_id" => $user_session,
+    );
+    //$obj->insert_records("sign_up",$myArray)
 
+	if( recordsToInsert("tbl_transaction_pay",$admission_insert)){
+		$success_update_sql = "UPDATE tbl_adminission_form set status = 'success',admission_order_id='$tech_orderId' where admin_gen_id ='$admissions_Nos' and mobile='$mobiles'";
+		$success_update_query = $conn->query($success_update_sql);
+	}
 	
 ?>
 

@@ -99,6 +99,8 @@
 ?>
 
 <button id="rzp-button1">Pay with Razorpay</button>
+<input type="hidden" name="admissions_ids" id="admissions_ids" value='<?php echo $admissions_ids; ?>'>
+<input type="hidden" name="admissions_Nos"  id="admissions_Nos" value='<?php echo $admissions_Nos; ?>'>
 <script src="https://checkout.razorpay.com/v1/checkout.js"></script>
 <form name='razorpayform' action="ajax/razor/order_success.php" method="POST">
     <input type="hidden" name="razorpay_payment_id" id="razorpay_payment_id">
@@ -117,13 +119,37 @@ options.handler = function (response){
     
     document.getElementById('razorpay_payment_id').value = response.razorpay_payment_id;
     document.getElementById('razorpay_signature').value = response.razorpay_signature;
-    //document.razorpayform.submit();
+    document.razorpayform.submit();
     console.log(response);
 };
 
 // Boolean whether to show image inside a white frame. (default: true)
 options.theme.image_padding = false;
 
+
+//pay_QLP4kZHZywsrS9
+var rzp = new Razorpay(options);
+rzp.on('payment.failed', function(response){
+    //alert(response.error.description)
+     console.log(response.error.metadata.payment_id);
+    // console.log(response.error.metadata.order_id);
+    // console.log(response.error.reason);
+    
+    //document.getElementById('razorpay_payment_id').value = response.error.metadata.payment_id;
+    var payment_id_f = response.error.metadata.payment_id;
+    var admissions_ids = document.getElementById('admissions_ids').value;
+    var admissions_Nos = document.getElementById('admissions_Nos').value;
+    //failed();
+    //alert(admissions_Nos)
+    const xhttp = new XMLHttpRequest();
+        xhttp.onload = function() {
+            alert(this.responseText);
+        }
+        xhttp.open("POST", "ajax/razor/razor_fail.php?payment_id_f="+payment_id_f+"&admissions_ids="+admissions_ids+"&admissions_Nos="+admissions_Nos, true);
+        xhttp.send();
+   
+    //document.razorpayform.submit()
+})
 options.modal = {
     ondismiss: function() {
         console.log("This code runs when the popup is closed");
@@ -135,17 +161,8 @@ options.modal = {
     // space outside checkout form should close the form. (default: false)
     backdropclose: false
 };
-//pay_QLP4kZHZywsrS9
-var rzp = new Razorpay(options);
-rzp.on('payment.failed', function(response){
-    //alert(response.error.description)
-     console.log(response.error.metadata.payment_id);
-    // console.log(response.error.metadata.order_id);
-    // console.log(response.error.reason);
-    //console.log("<?php echo $orderIdGen; ?>")
-    document.getElementById('razorpay_payment_id').value = response.error.metadata.payment_id;
-    //document.razorpayform.submit()
-})
+
+
 
 document.getElementById('rzp-button1').onclick = function(e){
     rzp.open();
