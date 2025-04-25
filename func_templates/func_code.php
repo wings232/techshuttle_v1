@@ -283,24 +283,7 @@
 		return json_encode($data);
 	}
 
-	function selectLoginDetails($table_name,$loginId){
-		global $conn;
-		//echo $user_session = isset($_SESSION['user_id'])?$_SESSION['user_id']:"";
-		$selectLoginDetails_sql = "select * from $table_name where regId = '$loginId'" ;
-		$selectLoginDetails_query = $conn->query($selectLoginDetails_sql);
-		//return $login_result = $login_query->fetch_assoc();
-		$selectLoginDetails_row = $selectLoginDetails_query->num_rows;
-		if($selectLoginDetails_row != 0){
-			while($selectLoginDetails_result = $selectLoginDetails_query->fetch_assoc()) { //loop the rows returned from db
-	        	$selectLoginDetailsArr[] = $selectLoginDetails_result; //add row to array
-	    	}
-	    	//return $mediaArr; 
-	    	$data = array();
-			$data['selectLoginDetails_count'] = $selectLoginDetails_row;
-			$data['selectLoginDetails_details'] = $selectLoginDetailsArr;
-			return json_encode($data);
-		}
-	}
+	
 
 	function selectCourseBatchMapping($table_name,$primary_id,$status){
 		global $conn;
@@ -479,6 +462,24 @@
 			$data['selectAdmissionCheck_details'] = $selectAdmissionCheckArr;
 			return json_encode($data);
 		}
+	}
+
+	function selectLoginDetails($table_name,$login_id,$user_status,$status){
+		global $conn;
+		//echo $user_session = isset($_SESSION['user_id'])?$_SESSION['user_id']:"";
+		$selectLoginDetails_sql = "SELECT * from $table_name where regId  = '$login_id' and userStatus='$user_status' and status = '$status' " ;
+		$selectLoginDetails_query = $conn->query($selectLoginDetails_sql);
+		//return $login_result = $login_query->fetch_assoc();
+		$selectLoginDetails_row = $selectLoginDetails_query->num_rows;
+		$data = array();
+		if($selectLoginDetails_row != 0){
+			while($selectLoginDetails_result = $selectLoginDetails_query->fetch_assoc()) { //loop the rows returned from db
+	        	$selectLoginDetailsArr[] = $selectLoginDetails_result; //add row to array
+	    	}	    	
+			$data['selectLoginDetails_details'] = $selectLoginDetailsArr;
+		}
+		$data['selectLoginDetails_count'] = $selectLoginDetails_row;
+		return json_encode($data);
 	}
 
 ?>

@@ -43,7 +43,7 @@
                         <li class="login_list"><span class='head_ellipsis'><i class='fas fa-user-alt'></i><?php echo $user_name; ?></span>
                             <div class='kmh_headbar_sublist'><!--fz_headbar_sublist Starts-->
                                 <ul>                                
-                                    <li><a href='students_portal.php'>Dashboard</a></li>
+                                    <li><a href='dashboard.php'>Dashboard</a></li>
                                     <li><a class='last' href='ajax/portal/sign_off.php'>Log Out</a></li>
                                 </ul>
                             </div>

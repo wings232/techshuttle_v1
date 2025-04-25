@@ -1,0 +1,123 @@
+@media only screen and (max-width:1300px){
+	.stud_portal_con .stud_portal_center{
+		width: 100%;
+	}
+
+	.patient_portal .ads_patient .image_ads{
+		width:99%;
+		margin-left: 5px;
+	}
+
+}
+
+@media only screen and (max-width:1024px){
+	/*.patient_portal_con{
+		margin-top: 210px
+	}*/
+
+	.stud_portal .leftside_bar{
+		width: 320px;
+		position: fixed;
+		z-index: 99999;
+		height: 100%;
+		top: 0;
+		padding: 0;
+		border-right:1px solid #ebe8e8;
+		/* //display: none; */
+		left:-320px;
+		
+
+	}
+
+	.stud_portal .leftside_bar .sidebar_button{
+		display: block;
+	}
+
+	.stud_portal .leftside_bar .left_side{
+		border:0;
+		max-height: 100%;
+		overflow-y: auto;
+		
+	}
+
+	/* width */
+	.stud_portal .leftside_bar .left_side::-webkit-scrollbar {
+	  width: 4px;
+	}
+
+	/* Track */
+	.stud_portal .leftside_bar .left_side::-webkit-scrollbar-track {
+	  background: #f1f1f1; 
+	}
+	 
+	/* Handle */
+	.stud_portal .leftside_bar .left_side::-webkit-scrollbar-thumb {
+	  background: #888; 
+	}
+
+	/* Handle on hover */
+	.stud_portal .leftside_bar .left_side::-webkit-scrollbar-thumb:hover {
+	  background: #555; 
+	}
+    
+	.stud_portal .rightside_bar{
+		width: 100%;
+	}
+
+	.leftside_bar .left_side .user_name_board .user_image{
+		margin-top: 10px;
+	}
+
+	.stud_portal .ads_patient .image_ads{
+		width:99%;
+		margin-left: 5px;
+	}
+}
+
+@media only screen and (max-width:768px){
+	.stud_portal{
+		margin-top: 190px
+	}
+
+	.stud_portal .ads_patient .image_ads{
+		width:99%;
+		margin-left: 3px;
+	}
+
+	.stud_portal .rightside_bar .right_side .user_intro .user_image .u_img{
+		position: static;
+	}
+
+	.stud_portal .rightside_bar .right_side .user_intro .user_image .u_img .user_desktop{
+		display: none;
+	}
+
+	.stud_portal .rightside_bar .right_side .user_intro .user_image .u_img .user_mobile{
+		display: block;
+		width: 100%;
+	}
+
+	.stud_portal .rightside_bar .right_side .user_intro .user_image .welcome{
+		width: 100%;
+	}
+
+	.right_side .user_intro .user_image .welcome .wel_head{
+		margin-top: 0px;
+	}
+
+	.right_side .user_intro .user_image .welcome .wel_para{
+		margin-bottom: 0px;
+	}
+}
+
+@media only screen and (max-width:600px){
+	.stud_portal_con{
+		margin-top: 176px
+	}
+
+
+}
+
+@media only screen and (max-width:500px){
+	
+}

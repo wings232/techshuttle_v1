@@ -1,0 +1,785 @@
+.stud_portal_con{
+	width: 100%;
+	float: left;
+}
+
+.stud_portal_con .stud_portal_center{
+	width: 1300px;
+	margin: 0 auto;
+}
+
+.stud_portal_con .stud_portal_center .stud_portal{
+	width: 100%;
+	float: left;
+	padding-top: 20px;
+}
+
+.stud_portal .leftside_bar{
+	width: 25%;
+    min-width: 260px;
+    padding: 5px;
+    background-color: #fff;
+    box-sizing: border-box;
+    float: left;
+    position: sticky;
+    top: 0;
+}
+
+.stud_portal .leftside_bar .sidebar_button{
+	position: absolute;
+	left:100%;
+	top: 50%;
+	display: none;
+	cursor: pointer;
+	background:var(--white);
+    padding: 10px 5px;
+    border-radius: 0px 5px 5px 0px;
+    border:1px solid #ebe8e8;
+    border-left: none;
+}
+
+.stud_portal .leftside_bar .sidebar_button i{	
+    font-size: 28px;    
+    color: #ee344e;
+}
+
+.stud_portal .leftside_bar .left_side{
+	width: 100%;
+	float: left;
+	/*border:1px solid #949494;*/
+	/*border: 1px solid #264753;*/
+	border: 1px solid #cfd7ee;
+}
+
+.leftside_bar .left_side .user_name_board{
+	width: 100%;
+	float: left;
+}
+
+.leftside_bar .left_side .user_name_board .user_image{
+	width: 100%;
+	float: left;
+	margin-top: -20px;
+}
+
+.leftside_bar .left_side .user_name_board .user_image .image{
+	width: 55%;
+	/*border:3px solid #949494;*/
+	border:3px solid #264753;
+	border-radius: 100px;
+	padding: 11px 7px;
+	background: white;
+	position: relative;
+}
+
+.leftside_bar .left_side .user_name_board .user_image .image .error_out{
+	width: 100%;
+	float: left;
+	text-align: center;
+	font-family: "rubik_regular";
+	margin-top:20px;
+}
+
+.leftside_bar .left_side .user_name_board .user_image .image .im_con{
+	overflow: hidden;
+    width: 95%;
+    border-radius: 100%;
+    height: 160px;
+}
+
+
+.leftside_bar .left_side .user_menu{
+	width: 100%;
+	float: left;
+}
+
+.leftside_bar .left_side .user_menu .user_li{
+	width: 100%;
+	float: left;
+}
+
+
+.leftside_bar .left_side .user_menu .user_li > ul > li{
+	width: 100%;
+	float: left;
+	border-top:1px solid rgb(148 148 148 / 35%);
+	/*border-left: 4px solid #ed7117;*/
+    box-sizing: border-box;
+	cursor: pointer;
+}
+
+.leftside_bar .left_side .user_menu .user_li > ul > li .user_m_img:hover{
+	/*background: #513f95;*/
+	background: var(--secondary_color);
+	border-left: 4px solid var(--primary_color);
+}
+
+.leftside_bar .left_side .user_menu .user_li > ul > li .user_m_img:hover .image i{
+	color:white;
+}
+
+.leftside_bar .left_side .user_menu .user_li > ul > li .user_m_img:hover .img_name{
+	color:white;
+}
+
+.leftside_bar .left_side .user_menu .user_li > ul > li.user_active{
+	background: #513f95;
+}
+
+.leftside_bar .left_side .user_menu .user_li > ul > li.user_active .user_m_img .image i{
+	color:white;
+}
+
+.leftside_bar .left_side .user_menu .user_li > ul > li.user_active .user_m_img .img_name{
+	color:white;
+}
+
+.leftside_bar .left_side .user_menu .user_li > ul > li .user_m_img.user_active{
+	/*background: #513f95;*/
+	background: var(--secondary_color);
+	border-left: 4px solid var(--primary_color);
+}
+
+.leftside_bar .left_side .user_menu .user_li > ul > li .user_m_img.user_active .image i{
+	color:white;
+}
+
+.leftside_bar .left_side .user_menu .user_li > ul > li .user_m_img.user_active .img_name{
+	color:white;
+}
+
+.leftside_bar .left_side .user_menu .user_li > ul > li .user_m_img{
+	width: 100%;
+	float: left;
+	box-sizing: border-box;
+}
+
+.leftside_bar .left_side .user_menu .user_li > ul > li .user_m_img .image{
+	width: 15%;
+	float: left;
+	padding: 14px 0px;
+	box-sizing: border-box;
+}
+
+.leftside_bar .left_side .user_menu .user_li > ul > li .user_m_img .image i{
+	font-size: 23px;
+	text-align: center;
+	/*color: #513f95;*/
+	color: var(--secondary_color);
+}
+
+.leftside_bar .left_side .user_menu .user_li > ul > li .user_m_img .image img{
+	width: 50%;
+}
+
+.leftside_bar .left_side .user_menu .user_li > ul > li .user_m_img .img_name{
+	width: 85%;
+    float: left;
+    font-family: var(--font_regular);
+    padding: 14px 5px;
+    font-size: 15px;
+    color: var(--black);
+    box-sizing: border-box;
+}
+
+.leftside_bar .left_side .user_menu .user_li > ul > li .leaf_drop{
+	width: 100%;
+	float: left;
+	/*background: #675e89;*/
+	background: #495154;
+	display: none;
+}
+
+.leftside_bar .left_side .user_menu .user_li > ul > li .leaf_drop ul li{	
+	border-top:1px solid #ebe8e8;
+	float: left;
+	width: 100%;
+	
+}
+
+.leftside_bar .left_side .user_menu .user_li > ul > li .leaf_drop ul li:hover .user_m_img{
+	background: #32383a;
+	padding-left: 25px;
+}
+
+.leftside_bar .left_side .user_menu .user_li > ul > li .leaf_drop ul li.a{
+	background: #32383a;
+}
+
+.leftside_bar .left_side .user_menu .user_li > ul > li .leaf_drop ul li .user_m_img{
+	padding-left: 29px;
+    box-sizing: border-box;
+}
+
+.leftside_bar .left_side .user_menu .user_li > ul > li .leaf_drop ul li .user_m_img .image i{
+	color:white;
+}
+
+.leftside_bar .left_side .user_menu .user_li > ul > li .leaf_drop ul li .user_m_img .img_name{
+	color:white;
+}
+
+.stud_portal .rightside_bar{
+	width: 75%;
+    min-width: 260px;
+    padding: 5px;
+    background-color: #fff;
+    border-radius: 5px;
+    box-sizing: border-box;
+    float: left;
+}
+
+.stud_portal .rightside_bar .right_side{
+	width: 100%;
+	float: left;
+	/* //border:2px solid #f0f0f0; */
+}
+
+.stud_portal .rightside_bar .right_side .spinners{
+	width: 100%;
+	float: left;
+	padding: 100px 0px;
+	display: none;
+}
+
+.stud_portal .rightside_bar .right_side .spinners .pls_wait{
+	width:100%;
+	text-align: center;
+	padding: 30px 0px;
+	font-size: 35px;
+	color:black;
+	font-family: "ralewaybold";
+}
+
+.stud_portal .rightside_bar .right_side .user_nav{
+	width:100%;
+	float: left;
+	margin-bottom: 5px;
+}
+
+.stud_portal .rightside_bar .right_side .user_nav > ul > li{
+	float: left;
+	padding: 5px 10px;
+	border-right: 1px solid var(--primary_color);
+	font-size: 15px;
+	font-family: var(--font_regular);
+}
+
+.stud_portal .rightside_bar .right_side .user_nav > ul > li i{
+	width:20px;
+	color: var(--primary_color);
+}
+
+.stud_portal .rightside_bar .right_side .user_nav > ul > li:last-child{
+	border-right: 0;
+}
+
+.stud_portal .rightside_bar .right_side .user_intro{
+	width:100%;
+	float: left;
+}
+
+.stud_portal .rightside_bar .right_side .user_intro .user_nav_one .intro_user{
+	width:100%;
+	float: left;
+	padding: 5px;
+	box-sizing: border-box;
+	border:1px solid #cfd7ee;
+	border-radius: 5px;
+	position: relative;
+	height: 325px;
+	background-color: #30a1a1 !important;
+}
+
+.stud_portal .rightside_bar .right_side .user_intro .user_nav_one .intro_user .userdash_image{
+	position: absolute;
+    right: 0;
+    bottom: 0;
+    width: 250px;
+    opacity: 1;
+}
+
+.stud_portal .rightside_bar .right_side .user_intro .user_nav_one .intro_user .userdash_image img{
+	width: 100%;
+}
+
+.stud_portal .rightside_bar .right_side .user_intro .user_nav_one .intro_content{
+	width:100%;
+	float: left;
+	padding: 5px 10px;
+	box-sizing: border-box;
+	margin-top: 2px;
+}
+
+.stud_portal .rightside_bar .right_side .user_intro .user_nav_one .intro_content .your_name{
+	width:100%;
+	float: left;
+}
+
+.right_side .user_intro .user_nav_one .intro_content .your_name .head{
+	font-family: "rubik_regular";
+	color: white;
+	letter-spacing: 1px;
+	font-size: 18px;
+	line-height: 35px;
+}
+
+.stud_portal .rightside_bar .right_side .user_intro .user_nav_one .intro_content .first_head{
+	width:100%;
+	float: left;
+}
+
+.right_side .user_intro .user_nav_one .intro_content .first_head .head{
+	font-family: "rubik_bold";
+	color: white;
+	letter-spacing: 1px;
+	font-size: 25px;
+	line-height: 30px;
+}
+
+.stud_portal .rightside_bar .right_side .user_intro .user_nav_one .intro_content .sec_head{
+	width:100%;
+	float: left;
+}
+
+.right_side .user_intro .user_nav_one .intro_content .sec_head .head{
+	font-family: "rubik_regular";
+	color: white;
+	letter-spacing: 1px;
+	font-size: 15px;
+	line-height: 25px;
+}
+
+.right_side .user_intro .user_nav_one .intro_content .head_list{
+	width:60%;
+	float: left;
+	margin-top: 30px;
+}
+
+.right_side .user_intro .user_nav_one .intro_content .head_list ul li{
+	width:100%;
+	float: left;
+	margin-bottom: 10px;
+}
+
+.right_side .user_intro .user_nav_one .intro_content .head_list ul li .image{
+	width:25%;
+	float: left;
+	
+}
+
+.right_side .user_intro .user_nav_one .intro_content .head_list ul li .image .img{
+	display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 110px;
+    border:2px solid #fff;
+    /* padding: 5px 10px; */
+    width: 50px;
+    height: 50px;
+}
+
+.right_side .user_intro .user_nav_one .intro_content .head_list ul li:first-child .image .img{
+	background: var(--primary_color);
+}
+
+.right_side .user_intro .user_nav_one .intro_content .head_list ul li:last-child .image .img{
+	background: #fec801 ;
+}
+
+.right_side .user_intro .user_nav_one .intro_content .head_list ul li .image i{
+	font-size: 25px;
+    text-align: center;
+    /* background: red; */
+    padding: 10px 5px;
+    color: white
+}
+
+
+.right_side .user_intro .user_nav_one .intro_content .head_list ul li .image_txt{
+	width:75%;
+	float: left;
+	color: white;
+	padding-top: 5px;
+}
+
+.right_side .user_intro .user_nav_one .intro_content .head_list ul li .image_txt .num_txt{
+	width:100%;
+	float: left;
+	font-size: 18px;
+	font-family: "rubik_medium";
+	margin-bottom: 5px;
+}
+
+.right_side .user_intro .user_nav_one .intro_content .head_list ul li .image_txt .number{
+	width:100%;
+	float: left;
+	font-size: 15px;
+	font-family: "rubik_regular";
+}
+
+
+.stud_portal .rightside_bar .right_side .user_intro .user_nav_one{
+	width:50%;
+	float: left;
+	padding: 5px;
+	box-sizing: border-box;
+}
+
+.stud_portal .rightside_bar .right_side .user_intro .user_nav_one .user_con{
+	width:100%;
+	float: left;
+	padding: 5px;
+	box-sizing: border-box;
+	border:1px solid #cfd7ee;
+	border-radius: 5px;
+}
+
+.stud_portal .rightside_bar .right_side .user_intro .user_nav_one .user_image {
+    width: 100%;
+    float: left;
+    margin:10px 0px;
+}
+
+.stud_portal .rightside_bar .right_side .user_intro .user_nav_one .user_image .image {
+    width: 28%;
+    /*border: 3px solid #949494; */
+    /*border: 3px solid #264753;*/
+    border: 3px solid var(--primary_color);
+    border-radius: 100px;
+    padding: 11px 7px;
+    background: var(--white);
+    position: relative;
+}
+
+.stud_portal .rightside_bar .right_side .user_intro .user_nav_one .user_image .image .im_con {
+    overflow: hidden;
+    width: 94%;
+    border-radius: 100%;
+    height: 124px;
+}
+.stud_portal .rightside_bar .right_side .user_intro .user_nav_one .user_image .image img {
+    height: 136px;
+    margin-left: -26px;
+}
+
+.stud_portal .rightside_bar .right_side .user_intro .user_nav_one .user_image .image .imageUpload {
+    position: absolute;
+    right: -20px;
+    z-index: 1;
+    top: 7px;
+    width: 36%;
+    cursor: pointer;
+}
+
+.stud_portal .rightside_bar .right_side .user_intro .user_nav_one .user_image .image .imageUpload .input_box {
+    width: 100%;
+    float: left;
+    box-sizing: border-box;
+    position: relative;
+}
+
+.stud_portal .rightside_bar .right_side .user_intro .user_nav_one .user_image .image .imageUpload .input_box .feild_action {
+    width: 96%;
+    height: 100%;
+    margin-bottom: 0 !important;
+}
+
+.stud_portal .rightside_bar .right_side .user_intro .user_nav_one .user_image .image .imageUpload .input_box .feild_action {
+    width: 96%;
+    height: 100%;
+    margin-bottom: 0 !important;
+}
+
+.stud_portal .rightside_bar .right_side .user_intro .user_nav_one .user_image .image .imageUpload .input_box .feild_action input {
+    position: absolute;
+    width: 85%;
+    float: left;
+    z-index: 1;
+    padding: 13px;
+    box-sizing: border-box;
+    outline: none;
+    opacity: 0;
+    background: none;
+    border: 1px solid #e2e8f51a;
+    color: white;
+    font-family: "Roboto Regular";
+    cursor: pointer;
+}
+
+.stud_portal .rightside_bar .right_side .user_intro .user_nav_one .user_image .image .imageUpload .input_box .feild_action .button_up {
+    position: absolute;
+    /* width: 100%; */
+    background: rgba(255,255,255,0.7);
+    backdrop-filter: blur(3px);
+    border-radius: 100px;
+    box-shadow: 0px 2px 4px 0px rgb(0 0 0 / 80%);
+    cursor: pointer;
+}
+
+.stud_portal .rightside_bar .right_side .user_intro .user_nav_one .user_image .image .imageUpload .input_box .feild_action .button_up .up_img {
+    float: left;
+    padding: 6px 5px;
+    cursor: pointer;
+}
+
+
+
+.stud_portal .rightside_bar .right_side .user_intro .user_nav_one .user_image .image .imageUpload input {
+    display: block;
+}
+
+.stud_portal .rightside_bar .right_side .user_intro .user_nav_one .user_image .image .imageUpload i {
+    padding: 10px 12px;
+    font-size: 19px;
+    color: #264753;
+    cursor: pointer;
+}
+
+.stud_portal .rightside_bar .right_side .user_intro .user_nav_one .user_image .image .imageUpload:hover .input_box .feild_action .button_up {
+    background: #f1f1f1;
+    border-color: #d6d6d6;
+}
+.stud_portal .rightside_bar .right_side .user_intro .user_nav_one .user_image .image .imageUpload:hover .input_box .feild_action .button_up .up_img i{
+	transform: rotate(360deg);
+}
+.stud_portal .rightside_bar .right_side .user_intro .user_nav_one .user_image .image .imageUpload .input_box .feild_action .button_up .up_img i {
+    transition: all 300ms linear 0s;
+}
+
+.stud_portal .rightside_bar .right_side .user_intro .user_nav_one .user_con .user_profile{
+	width: 100%;
+    float: left;
+}
+
+.right_side .user_intro .user_nav_one .user_con .user_profile .user_name{
+	width: 100%;
+    float: left;
+}
+
+.right_side .user_intro .user_nav_one .user_con .user_profile .user_name .name{
+	width: 100%;
+    float: left;
+    font-family: "rubik_regular";
+    text-transform: uppercase;
+    text-align: center;
+    padding: 5px 0px;
+    letter-spacing: 1px;
+    font-size: 15px;
+}
+
+.right_side .user_intro .user_nav_one .user_con .user_profile .user_email{
+	width: 100%;
+    float: left;
+}
+
+.right_side .user_intro .user_nav_one .user_con .user_profile .user_email .name{
+	width: 100%;
+    float: left;
+    font-family: "rubik_regular";
+    text-align: center;
+    padding: 5px 0px;
+    letter-spacing: 1px;
+    color: #5f5e5e;
+    font-size: 13px;
+}
+
+.right_side .user_intro .user_nav_one .user_con .user_profile .user_dob {
+	width: 100%;
+    float: left;
+}
+
+.right_side .user_intro .user_nav_one .user_con .user_profile .user_dob .dob_a{
+	width: 160px;
+    margin:0 auto;
+}
+
+.right_side .user_intro .user_nav_one .user_con .user_profile .user_dob .dob_a .dob{
+    float: left;
+}
+
+.right_side .user_intro .user_nav_one .user_con .user_profile .user_dob .dob_a .age{
+    float: left;
+}
+
+.right_side .user_intro .user_nav_one .user_con .user_profile .profile_edit{
+	width: 100%;
+    float: left;
+    margin: 10px 0px;
+}
+
+.right_side .user_intro .user_nav_one .user_con .user_profile .profile_edit .proedit_center{
+	width: 160px;
+    margin:0 auto;
+}
+
+.right_side .user_intro .user_nav_one .user_con .user_profile .profile_edit .proedit_center .pro_edit{
+	width: 100%;
+    float: left;
+    padding: 10px;
+    border: 1px solid #cfd7ee;
+    text-align: center;
+    color: #5f5e5e;
+    border-radius: 5px;
+    font-family: "rubik_regular";
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.stud_portal .rightside_bar .right_side .user_intro  .course_pro{
+	width:100%;
+	float: left;
+	padding: 5px;
+	box-sizing: border-box;
+}
+
+.right_side .user_intro  .course_pro .course_center{
+	width:100%;
+	float: left;
+}
+
+.right_side .user_intro  .course_pro .course_center .head_con_p{
+	width:100%;
+	float: left;
+}
+
+.right_side .user_intro  .course_pro .course_center .head_con_p .head{
+	width:100%;
+	float: left;
+	font-family: var(--font_bold);
+	text-align: center;
+	font-size: 25px;
+	margin: 20px 0px;
+}
+
+.right_side .user_intro  .course_pro .course_center .head_con_p .head span{
+	color: var(--primary_color);
+}
+
+.right_side .user_intro  .course_pro .course_center .head_con_p .head_para{
+	width:80%;
+	
+	margin: 0px auto;
+}
+
+.right_side .user_intro  .course_pro .course_center .head_con_p .head_para p{
+	font-family: var(--font_regular);
+	text-align: center;
+	font-size: 15px;
+	line-height: 30px;
+}
+
+.right_side .user_intro  .course_pro .course_center .head_pro{
+	width:100%;
+	float: left;
+}
+
+.right_side .user_intro  .course_pro .course_center .head_pro > ul > li{
+	width:33.3333333%;
+	float: left;
+	padding: 10px;
+	box-sizing: border-box;
+}
+
+.right_side .user_intro  .course_pro .course_center .head_pro > ul > li .list_con{
+	width:100%;
+	float: left;
+	padding: 10px;
+	box-sizing: border-box;
+	box-shadow:1px 1px 7px rgba(51,51,51,0.1);
+	border-radius: 5px;
+}
+
+.course_pro .course_center .head_pro > ul > li .list_con .image{
+	width:100%;
+	float: left;
+}
+
+.course_pro .course_center .head_pro > ul > li .list_con .image .img{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	padding: 20px 0px;	
+}
+
+
+.course_pro .course_center .head_pro > ul > li .list_con .image .img .img_p{
+	background: var(--primary_color);
+	padding: 20px;
+	border-radius: 100px;
+	border:5px solid rgba(255,255,255,0.3);
+}
+
+.course_pro .course_center .head_pro > ul > li .list_con .image .img i{
+	font-size: 22px;
+	color: white
+}
+
+.course_pro .course_center .head_pro > ul > li .list_con .head_p{
+	width:100%;
+	float: left;
+}
+
+.course_pro .course_center .head_pro > ul > li .list_con .head_p .head{
+	color:var(--primary_color);
+	text-align: center;
+	font-family: var(--font_medium);
+	font-size: 20px;
+	padding: 20px 0px;
+}
+
+.course_pro .course_center .head_pro > ul > li .list_con .head_para{
+	width:100%;
+	float: left;
+}
+
+.course_pro .course_center .head_pro > ul > li .list_con .head_para p{
+	font-family: var(--font_regular);
+	text-align: center;
+	font-size: 15px;
+	line-height: 30px;
+}
+
+/*My profile Starts*/
+.stud_portal .rightside_bar .right_side .profile_list{
+	width:100%;
+	float: left;
+	margin-bottom: 5px;
+}
+
+.stud_portal .rightside_bar .right_side .profile_list .profile_set{
+	width:100%;
+	float: left;
+	margin-bottom: 5px;
+	border-top: 2px solid var(--primary_color);
+	margin-top: 50px;
+}
+
+.stud_portal .rightside_bar .right_side .profile_list .profile_set > ul > li{
+	width:100%;
+	float: left;
+	border-bottom:1px solid rgba(173,180,201,0.2);
+}
+
+.stud_portal .rightside_bar .right_side .profile_list .profile_set > ul > li .column_l{
+	width:35%;
+	float: left;	
+	padding: 15px 10px;
+	box-sizing: border-box;
+	border-right:1px solid rgba(173,180,201,0.2);
+	font-family: var(--font_medium);
+	font-size: 14px;
+}
+
+.stud_portal .rightside_bar .right_side .profile_list .profile_set > ul > li .column_r{
+	width:65%;
+	float: left;
+	padding: 15px 10px;
+	box-sizing: border-box;
+	font-family: var(--font_regular);
+	font-size: 14px;
+}
+
+/*My profile Ends*/
+
+
