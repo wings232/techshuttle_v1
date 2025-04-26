@@ -129,6 +129,12 @@
 														</div>
 													</li>
 													<li>
+														<div class="user_m_img" onclick="leaf('change_pass')">
+															<div class="image"><center><i class="fa fa-address-book"></i></center></div>
+															<div class="img_name">Change Password</div>
+														</div>
+													</li>
+													<li>
 														<div class="user_m_img" onclick="leaf('book_health_check')">
 															<div class="image"><center><i class="fa fa-address-book"></i></center></div>
 															<div class="img_name">Address Book</div>
