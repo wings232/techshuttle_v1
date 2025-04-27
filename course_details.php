@@ -92,17 +92,126 @@
 
 ?>
         <div class="course_sec_con"><!--course_sec_con Starts -->
+			<div class='course_sam_con'>
+				<div class='course_center'>
+					<div class='course_sam'>
+					
+						<div class='cour_left'>
+							<div class="user_nav"><!--user_nav Starts -->
+								<ul>
+									<li><a href="">Home</a></li>
+									<li><a href=""><?php echo $menu_slugs_one; ?></a></li>
+									<li><a href=""><?php echo $menu_slugs_two; ?></a></li>
+									<li><a href=""><?php echo $menu_slug_three; ?></a></li>
+									<li><a href=""><?php echo $menu_names_f; ?></a></li>
+								</ul>
+							</div><!--user_nav Ends -->
+							<div class="course_name"><!--course_name Starts -->
+								<div class="name"><!--name Starts -->
+									<?php echo $menu_names_f; ?>								
+								</div><!--name Ends -->
+							</div><!--course_name Ends -->
+							<div class='desc'>
+								<p>
+									SAP Analytics Cloud (or SAP Cloud for Analytics) is a software as a service (SaaS) business intelligence (BI) platform designed by SAP specifically with the intent of providing all analytics capabilities to all users in one product. It is primarily suitable for SAP Consultants who is working with SAP BW, SAP BI, SAP BO, and SAP ECC-based Business Users, analysts who want to report and analyze using Dashboards/Visualization/Charts and Planning. This tool is generally a HANA Cloud-based Platform tool used for Reporting, Visualization/Dashboard, and Planning.
+								</p>
+							</div>
+
+							<div class='button'>
+								<div class="feild_b">														
+									<div class="box_feild">
+										<input type="button" value="Training Options">
+									</div>
+									<div class="box_feild">
+										<input type="button" value="Request a demo" onclick='enq_form("course","<?php echo $menu_slug_f; ?>","demo")'>
+									</div>
+									<div class="box_feild">
+										<input type="button" value="Corporate Training" onclick='enq_form("course","<?php echo $menu_slug_f; ?>","Corporate Training")'>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class='cour_right'>
+							<div class='images'>
+								<img src="images/courses.png">
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="label_con"><!--label_con Starts -->
+            <div class='label_center'>
+                <div class="label">
+                    <div class="fact">
+                        <ul>
+                            <li><!--Loop Starts -->
+                                <div class="fact_con">
+                                    <div class='img'>
+                                        <img src='images/label/01.svg'/>
+                                    </div>
+                                    <div class="txt">
+                                        <div class="txt_one">
+                                            Structured Classes
+                                        </div>
+                                        <div class="txt_two">
+                                            You pick schedule.
+                                        </div>
+                                    </div>
+                                </div>
+                            </li><!--Loop Ends -->
+                            <li><!--Loop Starts -->
+                                <div class="fact_con">
+                                    <div class='img'>
+                                        <img src='images/label/02.svg'/>
+                                    </div>
+                                    <div class="txt">
+                                        <div class="txt_one">
+                                            Hands On Practical 
+                                        </div>
+                                        <div class="txt_two">
+                                            Download classes.
+                                        </div>
+                                    </div>
+                                </div>
+                            </li><!--Loop Ends -->
+                            <li><!--Loop Starts -->
+                                <div class="fact_con">
+                                    <div class='img'>
+                                        <img src='images/label/03.svg'/>
+                                    </div>
+                                    <div class="txt">
+                                        <div class="txt_one">
+                                            Experienced Teachers
+                                        </div>
+                                        <div class="txt_two">
+                                            Explore fresh topics.
+                                        </div>
+                                    </div>
+                                </div>
+                            </li><!--Loop Ends -->
+                            <li><!--Loop Starts -->
+                                <div class="fact_con">
+                                    <div class='img'>
+                                        <img src='images/label/04.svg'/>
+                                    </div>
+                                    <div class="txt">
+                                        <div class="txt_one">
+                                            100% Placement Assistances
+                                        </div>
+                                        <div class="txt_two">
+                                            Always get answers.
+                                        </div>
+                                    </div>
+                                </div>
+                            </li><!--Loop Ends -->
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div><!--label_con Ends -->
             <div class="course_sec_center"><!--course_sec_center Starts -->
                 <div class="course_sec"><!--course_sec Starts -->
-                    <div class="user_nav"><!--user_nav Starts -->
-						<ul>
-							<li><a href="">Home</a></li>
-							<li><a href=""><?php echo $menu_slugs_one; ?></a></li>
-							<li><a href=""><?php echo $menu_slugs_two; ?></a></li>
-							<li><a href=""><?php echo $menu_slug_three; ?></a></li>
-							<li><a href=""><?php echo $menu_names_f; ?></a></li>
-						</ul>
-					</div><!--user_nav Ends -->
+                    
 
                     <div class="product_details_con"><!--product_details_con Starts -->
                         <div class="product_details"><!--product_details Starts -->
@@ -111,7 +220,7 @@
                                 <div class="product_det"><!--product_det Starts -->
                                     <div class="course_name"><!--course_name Starts -->
 										<div class="name"><!--name Starts -->
-											<?php echo $menu_names_f; ?>								
+											<?php //echo $menu_names_f; ?>								
                                         </div><!--name Ends -->
 									</div><!--course_name Ends -->
 
@@ -161,7 +270,7 @@
 									</div><!--type_list Ends -->
 
                                     <div class="product_images"><!--product_images Starts -->
-										<img src="images/course/main/sap_abap.webp">
+										<!-- <img src="images/course/main/sap_abap.webp"> -->
 									</div>
 <?php /* ?>
 									<div class="course_batch_list"><!--course_batch_list Starts -->
@@ -543,9 +652,82 @@ foreach ($selectMultipleListRecord_json['selectMultipleListRecord_details'] as $
 												</nav>
 											</div><!--content_acco Ends -->
 
+											<div class='cour_feat'>
+												<div class='featur_img'>
+													<img src='images/label/about.png'/>
+												</div>
+												<div class='featur_list'>
+													<div class='li_head'>
+														Course Features
+													</div>
+													<ul>
+														<li><!--Loop Starts --> 
+ 															<div class='li_con'>
+																<div class='img'>
+																	<img src='images/icons/real-time.png'/>
+																</div>
+																<div class='img_txt'>
+																	Real-time Use cases
+																</div>
+															</div>
+														</li><!--Loop Ends --> 
+														<li><!--Loop Starts --> 
+ 															<div class='li_con'>
+																<div class='img'>
+																	<img src='images/icons/24-7.png'/>
+																</div>
+																<div class='img_txt'>
+																	24/7 Lifetime Support
+																</div>
+															</div>
+														</li><!--Loop Ends -->
+														<li><!--Loop Starts --> 
+ 															<div class='li_con'>
+																<div class='img'>
+																	<img src='images/icons/medal.png'/>
+																</div>
+																<div class='img_txt'>
+																	Certification Based Curriculum
+																</div>
+															</div>
+														</li><!--Loop Ends -->
+														<li><!--Loop Starts --> 
+ 															<div class='li_con'>
+																<div class='img'>
+																	<img src='images/icons/calendar.png'/>
+																</div>
+																<div class='img_txt'>
+																	Flexible Schedules
+																</div>
+															</div>
+														</li><!--Loop Ends -->
+														<li><!--Loop Starts --> 
+ 															<div class='li_con'>
+																<div class='img'>
+																	<img src='images/icons/customer-service.png'/>
+																</div>
+																<div class='img_txt'>
+																	One-on-one doubt clearing
+																</div>
+															</div>
+														</li><!--Loop Ends -->
+														<li><!--Loop Starts --> 
+ 															<div class='li_con'>
+																<div class='img'>
+																	<img src='images/icons/success.png'/>
+																</div>
+																<div class='img_txt'>
+																	Career path guidance
+																</div>
+															</div>
+														</li><!--Loop Ends -->
+													</ul>
+												</div>
+											</div>
 
 
 										</div>
+
 										<div class="course_right">
 											<div class="border_bar">
 												<div class="image">
@@ -748,6 +930,8 @@ foreach ($selectMultipleListRecord_json['selectMultipleListRecord_details'] as $
 											</div>
 										</div>
 									</div><!--course_content Ends -->
+
+
 
 
 									<div class='mat_enquiry'><!--mat_enquiry Starts -->
@@ -1063,15 +1247,31 @@ foreach ($selectMultipleListRecord_json['selectMultipleListRecord_details'] as $
 												<div class='sub_head'>
 													<p>Enterprise training for teams</p>
 												</div>
-												<div class="enq_button"><!--enq_button Starts -->
+												<div class="enq_button" onclick='enq_form("course","<?php echo $menu_slug_f; ?>","Corporate Training")' ><!--enq_button Starts -->
 													<div class="banner-btn wow fadeup-animation animated" data-wow-duration="0.8s" data-wow-delay="0.5s" style="visibility: visible; animation-duration: 0.8s; animation-delay: 0.5s;">
-														<a href="" class="sec-btn" title="Get Started"><span>For Enquire</span></a>
+														<div class="sec-btn" title="Get Started"><span>For Enquire</span></div>
 													</div>
 												</div>
 											</div>
 										</div>
 										
 									</div><!--mat_enquiry Ends -->
+								
+									<div class='hands_on'>
+										<div class='hand_cover'>
+											
+										</div>
+										<div class='image'>
+											<img src='images/girl_01.png'/>
+										</div>
+										<div class='heads'> Hands-on <span><?php echo $menu_names_f; ?> &nbsp;</span>Projects</div>
+										<div class='para'>
+											<p>
+												Our <span><?php echo $menu_names_f; ?></span> Training course aims to deliver quality training that covers solid fundamental knowledge on core concepts with a practical approach. Such exposure to the current industry use-cases and scenarios will help learners scale up their skills and perform real-time projects with the best practices.
+											</p>
+										</div>
+									</div>
+				
 <?php
 /*
 									<div class="course_overview"><!--course_overview Starts -->
@@ -1252,7 +1452,7 @@ if($selectMultipleListLevelRecord_json_count > 0){
                             </div><!--product_leftbar Ends -->
 
 							<div class="course_t_con"><!--course_t_con Starts -->
-								<?php include "course_index.php"; ?>
+								<?php include "related_course.php"; ?>
 							</div><!--course_t_con Ends -->
 <?php /* ?>
                             <div class="product_rightbar"><!--product_rightbar Starts -->

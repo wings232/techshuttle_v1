@@ -782,4 +782,145 @@
 
 /*My profile Ends*/
 
+/* Orders Starts */
+.stud_portal .rightside_bar .right_side .profile_list .profile_set{
+	width:100%;
+	float: left;
+	margin-bottom: 5px;
+	border-top: 2px solid var(--primary_color);
+	margin-top: 50px;
+}
+
+.stud_portal .rightside_bar .right_side .profile_list .profile_set .orders_con{
+	width:100%;
+	float: left;
+}
+
+.stud_portal .rightside_bar .right_side .profile_list .profile_set .orders_con .order_head{
+	width:100%;
+	float: left;
+}
+
+.right_side .profile_list .profile_set .orders_con .order_head ul {
+	width:100%;
+	float: left;
+}
+
+.right_side .profile_list .profile_set .orders_con .order_head ul li{
+	float: left;
+	width: 20%;
+	background: #2f57ef21;
+	text-align: center;
+	padding: 10px;
+	box-sizing: border-box;
+	font-family: var(--font_bold);
+}
+
+.stud_portal .rightside_bar .right_side .profile_list .profile_set .orders_con .order_list{
+	width:100%;
+	float: left;
+}
+
+.right_side .profile_list .profile_set .orders_con .order_list ul {
+	width:100%;
+	float: left;
+}
+
+.right_side .profile_list .profile_set .orders_con .order_list ul li{
+	float: left;
+	width: 100%;
+	padding: 10px;
+	box-sizing: border-box;
+	font-family: var(--font_regular);
+	text-align: center;
+}
+
+.right_side .profile_list .profile_set .orders_con .order_list ul li:nth-child(even){
+	background: #cfcfcf3d;
+}
+
+
+.right_side .profile_list .profile_set .orders_con .order_list ul li .cols{
+	width: 20%;
+	float: left;
+	padding: 5px;
+	box-sizing: border-box;
+}
+
+
+.right_side .profile_list .profile_set .orders_con .order_list ul li .col_five{
+	float: left;
+    background: var(--primary_color);
+    color: white;
+    font-size: 15px;
+    border-radius: 5px;
+    box-sizing: border-box;
+	cursor: pointer;
+}
+
+.right_side .profile_list .profile_set .orders_con .order_list ul li .sum_list{
+    width: 100%;
+    float: left;
+    padding: 10px 0px;
+    display: none;
+}
+
+.right_side .profile_list .profile_set .orders_con .order_list ul li .sum_list > ul > li{
+    width: 49.6%;
+    float: left;
+    box-sizing: border-box;
+    border: 1px solid #eee;   
+    margin-bottom: 5px;
+}
+
+.right_side .profile_list .profile_set .orders_con .order_list ul li .sum_list > ul > li:nth-child(odd){
+    margin-right: 5px; 
+}
+
+.right_side .profile_list .profile_set .orders_con .order_list ul li .sum_list > ul > li .head{
+    width: 40%;
+    float: left;
+    border-right: 1px solid #eee;
+    box-sizing: border-box;
+    padding: 10px;
+    font-family: var(--font_medium);
+    text-align: left;
+}
+
+.right_side .profile_list .profile_set .orders_con .order_list ul li .sum_list > ul > li .head_l{
+    width: 60%;
+    float: left;
+    padding: 10px;
+    box-sizing: border-box;
+    font-family: var(--font_regular);
+    text-align: left;
+}
+
+.right_side .profile_list .profile_set .orders_con .order_list ul li .sum_list > ul > li:last-child{
+    width: 100%;
+    float: left;
+}
+
+.right_side .profile_list .profile_set .orders_con .order_list ul li .sum_list > ul > li:last-child .head{
+    width: 100%;
+    float: left;
+    border-right: 1px solid #eee;
+    box-sizing: border-box;
+    padding: 10px;
+    font-family: var(--font_medium);
+    text-align: left;
+}
+
+.right_side .profile_list .profile_set .orders_con .order_list ul li .sum_list > ul > li:last-child .head_l{
+    width: 100%;
+    float: left;
+    padding: 10px;
+    box-sizing: border-box;
+    font-family: var(--font_regular);
+    text-align: left;
+}
+
+
+/* Orders Ends */
+
 

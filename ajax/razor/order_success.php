@@ -8,6 +8,9 @@
 	use Razorpay\Api\Api;
 	use Razorpay\Api\Errors\SignatureVerificationError;
 	$success = true;
+	if($user_session == ""){
+		header("Location:index.php");
+	}	
 ?>
 <!DOCTYPE html>
 <html>

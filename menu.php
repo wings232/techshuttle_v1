@@ -84,7 +84,7 @@
                                     <li>
                                         <a href="<?php echo $categories_groups_f;?>/<?php echo $menu_slug_f;?>">
                                             <div class="image">
-                                                <img src="images/menu_image/menu_icons/sap.png" alt="SAP Certification Training">
+                                                <img src="images/menu_image/menu_icons/<?php echo $menu_banner_f; ?>" alt="SAP Certification Training">
                                             </div>
                                             <div class="txt">
                                                 <?php echo $menu_names_f;?>

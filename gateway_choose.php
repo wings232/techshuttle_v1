@@ -4,7 +4,7 @@
 	include_once "func_templates/func_code.php";
 	include "constantconfig.php";
 	if($user_session == ""){
-		//header("Location:index.php");
+		header("Location:index.php");
 	}	
 	
 ?>

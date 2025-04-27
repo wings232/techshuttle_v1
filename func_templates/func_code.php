@@ -482,4 +482,22 @@
 		return json_encode($data);
 	}
 
+	function selectDashAdminDetails($table_name,$login_id,$status){
+		global $conn;
+		//echo $user_session = isset($_SESSION['user_id'])?$_SESSION['user_id']:"";
+		$selectDashAdminDetails_sql = "SELECT * from $table_name where register_id  = '$login_id' and status = '$status' " ;
+		$selectDashAdminDetails_query = $conn->query($selectDashAdminDetails_sql);
+		//return $login_result = $login_query->fetch_assoc();
+		$selectDashAdminDetails_row = $selectDashAdminDetails_query->num_rows;
+		$data = array();
+		if($selectDashAdminDetails_row != 0){
+			while($selectDashAdminDetails_result = $selectDashAdminDetails_query->fetch_assoc()) { //loop the rows returned from db
+	        	$selectDashAdminDetailsArr[] = $selectDashAdminDetails_result; //add row to array
+	    	}	    	
+			$data['selectDashAdminDetails_details'] = $selectDashAdminDetailsArr;
+		}
+		$data['selectDashAdminDetails_count'] = $selectDashAdminDetails_row;
+		return json_encode($data);
+	}
+
 ?>

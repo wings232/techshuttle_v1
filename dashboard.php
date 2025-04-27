@@ -109,12 +109,12 @@
 												<div class="img_name">My Course</div>
 											</div>
 										</li>
-										<li onclick="leaf('user_appoint_list_v1')">
+										<!-- <li onclick="leaf('user_appoint_list_v1')">
 											<div class="user_m_img slides">
 												<div class="image"><center><i class="fa fa-heart" aria-hidden="true"></i></center></div>
 												<div class="img_name">My Favorite</div>
 											</div>
-										</li>
+										</li> -->
 										<li>
 											<div class="user_m_img slides">
 												<div class="image"><center><i class="fa fa-user-circle" aria-hidden="true"></i></center></div>
@@ -149,12 +149,28 @@
 												</ul>
 											</div>
 										</li>
-										<li onclick="leaf('user_appoint_list_v1')">
+
+										<li>
+											<div class="user_m_img slides">
+												<div class="image"><center><i class="fa fa-user-circle" aria-hidden="true"></i></center></div>
+												<div class="img_name">My Orders</div>
+											</div>
+											<div class="leaf_drop">
+												<ul>
+													<li>
+														<div class="user_m_img" onclick="leaf('orders')">
+															<div class="image"><center><i class="fa fa-user" aria-hidden="true"></i></center></div>
+															<div class="img_name">Orders</div>
+														</div>
+													</li>
+											</div>
+										</li>
+										<!-- <li onclick="leaf('user_appoint_list_v1')">
 											<div class="user_m_img slides">
 												<div class="image"><center><i class='fas fa-toggle-off'></i></center></div>
 												<div class="img_name">Deativate Account</div>
 											</div>
-										</li>
+										</li> -->
 										
 										
 										<!-- <li onclick="leaf('book_health_check')">
@@ -198,12 +214,12 @@
 												</ul>
 											</div>
 										</li> -->					
-										<li onclick="leaf('hrs')">
+										<!-- <li onclick="leaf('hrs')">
 											<div class="user_m_img slides">
 												<div class="image"><center><i class="fa fa-bell" aria-hidden="true"></i></center></div>
 												<div class="img_name">Notification</div>
 											</div>
-										</li>
+										</li> -->
 
 										<!-- <li>
 											<div class="user_m_img slides">
@@ -236,7 +252,7 @@
 										
 
 										
-										<li onclick="leaf('make_payments')">
+										<!-- <li onclick="leaf('make_payments')">
 											<div class="user_m_img slides">
 												<div class="image"><center><i class="fa fa-envelope-open"></i></center></div>
 												<div class="img_name">Email Preference</div>
@@ -254,7 +270,7 @@
 												<div class="image"><center><i class='fas fa-wallet'></i></center></div>
 												<div class="img_name">Wallet</div>
 											</div>
-										</li>
+										</li> -->
 										<li onclick="leaf('user_pro_set')">
 											<div class="user_m_img slides">
 												<div class="image"><center><i class="fa fa-cog" aria-hidden="true"></i></center></div>
@@ -413,7 +429,7 @@
 
 											<div class="user_profile">
 												<div class="user_name">
-													<div class="name">Jaheer Hussain A</div>
+													<div class="name"><?php echo $user_name; ?></div>
 												</div>
 												<div class="user_email">
 													<div class="name">jaheerabdul@techshuttle.com</div>

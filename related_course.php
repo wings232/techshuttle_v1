@@ -3,10 +3,10 @@
                     <div class="course_heads"><!--course_heads Starts -->
                         <div class="pop_course">
                             <div class="pop_title">
-                                <div class="title">Popular Courses</div>
+                                <div class="title">Related Courses</div>
                             </div>
                             <div class="pop_head">
-                                Explore Top
+                                Explore <?php echo $menu_slugs_two; ?>
                                 <span>Courses 
                                     <img  src="images/label/course_head_line.svg" alt="" />
                                 </span>

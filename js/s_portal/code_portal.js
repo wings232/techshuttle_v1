@@ -114,3 +114,7 @@ $(document).on("click",".leftside_bar .left_side .user_menu .user_li > ul > li .
 $(document).on("click",".leaf_drop ul li",function(){
 	$(this).addClass('a').siblings().removeClass('a');
 });
+
+$(document).on("click",".right_side .profile_list .profile_set .orders_con .order_list ul li .col_five",function(){
+    $(this).next('.right_side .profile_list .profile_set .orders_con .order_list ul li .sum_list').slideToggle();    
+});

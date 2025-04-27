@@ -1111,6 +1111,7 @@ body{
     font-weight: 500;
     margin-top: 10px;
     font-family: var(--font_bold);
+    text-transform: capitalize;
 }
 
 .course_t .course_heads .pop_course .pop_head span{
@@ -1140,12 +1141,12 @@ body{
 .course_t .course_heads .pop_cate .cate_list ul{
     width:100%;
     float: left; 
-    display: flex;   
+    display: flex    ;
+    justify-content: end;  
 }
 
 .course_t .course_heads .pop_cate .cate_list ul li{
-    width:100%;
-    float: left; 
+    float: right; 
     color: #a0a2a4;
     font-size: 20px;
     line-height: 20px;

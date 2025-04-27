@@ -9,6 +9,216 @@
     
 }
 
+.container .course_sec_con .course_sam_con{
+    width:100%;
+    float: left;    
+    background: #f9faf8;
+}
+
+.course_sec_con .course_sam_con .course_center{
+    width:1300px;
+    margin:0 auto;    
+}
+
+.course_sec_con .course_sam_con .course_center .course_sam{
+    width:100%;
+    float: left;    
+}
+
+.course_center .course_sam .cour_left{
+    width: 45%;
+    float: left;
+}
+
+.course_sam .cour_left .user_nav {
+    width: 100%;
+    float: left;
+    margin-top: 50px;
+}
+
+.course_sam .cour_left .user_nav ul {
+    float: left;
+    padding: 15px 0px;
+}
+
+.course_sam .cour_left .user_nav ul li {
+    float: left;
+}
+
+.course_sam .cour_left .user_nav ul li:nth-child(1) a{
+    padding-left: 0;
+}
+
+.course_sam .cour_left .user_nav ul li a {
+    font-family: var(--font_regular);
+    border-right: 1px solid var(--primary_color);
+    font-size: 11px;
+    color:var(--primary_color);
+    text-transform: uppercase;
+    padding: 0px 10px;
+}
+
+.course_sam .cour_left .user_nav ul li:last-child a{
+    border-right:0;
+}
+
+
+
+.course_center .course_sam .cour_left .course_name{
+    width: 100%;
+    float: left;
+    
+}
+
+.course_center .course_sam .cour_left .course_name .name{
+    width: 100%;
+    float: left;
+    font-family: var(--font_medium);
+    font-size: 22px;
+    color: var(--black);
+    text-transform: uppercase;
+    padding: 10px 0px;
+}
+
+.course_center .course_sam .cour_left .desc {
+    width: 100%;
+    float: left;
+}
+
+.course_center .course_sam .cour_left .desc p{
+    width: 100%;
+    float: left;
+    height: 109px;
+    overflow: hidden;
+    font-family: var(--font_regular);
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 4;
+    -webkit-box-orient: vertical;
+    font-size: 14px;
+    text-align: justify;
+}
+
+.course_center .course_sam .cour_left .button{
+    width: 100%;
+    float: left;
+    margin-top: 30px;
+    margin-bottom: 60px;
+}
+
+.course_center .course_sam .cour_left .button .feild_b{
+    width: 100%;
+    float: left;
+}
+
+.course_center .course_sam .cour_left .button .feild_b .box_feild{
+    float: left;
+    margin-right: 5px;
+}
+
+.course_center .course_sam .cour_left .button .feild_b .box_feild input{
+    width: 100%;
+    float: left;
+    padding: 15px;
+    box-sizing: border-box;
+    outline: none;
+    border: 0;
+    background: var(--primary_color);
+    color: white;
+    font-family: var(--font_medium);
+    font-size: 15px;
+    text-transform: uppercase;
+}
+
+.course_center .course_sam .cour_right{
+    width: 55%;
+    float: left;
+}
+
+.course_center .course_sam .cour_right .images{
+    width: 100%;
+    float: left;
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+}
+
+.course_center .course_sam .cour_right .images img{
+    display: block;
+    height: 500px;
+}
+
+
+/* Label css Starts */
+
+.container .label_con{
+    width:100%;
+    float: left;  
+    background-color:var(--primary_color);
+    background-position: 50%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 40px 0;  
+}
+
+.container .label_con .label_center{
+    width:1300px;
+    margin:0 auto;
+}
+
+.container .label_con .label_center .label{
+    width:100%;
+    float: left;
+    position: relative;   
+}
+
+.label .fact{
+    width:100%;
+    float: left;
+}
+
+.label .fact ul{
+    --bs-gutter-x: 1.5rem;
+    --bs-gutter-y: 0;
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: calc(var(--bs-gutter-x)* -.5);
+    margin-right: calc(var(--bs-gutter-x)* -.5);
+    margin-top: calc(var(--bs-gutter-y)* -1);
+}
+
+.label .fact ul li{
+    flex: 0 0 auto;
+    width: 25%;
+}
+
+.label .fact ul li .fact_con{
+    display: flex;
+    align-items: center;
+}
+
+.label .fact ul li .fact_con .img{
+    flex: 0 0 auto;
+    margin-right: 25px;
+}
+
+.label .fact ul li .fact_con .txt{
+    flex: 0 0 auto;
+}
+
+.label .fact ul li .fact_con .txt .txt_one{
+    color:#fff;
+    font-size: 20px;
+    font-weight: 500;
+    margin-bottom: 2px;
+}
+
+.label .fact ul li .fact_con .txt .txt_two{
+    color: hsla(0, 0%, 100%, .8);
+    font-size: 15px;
+}
+
+
 .container .course_sec_con .course_sec_center{
     width:1300px;
     margin:0 auto;
@@ -1176,6 +1386,77 @@
     box-sizing: border-box;
 } 
 
+.product_details_con .product_leftbar .product_det .hands_on{
+    width: 100%;
+    float: left;
+    position: relative;
+    padding: 75px 60px 60px;
+    box-sizing: border-box;
+    background: linear-gradient(90deg, #5A72FF 0%, #687EFF 100%);
+    margin: 50px 0px;
+    border-radius: 30px;
+}
+
+.product_details_con .product_leftbar .product_det .hands_on .hand_cover{
+    background: url('../../images/label/shape.png');
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    z-index: -1;
+}
+
+.product_details_con .product_leftbar .product_det .hands_on .image{
+    position: absolute;
+    bottom: -0;
+    right: 90px;
+    z-index: 2;
+}
+
+.product_details_con .product_leftbar .product_det .hands_on .image img{
+    display: block;
+    height: 350px;
+}
+
+.product_details_con .product_leftbar .product_det .hands_on .heads{
+    width: 65%;
+    float: left;
+    color: var(--white);
+    font-family: var(--font_bold);
+    font-size: 30px;
+    padding: 20px 0;
+}
+
+.product_details_con .product_leftbar .product_det .hands_on .heads span{
+    text-transform: uppercase;
+    font-style: italic;
+    font-size: 35px;
+}
+
+.product_details_con .product_leftbar .product_det .hands_on .para{
+    width: 65%;
+    float: left;
+}
+
+.product_details_con .product_leftbar .product_det .hands_on .para p{
+    font-family: var(--font_regular);
+    font-size: 15px;
+    color: var(--white);
+    text-align: justify;
+}
+
+.product_details_con .product_leftbar .product_det .hands_on .para p span{
+    text-transform: uppercase;
+    font-style: italic;
+    font-family: var(--font_bold);
+}
+
+
+
 .product_leftbar .product_det .course_content{
     width: 100%;
     float: left;
@@ -1224,6 +1505,76 @@
     padding: 0;
     box-sizing: border-box;
    
+}
+
+.product_leftbar .product_det .course_content .cour_feat{
+    width: 100%;
+    float: left;
+    margin-top: 30px;
+    height: 550px;
+}
+
+.product_leftbar .product_det .course_content .cour_feat .featur_img{
+    width: 50%;
+    float: left;
+    display: flex;
+    align-items: center;
+    height: 100%;
+}
+
+.product_leftbar .product_det .course_content .cour_feat .featur_img img{
+    width: 100%;
+    float: left;
+}
+
+.product_leftbar .product_det .course_content .cour_feat .featur_list{
+    width: 50%;
+    float: left;
+    padding: 30px 20px;
+    box-sizing: border-box;
+}
+
+.product_leftbar .product_det .course_content .cour_feat .featur_list .li_head{
+    width: 100%;
+    float: left;
+    font-family: var(--font_bold);
+    color: var(--primary_color);
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+
+.course_content .cour_feat .featur_list ul {
+    display: flex    ;
+    flex-wrap: wrap;
+    width: 100%;
+    row-gap: 5px;
+} 
+
+.course_content .cour_feat .featur_list ul li{
+    width: 100%;
+    float: left;
+}
+
+.course_content .cour_feat .featur_list ul li .li_con{
+    width: 100%;
+    float: left;
+    display: flex;
+    align-items: center;
+}
+
+.course_content .cour_feat .featur_list ul li .li_con .img{
+    float: left;
+    padding-right: 10px;
+}
+
+.course_content .cour_feat .featur_list ul li .li_con .img img{
+    height: 40px;
+    padding: 10px;
+}
+
+.course_content .cour_feat .featur_list ul li .li_con .img_txt{
+    float: left;
+    font-family: var(--font_regular);
 }
 
 
