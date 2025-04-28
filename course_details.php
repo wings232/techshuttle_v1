@@ -45,6 +45,7 @@
 			$menu_ids_f  = $courseSingleRecord["parent_id"];
 			$menu_names_f = $courseSingleRecord["menu_name"];
 			$menu_slug_f = $courseSingleRecord["menu_slug"];
+			$parent_id_f = $courseSingleRecord["parent_id"];
 			$main_image = $courseSingleRecord["course_main_image"];
 			$sub_ids = $courseSingleRecord["sub_id"];
 			$categories_groups = $courseSingleRecord["categories_group"];
@@ -79,7 +80,7 @@
 					if($selectUserNav_two_json_count > 0){  
 					  foreach ($selectUserNav_two_json['selectUserNav_details'] as $userNav_two) {
 					      $menu_slugs_one  = $userNav_two["menu_slug"];
-					      $userNavSubIds_one = $userNav_two["sub_id"];
+					     	$userNavSubIds_one = $userNav_two["sub_id"];
 					  	}
 
 					  }
@@ -151,7 +152,7 @@
                                     </div>
                                     <div class="txt">
                                         <div class="txt_one">
-                                            Structured Classes
+											Flexible classes
                                         </div>
                                         <div class="txt_two">
                                             You pick schedule.
@@ -166,7 +167,7 @@
                                     </div>
                                     <div class="txt">
                                         <div class="txt_one">
-                                            Hands On Practical 
+											Offline mode
                                         </div>
                                         <div class="txt_two">
                                             Download classes.
@@ -181,7 +182,7 @@
                                     </div>
                                     <div class="txt">
                                         <div class="txt_one">
-                                            Experienced Teachers
+											10k online courses
                                         </div>
                                         <div class="txt_two">
                                             Explore fresh topics.
@@ -196,7 +197,7 @@
                                     </div>
                                     <div class="txt">
                                         <div class="txt_one">
-                                            100% Placement Assistances
+											Educator help
                                         </div>
                                         <div class="txt_two">
                                             Always get answers.
@@ -893,7 +894,7 @@ foreach ($selectMultipleListRecord_json['selectMultipleListRecord_details'] as $
 												
 											</div>
 
-											<div class="border_bar">
+											<!--<div class="border_bar">
 												<div class="other_details">
 													<div class="details_head">
 														Popular Tags
@@ -927,7 +928,7 @@ foreach ($selectMultipleListRecord_json['selectMultipleListRecord_details'] as $
 														</ul>
 													</div>
 												</div>
-											</div>
+											</div>-->
 										</div>
 									</div><!--course_content Ends -->
 
@@ -1246,6 +1247,9 @@ foreach ($selectMultipleListRecord_json['selectMultipleListRecord_details'] as $
 												</div>
 												<div class='sub_head'>
 													<p>Enterprise training for teams</p>
+												</div>
+												<div class='images'>
+													<img src="images/image_01.png"/>
 												</div>
 												<div class="enq_button" onclick='enq_form("course","<?php echo $menu_slug_f; ?>","Corporate Training")' ><!--enq_button Starts -->
 													<div class="banner-btn wow fadeup-animation animated" data-wow-duration="0.8s" data-wow-delay="0.5s" style="visibility: visible; animation-duration: 0.8s; animation-delay: 0.5s;">

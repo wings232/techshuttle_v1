@@ -993,9 +993,10 @@
 
 .product_details_con .product_leftbar .product_det .mat_inc_enq .train_head .head{
     font-family: var(--font_bold);
-    font-size: 20px;
+    font-size: 25px;
     text-align: center;
     color: var(--primary_color);
+    text-transform: uppercase;
     margin-bottom: 20px;
 }
 
@@ -1248,6 +1249,7 @@
 .product_details_con .product_leftbar .product_det .mat_enquiry .inquiry .inq_con{
     width: 100%;
     float: left;
+    display: none;
 }
 
 .product_det .mat_enquiry .inquiry .feild_head{
@@ -1363,6 +1365,9 @@
     font-family: var(--font_bold);
     text-align: center;
     margin-bottom: 10px;
+    font-size: 25px;
+    text-transform: uppercase;
+    margin-top: 70px;
 }
 
 .product_det .mat_enquiry .inquiry .cor .sub_head{
@@ -1374,6 +1379,16 @@
 .product_det .mat_enquiry .inquiry .cor .sub_head p{
     font-family: var(--font_regular);
     text-align: center;
+}
+
+.product_det .mat_enquiry .inquiry .cor .images{
+    width: 100%;
+    float: left;
+    margin-bottom: 10px;
+}
+
+.product_det .mat_enquiry .inquiry .cor .images img{
+    width: 100%;
 }
 
 .product_det .mat_enquiry .inquiry .cor .enq_button{

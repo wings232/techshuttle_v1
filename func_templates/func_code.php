@@ -500,4 +500,22 @@
 		return json_encode($data);
 	}
 
+	function selectUserNavs($table_name,$menu_id,$categories_group,$status,$parent_id){
+		global $conn;
+		//echo $user_session = isset($_SESSION['user_id'])?$_SESSION['user_id']:"";
+		$selectUserNav_sql = "select * from $table_name where sub_id = '$menu_id' and  categories_group = '$categories_group' and status = '$status' and parent_id != '$parent_id'" ;
+		$selectUserNav_query = $conn->query($selectUserNav_sql);
+		//return $login_result = $login_query->fetch_assoc();
+		$selectUserNav_row = $selectUserNav_query->num_rows;
+		$data = array();
+		if($selectUserNav_row != 0){
+			while($selectUserNav_result = $selectUserNav_query->fetch_assoc()) { //loop the rows returned from db
+				$selectUserNavArr[] = $selectUserNav_result; //add row to array
+			}
+			$data['selectUserNav_details'] = $selectUserNavArr;
+		}
+		$data['selectUserNav_count'] = $selectUserNav_row;
+		return json_encode($data);
+	}
+
 ?>

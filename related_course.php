@@ -1,6 +1,16 @@
+<?php
+    $selectUserNavs= selectUserNavs("tbl_navigation_details",$sub_ids,'courses',"Active",$parent_id_f);
+    $selectUserNavs_json = json_decode($selectUserNavs, true);
+    //print_r($accopany_filter_List_json);
+    $selectUserNavs_json_count = isset($selectUserNavs_json['selectUserNav_count'])?$selectUserNavs_json['selectUserNav_count']:""; 
+   
+?>
 <div class="course_t_center">
                 <div class="course_t">
                     <div class="course_heads"><!--course_heads Starts -->
+                        <?php
+                            if($selectUserNavs_json_count != 0){
+                        ?>
                         <div class="pop_course">
                             <div class="pop_title">
                                 <div class="title">Related Courses</div>
@@ -12,6 +22,8 @@
                                 </span>
                             </div>
                         </div>
+
+                       
                         <div class="pop_cate">
                             <div class="cate_list">
                                 <ul>
@@ -22,11 +34,22 @@
                                 </ul>
                             </div>
                         </div>
+                        <?php
+
+                            }
+                        ?>
                     </div>  <!--course_heads Ends -->
                     
                     <div class="course_list">
                         <ul>
-                            <?php for($i=0; $i<=7; $i++){ ?>
+                            <?php 
+                            if($selectUserNavs_json_count != 0){
+                                foreach ($selectUserNavs_json['selectUserNav_details'] as $menuMultipleRecord_lists) {
+                                    $course_thumb_image  = $menuMultipleRecord_lists["course_thumb_image"];
+                                    $menu_name = $menuMultipleRecord_lists["menu_name"];
+                                    $menu_slug = $menuMultipleRecord_lists["menu_slug"];
+                                    $parent_id = $menuMultipleRecord_lists["parent_id"];
+                            ?>
                             <li><!-- Course_list loop starts-->
                                 <div class="list_con">
                                     <div class="image">
@@ -129,7 +152,7 @@
                                     </div>
                                 </div>
                             </li><!-- Course_list loop Ends-->
-                            <?php } ?>
+                            <?php } } ?>
                         </ul>
 
                     </div>
