@@ -37,8 +37,8 @@ function create_admission(){
               if(re == 'valid'){
                   //window.location.href = "http://192.168.0.34/kmh_new_v1/patient_portal.php";            
                   //window.history.go(-1);
-                  window.location.href = "http://192.168.0.34/studies/techshuttle_v1/order_summary.php";
-                  //window.location.href ="http://localhost/techshuttle_v1/order_summary.php";
+                  //window.location.href = "http://192.168.0.34/studies/techshuttle_v1/order_summary.php";
+                  window.location.href ="http://localhost/techshuttle_v1/order_summary.php";
               }      
             
           }
@@ -68,8 +68,8 @@ function choose_card(){
             re = result.trim()
 
             if(re =="good"){
-              window.location.href ="http://192.168.0.34/studies/techshuttle_v1/gateway_choose.php";
-              //window.location.href ="http://localhost/techshuttle_v1/gateway_choose.php";
+              //window.location.href ="http://192.168.0.34/studies/techshuttle_v1/gateway_choose.php";
+              window.location.href ="http://localhost/techshuttle_v1/gateway_choose.php";
             }
             /*re = result.trim()
               if(re == 'valid'){
