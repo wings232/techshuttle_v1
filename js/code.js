@@ -192,6 +192,13 @@ $(document).on("click",".sum_leftside .product_list .list_content ul li .img_lis
 });
 
 
+$(document).on("click",".course_center .course_sam .cour_left .button .feild_b .box_feild:first-child input",function(){
+	//var list_id = $(this).attr('href');							
+	$('html, body').animate({
+		scrollTop: $('.product_details_con .product_leftbar .product_det .mat_enquiry').offset().top - 180
+	}, 1000);
+});
+
 
 
 $(document).on("click",".common_form .close_button",function(){

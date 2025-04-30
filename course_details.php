@@ -47,6 +47,7 @@
 			$menu_slug_f = $courseSingleRecord["menu_slug"];
 			$parent_id_f = $courseSingleRecord["parent_id"];
 			$main_image = $courseSingleRecord["course_main_image"];
+			$thumb_image = $courseSingleRecord["course_thumb_image"];
 			$sub_ids = $courseSingleRecord["sub_id"];
 			$categories_groups = $courseSingleRecord["categories_group"];
 		}
@@ -732,7 +733,7 @@ foreach ($selectMultipleListRecord_json['selectMultipleListRecord_details'] as $
 										<div class="course_right">
 											<div class="border_bar">
 												<div class="image">
-													<img src="images/course/sidebar/sidebar.webp"/>
+													<img src="images/course/thumb/<?php echo $thumb_image; ?>"/>
 												</div>
 												<div class="button" style="display:none">
 													<div class="banner-btn wow fadeup-animation animated" data-wow-duration="0.8s" data-wow-delay="0.5s" style="visibility: visible; animation-duration: 0.8s; animation-delay: 0.5s;">
