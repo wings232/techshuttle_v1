@@ -38,12 +38,16 @@
 			echo trim("valid");
 			foreach ($selectLoginCheck_json['selectLoginCheck_details'] as $techId) {
 		        $techIds  = $techId["regId"];
-		        $techName  = $techId["firstName"];		        
+		        $techName  = $techId["firstName"];	
+				$userStatus  = $techId["userStatus"];	
+				$status  = $techId["status"];		        
 		    }
 
 		    session_start();
 			$_SESSION['tsWebUserId'] = $techIds;
 			$_SESSION['tsWebUserName'] = $techName;
+			$_SESSION['userStatus'] = $userStatus;
+			$_SESSION['status'] = $status;
 			$_SESSION['tsAdmisId'] = $admin_ids;
 			$_SESSION['tsAdmisMobile'] = $admin_ms;
 

@@ -264,7 +264,7 @@
 	function selectLoginCheck($table_name,$username,$password){
 		global $conn;
 		//echo $user_session = isset($_SESSION['user_id'])?$_SESSION['user_id']:"";
-		$selectLoginCheck_sql = "select regId,firstName,email,mobileNo from $table_name where (email = '$username' or mobileNo = '$username') and password ='$password' " ;
+		$selectLoginCheck_sql = "select regId,firstName,email,mobileNo,userStatus,status from $table_name where (email = '$username' or mobileNo = '$username') and password ='$password' " ;
 		$selectLoginCheck_query = $conn->query($selectLoginCheck_sql);
 		//return $login_result = $login_query->fetch_assoc();
 		$selectLoginCheck_row = $selectLoginCheck_query->num_rows;
@@ -467,7 +467,7 @@
 	function selectLoginDetails($table_name,$login_id,$user_status,$status){
 		global $conn;
 		//echo $user_session = isset($_SESSION['user_id'])?$_SESSION['user_id']:"";
-		$selectLoginDetails_sql = "SELECT * from $table_name where regId  = '$login_id' and userStatus='$user_status' and status = '$status' " ;
+		echo $selectLoginDetails_sql = "SELECT * from $table_name where regId  = '$login_id' and userStatus='$user_status' and status = '$status' " ;
 		$selectLoginDetails_query = $conn->query($selectLoginDetails_sql);
 		//return $login_result = $login_query->fetch_assoc();
 		$selectLoginDetails_row = $selectLoginDetails_query->num_rows;
