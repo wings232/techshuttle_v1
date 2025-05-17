@@ -25,21 +25,34 @@
                     </div>  <!--course_heads Ends -->
                     
                     <div class="course_list">
+<?php  
+	         
+    $selectDepartC= selectDepartC("tbl_navigation_details",4,'courses',"Active");
+    $selectDepartC_json = json_decode($selectDepartC, true);
+    //print_r($accopany_filter_List_json);
+    $selectDepartC_json_count = isset($selectDepartC_json['selectDepartC_count'])?$selectDepartC_json['selectDepartC_count']:"";
+?> 
                         <ul>
-                            <?php for($i=0; $i<=7; $i++){ ?>
+<?php 
+    foreach ($selectDepartC_json['selectDepartC_details'] as $selectDepartCList) {
+        $course_thumb_image  = $selectDepartCList["course_thumb_image"];
+        $menu_name = $selectDepartCList["menu_name"];
+        $menu_slug = $selectDepartCList["menu_slug"];
+        $parent_id = $selectDepartCList["parent_id"];
+?>
                             <li><!-- Course_list loop starts-->
                                 <div class="list_con">
                                     <div class="image">
-                                        <img src="images/course/18.jpg"/>
+                                        <img src="images/course/thumb/<?php  echo $course_thumb_image ?>"/>
                                     </div>
                                     <div class="img_cont">
                                         <div class="depart">
                                             <span>
-                                               <div class='cor'><a href="">SAP</a></div>
+                                               <div class='cor'><a href=""><?php  echo $menu_name ?></a></div>
                                             </span>
                                         </div>
                                         <div class="head">
-                                            Learn With Advance Web Design (UX/UI) Course
+                                            <?php  echo $menu_name ?>
                                         </div>
                                         <!--<div class="para">
                                             <p>

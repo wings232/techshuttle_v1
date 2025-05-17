@@ -518,4 +518,22 @@
 		return json_encode($data);
 	}
 
+	function selectDepartC($table_name,$level,$categories_group,$status){
+		global $conn;
+		//echo $user_session = isset($_SESSION['user_id'])?$_SESSION['user_id']:"";
+		$selectDepartC_sql = "select * from $table_name where level = '$level' and  categories_group = '$categories_group' and status = '$status'" ;
+		$selectDepartC_query = $conn->query($selectDepartC_sql);
+		//return $login_result = $login_query->fetch_assoc();
+		$selectDepartC_row = $selectDepartC_query->num_rows;
+		$data = array();
+		if($selectDepartC_row != 0){
+			while($selectDepartC_result = $selectDepartC_query->fetch_assoc()) { //loop the rows returned from db
+				$selectDepartCArr[] = $selectDepartC_result; //add row to array
+			}
+			$data['selectDepartC_details'] = $selectDepartCArr;
+		}
+		$data['selectDepartC_count'] = $selectDepartC_row;
+		return json_encode($data);
+	}
+
 ?>
