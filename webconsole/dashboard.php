@@ -14,12 +14,14 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Techshuttle Dashboard</title>
-	<link rel="stylesheet" type="text/css" href="css/style.css"/>
+	<title>Techshuttle Dashboard</title>	
 	<link rel="stylesheet" type="text/css" href="css/reset.css"/>
 	<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/timepicker/1.3.5/jquery.timepicker.min.css">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"/>
+	<link rel="stylesheet" href="css/root.css"/>
+	<link rel="stylesheet" href="css/fonts.css"/>
+	<link rel="stylesheet" type="text/css" href="css/style.css"/>
 	<script type="text/javascript" src="js/jquery.js"></script>
 	<script src="js/jquery-ui-13/jquery-ui.js"></script>
 	<link rel="stylesheet" href="js/jquery-ui-13/jquery-ui.css"/>
@@ -34,6 +36,11 @@
 		levels_create_center();
 	</script>
 </head>
+
+
+
+
+
 <body>
 	<div class="container"><!--container Starts -->
 		<div class="go_to_top"><!--go_to_top Starts -->
@@ -47,7 +54,7 @@
 			<div class="techshuttle_logo_l"><!--techshuttle_logo_l Starts -->
 				<div class="image"><!--image Starts -->
 					<div class="img_center">
-						<img src="images/logo/techshuttle.webp">
+						<img src="images/logo_01.png">
 					</div>
 				</div><!-- image Ends -->
 			</div><!-- techshuttle_logo_l Ends -->

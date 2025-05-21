@@ -1,0 +1,18 @@
+:root {
+    --primary_color: #0251af;
+    /* --button_background:#ffa52b; */
+    /* --button_background:#356df1; */
+    --button_background:#0251af;
+    --secondary_color:#1f70d1;
+    --bg: #f4f9ff;
+    --button_hover:#173375;
+    --white: #ffffff;
+    --black:black;
+    --font_regular:"rubik_regular";
+    --font_medium:"rubik_medium";
+    --font_bold:"roboto_bold";
+    --font_bold_rale:"raleway_bold";
+    --heading: #031f42;
+
+    --error:red;
+}

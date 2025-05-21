@@ -28,9 +28,12 @@
 <head>
 	<title>Techshuttle | Home</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"/>
-	<link rel="stylesheet" type="text/css" href="css/style.css"/>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"/>	
 	<link rel="stylesheet" type="text/css" href="css/reset.css"/>
+	<link rel="stylesheet" href="css/root.css"/>
+	<link rel="stylesheet" href="css/fonts.css"/>
+	<link rel="stylesheet" type="text/css" href="css/style.css"/>
 	<script type="text/javascript" src="js/jquery.js"></script>
 </head>
 <body>
@@ -48,7 +51,7 @@
 						<div class="login_col">
 							<div class="image">
 								<div class="img_center">
-									<img src="images/logo/techshuttle.webp">
+									<img src="images/logo_01.png">
 								</div>								
 							</div>
 							<div class="img_txt">
