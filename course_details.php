@@ -114,9 +114,22 @@
 								</div><!--name Ends -->
 							</div><!--course_name Ends -->
 							<div class='desc'>
+<?php
+	$forCourseProductDescriptionDetails= forCourseProductDescriptionDetails("tbl_product_description",$menu_ids_f,'Description','courses','Active');
+	$forCourseProductDescriptionDetails_json = json_decode($forCourseProductDescriptionDetails, true);
+	//print_r($accopany_filter_List_json);
+	$forCourseProductDescriptionDetails_json_count = isset($forCourseProductDescriptionDetails_json['forCourseProductDescriptionDetails_count'])?$forCourseProductDescriptionDetails_json['forCourseProductDescriptionDetails_count']:"";
+	if($forCourseProductDescriptionDetails_json_count > 0){  
+	  foreach ($forCourseProductDescriptionDetails_json['forCourseProductDescriptionDetails_details'] as $courseDescription) {
+	      $product_description  = $courseDescription["product_description"];
+?>
 								<p>
-									SAP Analytics Cloud (or SAP Cloud for Analytics) is a software as a service (SaaS) business intelligence (BI) platform designed by SAP specifically with the intent of providing all analytics capabilities to all users in one product. It is primarily suitable for SAP Consultants who is working with SAP BW, SAP BI, SAP BO, and SAP ECC-based Business Users, analysts who want to report and analyze using Dashboards/Visualization/Charts and Planning. This tool is generally a HANA Cloud-based Platform tool used for Reporting, Visualization/Dashboard, and Planning.
+									<?php echo $product_description;  ?>
 								</p>
+<?php
+	  }
+	}
+?>
 							</div>
 
 							<div class='button'>
@@ -131,6 +144,9 @@
 										<input type="button" value="Corporate Training" onclick='enq_form("course","<?php echo $menu_slug_f; ?>","Corporate Training")'>
 									</div>
 								</div>
+							</div>
+							<div>
+								
 							</div>
 						</div>
 						<div class='cour_right'>
@@ -1261,7 +1277,15 @@ foreach ($selectMultipleListRecord_json['selectMultipleListRecord_details'] as $
 										</div>
 										
 									</div><!--mat_enquiry Ends -->
-								
+<?php
+	  $selectMultipleListRecord= selectMultipleListRecord("tbl_product_faq",$menu_ids_f,1,"Active","Hands on");
+      $selectMultipleListRecord_json = json_decode($selectMultipleListRecord, true);
+      //print_r($accopany_filter_List_json);
+      $selectMultipleListRecord_json_count = isset($selectMultipleListRecord_json['selectMultipleListRecord_count'])?$selectMultipleListRecord_json['selectMultipleListRecord_count']:"";
+	  
+		if($selectMultipleListRecord_json_count > 0){
+
+?>
 									<div class='hands_on'>
 										<div class='hand_cover'>
 											
@@ -1269,13 +1293,37 @@ foreach ($selectMultipleListRecord_json['selectMultipleListRecord_details'] as $
 										<div class='image'>
 											<img src='images/girl_01.png'/>
 										</div>
+
 										<div class='heads'> Hands-on <span><?php echo $menu_names_f; ?> &nbsp;</span>Projects</div>
 										<div class='para'>
-											<p>
-												Our <span><?php echo $menu_names_f; ?></span> Training course aims to deliver quality training that covers solid fundamental knowledge on core concepts with a practical approach. Such exposure to the current industry use-cases and scenarios will help learners scale up their skills and perform real-time projects with the best practices.
-											</p>
+<?php  
+	if($selectMultipleListRecord_json_count > 0){
+	foreach ($selectMultipleListRecord_json['selectMultipleListRecord_details'] as $menuMultipleRecord_lists) {
+	$product_list_id  = $menuMultipleRecord_lists["product_list_id"];
+	$product_primary_id = $menuMultipleRecord_lists["product_primary_id"];
+	$product_list = $menuMultipleRecord_lists["product_faq"];
+	$product_type = $menuMultipleRecord_lists["product_type"];
+	$sub_id = $menuMultipleRecord_lists["sub_id"];
+	$categories_group = $menuMultipleRecord_lists["categories_group"];
+?>
+											<div class='list'>
+												<div class='img'>
+													<i class="fa fa-arrow-right" aria-hidden="true"></i> 
+												</div>
+												<div class="txt">
+													<?php echo $product_list; ?>
+												</div>
+											</div>
+<?php
+	}
+}
+?>											
+											
 										</div>
 									</div>
+<?php
+	}
+?>
 				
 <?php
 /*

@@ -53,26 +53,28 @@
                             </div>
                             <div class="about_para">
                                 <p>
-                                    Techshuttle is a place of excellence and mentoring to develop skills expertise resulting in Great Placements and Fulfilling Careers
+                                    TECHSHUTTLE was founded by two corporate visionaries driven by a profound insight into the barriers facing technology training, dedicated to breaking down obstacles and nurturing a new generation of tech enthusiasts.
                                 </p>
-                                <p>
-                                    Over the past 12 years, we have helped 4500+ people to become experts in the latest industry relevant technologies of their choice.
-                                </p>
+                               
                             </div>
 
                             <div class="ab_item">
                                 <ul>
                                     <li>
                                         <div class="check"><i class="fa fa-check"></i></div>
-                                        <div class="check_txt">Point One</div>
+                                        <div class="check_txt">Embarking on a Mission</div>
                                     </li>
                                     <li>
                                         <div class="check"><i class="fa fa-check"></i></div>
-                                        <div class="check_txt">Point One</div>
+                                        <div class="check_txt">Guiding Light</div>
                                     </li>
                                     <li>
                                         <div class="check"><i class="fa fa-check"></i></div>
-                                        <div class="check_txt">Point One</div>
+                                        <div class="check_txt">Empowering Education</div>
+                                    </li>
+                                    <li>
+                                        <div class="check"><i class="fa fa-check"></i></div>
+                                        <div class="check_txt">Building Futures</div>
                                     </li>
                                 </ul>
                             </div>

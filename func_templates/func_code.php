@@ -521,7 +521,7 @@
 	function selectDepartC($table_name,$level,$categories_group,$status){
 		global $conn;
 		//echo $user_session = isset($_SESSION['user_id'])?$_SESSION['user_id']:"";
-		$selectDepartC_sql = "select * from $table_name where level = '$level' and  categories_group = '$categories_group' and status = '$status'" ;
+		 $selectDepartC_sql = "select * from $table_name where level = '$level' and  categories_group = '$categories_group' and status = '$status' ORDER BY RAND( ) LIMIT 12" ;
 		$selectDepartC_query = $conn->query($selectDepartC_sql);
 		//return $login_result = $login_query->fetch_assoc();
 		$selectDepartC_row = $selectDepartC_query->num_rows;
@@ -533,6 +533,24 @@
 			$data['selectDepartC_details'] = $selectDepartCArr;
 		}
 		$data['selectDepartC_count'] = $selectDepartC_row;
+		return json_encode($data);
+	}
+
+	function selectByLevelThree($table_name,$sub_ids,$categories_group,$status){
+		global $conn;
+		//echo $user_session = isset($_SESSION['user_id'])?$_SESSION['user_id']:"";
+		$selectByLevelThree_sql = "select * from $table_name where sub_id IN ($sub_ids) and categories_group = '$categories_group' and status = '$status' order by rand() LIMIT 8" ;
+		$selectByLevelThree_query = $conn->query($selectByLevelThree_sql);
+		//return $login_result = $login_query->fetch_assoc();
+		$selectByLevelThree_row = $selectByLevelThree_query->num_rows;
+		$data = array();
+		if($selectByLevelThree_row != 0){
+			while($selectByLevelThree_result = $selectByLevelThree_query->fetch_assoc()) { //loop the rows returned from db
+				$selectByLevelThreeArr[] = $selectByLevelThree_result; //add row to array
+			}
+			$data['selectByLevelThree_details'] = $selectByLevelThreeArr;
+		}
+		$data['selectByLevelThree_count'] = $selectByLevelThree_row;
 		return json_encode($data);
 	}
 

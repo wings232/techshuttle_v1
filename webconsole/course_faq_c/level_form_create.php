@@ -8,6 +8,7 @@
 	$menu_slug = isset($_REQUEST['menu_slug'])?$_REQUEST['menu_slug']:"";
 	$cate_levelVal = isset($_REQUEST['cate_levelVal'])?$_REQUEST['cate_levelVal']:"";
 	$head_services = isset($_REQUEST['head_services'])?$_REQUEST['head_services']:"";
+	$pro_type = isset($_REQUEST['pro_type'])?$_REQUEST['pro_type']:"";
 	$list_levels = isset($_REQUEST['list_levels'])?$_REQUEST['list_levels']:"";
 ?>
 
@@ -30,7 +31,7 @@
 											<option value=''>Select Description Type</option>	
 											<?php
 												
-									$selectListRecordlevel= selectListRecordlevel('tbl_product_faq',$prev_level,$parent_val);
+									$selectListRecordlevel= selectListRecordlevel('tbl_product_faq',$prev_level,$parent_val,$pro_type);
 									$selectListRecordlevel_json = json_decode($selectListRecordlevel, true);
 										
 											//print_r($socialmedia_list_json);

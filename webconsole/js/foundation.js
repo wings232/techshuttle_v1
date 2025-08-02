@@ -1343,6 +1343,7 @@ function select_list_levels(){
   var menu_slug = document.getElementById('menu_slug').value; 
   var cate_level_val = document.getElementById('level').value; 
   var head_services = document.getElementById('head_services').innerHTML;
+  var pro_type = document.getElementById("pro_type").value;
   var list_levels = document.getElementById("list_levels").value;
   //alert(roles_view)
   if(parent_val != "" && list_levels != ""){
@@ -1356,6 +1357,7 @@ function select_list_levels(){
         menu_slug:menu_slug,
         cate_levelVal:cate_level_val,
         head_services:head_services,
+        pro_type:pro_type,
         list_levels:list_levels,
       },
       success:function(result){
@@ -1485,8 +1487,9 @@ function select_faq_levels(){
   var menu_slug = document.getElementById('menu_slug').value; 
   var cate_level_val = document.getElementById('level').value; 
   var head_services = document.getElementById('head_services').innerHTML;
+  var pro_type = document.getElementById("pro_type").value;
   var list_levels = document.getElementById("list_levels").value;
-  //alert(roles_view)
+//alert(pro_type)
   if(parent_val != "" && list_levels != ""){
     $.ajax({
       url:"course_faq_c/level_form_create.php",
@@ -1498,6 +1501,7 @@ function select_faq_levels(){
         menu_slug:menu_slug,
         cate_levelVal:cate_level_val,
         head_services:head_services,
+        pro_type:pro_type,
         list_levels:list_levels,
       },
       success:function(result){

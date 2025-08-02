@@ -164,6 +164,23 @@
 					<div class="feild_box">
 						<div class="input_box"><!-- input_box loop Start-->
 							<div class="feild_head">
+								<div class="head">Select Product Type</div>
+							</div>
+							<div class="feild_action">
+								<div class="new_select">
+									<select id='pro_type' name="pro_type">
+										<option value=''>Select Product Type</option>	
+										<option value='Faq'>FAQ</option>
+										<option value='Hands on'>Handson</option>
+										<option value='infras'>Infrastructure</option>				
+									</select>
+								</div>
+							</div>
+						</div><!-- input_box loop Ends-->
+					</div>
+					<div class="feild_box">
+						<div class="input_box"><!-- input_box loop Start-->
+							<div class="feild_head">
 								<div class="head">Select List Level</div>
 							</div>
 							<div class="feild_action">

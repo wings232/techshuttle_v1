@@ -104,7 +104,7 @@
 ?> 
                             
                         <div class="course_img">
-                            <img src="images/menu_image/course_bar_image3.webp">
+                            <img src="images/menu_image/<?php echo $menu_banner; ?>">
                         </div>
                     
                     </div>

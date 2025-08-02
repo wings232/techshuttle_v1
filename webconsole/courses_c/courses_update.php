@@ -46,7 +46,7 @@
 		<div class="media_box">
 			<div class="head_input">
 				<div class="image_center">
-					<img src="../images/courses/thumb/<?php echo $course_thumb_image; ?>">
+					<img src="../images/course/thumb/<?php echo $course_thumb_image; ?>">
 				</div>
 				
 			</div>
@@ -68,7 +68,7 @@
 		<div class="media_box">
 			<div class="head_input">
 				<div class="image_center">
-					<img src="../images/courses/main/<?php echo $course_main_image; ?>">
+					<img src="../images/course/main/<?php echo $course_main_image; ?>">
 				</div>
 				
 			</div>

@@ -87,16 +87,18 @@
 		$selectNavDetailsCheck_query = $conn->query($selectNavDetailsCheck_sql);
 		//return $login_result = $login_query->fetch_assoc();
 		$selectNavDetailsCheck_row = $selectNavDetailsCheck_query->num_rows;
+		$data = array();
+			$data['selectNavDetailsCheck_count'] = $selectNavDetailsCheck_row;
 		if($selectNavDetailsCheck_row != 0){
 			while($selectNavDetailsCheck_result = $selectNavDetailsCheck_query->fetch_assoc()) { //loop the rows returned from db
 	        	$selectNavDetailsCheckArr[] = $selectNavDetailsCheck_result; //add row to array
 	    	}
 	    	//return $mediaArr; 
-	    	$data = array();
-			$data['selectNavDetailsCheck_count'] = $selectNavDetailsCheck_row;
+	    	
 			$data['selectNavDetailsCheck_details'] = $selectNavDetailsCheckArr;
-			return json_encode($data);
+			
 		}
+		return json_encode($data);
 	}
 
 	function selectNaviSingleRecord($table_name,$nav_id){
@@ -157,23 +159,26 @@
 	}
 
 
-	function selectCategoriesGroupMulRecord($table_name,$cate_type){
+	function selectCategoriesGroupMulRecord($table_name,$sub_id,$cate_sts){
 		global $conn;
 		//echo $user_session = isset($_SESSION['user_id'])?$_SESSION['user_id']:"";
-		$categories_groupMul_sql = "select * from $table_name where categories_type = '$cate_type'" ;
+		$categories_groupMul_sql = "select * from $table_name where sub_id = '$sub_id' and cate_status ='$cate_sts'" ;
 		$categories_groupMul_query = $conn->query($categories_groupMul_sql);
 		//return $login_result = $login_query->fetch_assoc();
 		$categories_groupMul_row = $categories_groupMul_query->num_rows;
+		$data = array();
 		if($categories_groupMul_row != 0){
 			while($categories_groupMul_result = $categories_groupMul_query->fetch_assoc()) { //loop the rows returned from db
 	        	$categories_groupMultiArr[] = $categories_groupMul_result; //add row to array
 	    	}
 	    	//return $mediaArr; 
-	    	$data = array();
-			$data['categories_groupMul_count'] = $categories_groupMul_row;
+	    	
+			
 			$data['categories_groupMul_details'] = $categories_groupMultiArr;
-			return json_encode($data);
+			
 		}
+		$data['categories_groupMul_count'] = $categories_groupMul_row;
+		return json_encode($data);
 	}
 
 	function selectRangeGroupMulsRecord($table_name){
@@ -543,10 +548,10 @@
 
 	/*Course batch check ends*/
 
-	 function selectListRecordlevel($table_name,$level_id,$product_primary_id){
+	 function selectListRecordlevel($table_name,$level_id,$product_primary_id,$pro_type){
 		global $conn;
 		//echo $user_session = isset($_SESSION['user_id'])?$_SESSION['user_id']:"";
-		$selectListRecordlevel_sql = "select * from $table_name where level = '$level_id' and product_primary_id = '$product_primary_id'" ;
+		$selectListRecordlevel_sql = "select * from $table_name where level = '$level_id' and product_primary_id = '$product_primary_id' and product_type='$pro_type'" ;
 		$selectListRecordlevel_query = $conn->query($selectListRecordlevel_sql);
 		//return $login_result = $login_query->fetch_assoc();
 		 $selectListRecordlevel_row = $selectListRecordlevel_query->num_rows;

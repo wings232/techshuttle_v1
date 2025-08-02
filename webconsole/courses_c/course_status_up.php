@@ -48,12 +48,12 @@ if($selectMulRecFromnavStatus_json_count != 0){
 	foreach ($selectMulRecFromnavStatus_json['navMultipleRecordStatus_details'] as $navmultiple_details) {
 		$nav_id = $navmultiple_details["nav_id"];
 		$menu_name = $navmultiple_details["menu_name"];
-		$banner = $navmultiple_details["banner"];
+		//$banner = $navmultiple_details["banner"];
 		$status = $navmultiple_details["status"];
 ?>
 			<tr>      
 			      <td><?php echo $menu_name; ?></td>
-			      <td><?php echo $banner; ?></td>
+			      <td><?php //echo $banner; ?></td>
 			      <td><?php echo $status; ?></td>
 			      <td><div class="c_update_button" onclick="course_approved('<?php echo $nav_id; ?>','<?php echo $menu_name; ?>')">View</div></td>
 			    </tr>

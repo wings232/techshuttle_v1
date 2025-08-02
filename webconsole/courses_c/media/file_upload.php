@@ -36,14 +36,14 @@
      * Check if the same file name already exists in the upload folder, 
      * append increment number to the original filename
      **/
-    while (file_exists("../../../images/courses/thumb/" . $file_name . "." . $extension)) {
+    while (file_exists("../../../images/course/thumb/" . $file_name . "." . $extension)) {
         $file_name = (string) $file_name_original . $num;
         $file_name_complete = $file_name . "." . $extension;
         $num++;
     }
 
     // Upload file in upload folder
-    $file_target_location = "../../../images/courses/thumb/" . $file_name_complete;
+    $file_target_location = "../../../images/course/thumb/" . $file_name_complete;
     $file_upload_status = move_uploaded_file($file_temp_location, $file_target_location);
 
     if ($file_upload_status == true) {
@@ -62,7 +62,7 @@
 	$file_type=$_FILES['file']['type'];
 
 	$imageFileType = strtolower(pathinfo($file_name,PATHINFO_EXTENSION));
-	$target_dir = "../../../images/courses/thumb/";
+	$target_dir = "../../../images/course/thumb/";
 	$target_file = $target_dir . basename($file_name);
 	$expensions= array("jpeg","jpg","png","webp");
 	/* $image = getimagesize($file_tmp);
@@ -92,12 +92,12 @@
 
   if(empty($errors)==true ){
   	//echo $errors;
-  	move_uploaded_file($file_tmp,"../../../images/courses/thumb/".$file_name);
+  	move_uploaded_file($file_tmp,"../../../images/course/thumb/".$file_name);
 ?>
 	<div class="error_out">
 		<input type='hidden' id='sfile_image' value="<?php echo $file_name; ?>" />
 		<div class="success">
-			<img width="30%" src="../images/courses/thumb/<?php echo $file_name; ?>"/>  File Uploaded successfully
+			<img width="30%" src="../images/course/thumb/<?php echo $file_name; ?>"/>  File Uploaded successfully
 		</div>
 	</div>
 

@@ -1443,14 +1443,16 @@
     float: left;
     color: var(--white);
     font-family: var(--font_bold);
-    font-size: 30px;
+    font-size: 20px;
     padding: 20px 0;
+    text-transform: uppercase;
 }
 
 .product_details_con .product_leftbar .product_det .hands_on .heads span{
     text-transform: uppercase;
     font-style: italic;
-    font-size: 35px;
+    font-size: 20px;
+    color: #ffdbb6;
 }
 
 .product_details_con .product_leftbar .product_det .hands_on .para{
@@ -1458,11 +1460,21 @@
     float: left;
 }
 
-.product_details_con .product_leftbar .product_det .hands_on .para p{
+.product_details_con .product_leftbar .product_det .hands_on .para .list{
     font-family: var(--font_regular);
     font-size: 15px;
     color: var(--white);
     text-align: justify;
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    gap: 10px;
+    margin-left: 5px;
+}
+
+.product_details_con .product_leftbar .product_det .hands_on .para .list .img{
+    float: left;
+
 }
 
 .product_details_con .product_leftbar .product_det .hands_on .para p span{

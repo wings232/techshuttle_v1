@@ -14,7 +14,7 @@
 	date_default_timezone_set('Asia/Calcutta'); 
 	$currentdates = date("Y-m-d H:i:s"); // time in India
 	$user_call_id = isset($_REQUEST['user_call_id'])?$_REQUEST['user_call_id']:'';
-		$selectNavDetailsCheck= selectNavDetailsCheck("tbl_categories_groups",$cate_name,$media_slug,$levels);
+		$selectNavDetailsCheck= selectNavDetailsCheck("tbl_categories_groups",$cate_name,$media_slug,$levels,$subId);
 		$selectNavDetailsCheck_json = json_decode($selectNavDetailsCheck, true);
 		//print_r($accopany_filter_List_json);
 		$selectNavDetailsCheck_json_count = isset($selectNavDetailsCheck_json['selectNavDetailsCheck_count'])?$selectNavDetailsCheck_json['selectNavDetailsCheck_count']:"";
