@@ -1,0 +1,603 @@
+.about_banner {
+    position: relative;
+    padding: 100px 0 40px;
+    background-color: #ffffff;
+    overflow: hidden;
+    width: 100%;
+    float: left;
+    background-image: url(https://demo.edublink.co/wp-content/uploads/2023/12/onlien-academy-hero-background.png);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.about_one{
+    position: relative;
+    z-index: 5;
+    margin: 0 auto;
+    width: 1300px;
+    min-height: 650px;
+    display: flex;
+    /* align-items: center; */
+}
+
+.about_one .column{
+    position: relative;
+    min-height: 1px;
+    display: flex;
+    width: 100%;
+}
+
+.about_one .column .wrapper{
+    position: relative;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    align-content: flex-start;
+
+}
+
+.about_one .column .wrapper .ab_sha_one{
+    position: absolute;
+    display: flex;
+    top: 10px;
+    left: -140px;
+    z-index: 0;
+    opacity: 0.5;
+}
+
+.about_one .column .wrapper .ab_sha_two{
+    position: absolute;
+    display: flex;
+    top: 10px;    
+    z-index: 0;
+    opacity: 0.5;
+}
+
+.about_one .column .wrapper .ab_sha_three{
+    position: absolute;
+    display: flex;
+    top: 120px;    
+    right: -260px;
+    z-index: 0;
+    
+}
+
+.about_one .column .wrapper .ab_sha_four{
+    position: absolute;
+    display: flex;
+    top: -26px;
+    right: 0px;
+    z-index: 0; 
+}
+
+.about_one .column .wrapper .ab_sha_five{
+    position: absolute;
+    display: flex;
+    bottom: 115px;;    
+    right: -290px;
+    z-index: 0;  
+    opacity: 0.5;  
+}
+
+.about_one .column .wrapper .ab_sha_six{
+    position: absolute;
+    display: flex;
+    bottom: 70px;
+    left: 200px;
+    z-index: 0;  
+}
+
+.about_one .column .wrapper .ab_sha_seven{
+    position: absolute;
+    display: flex;
+    bottom:20px;    
+    left: -110px;
+    z-index: 0;    
+}
+
+.about_one .column .wrapper .ab_sha_seven .custom_shp{
+    border-radius: 50px 10px 50px 10px;
+    padding: 30px;
+    min-width: 300px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, .1);
+    background: var(--white);
+}
+
+.about_one .column .wrapper .ab_sha_seven .custom_shp .shp_row{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.about_one .column .wrapper .ab_sha_seven .custom_shp .shp_row .image{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.about_one .column .wrapper .ab_sha_seven .custom_shp .shp_row .image i{
+    width: 50px;
+    height: 50px;
+    background: rgb(2 81 175 / 11%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    font-size: 22px;
+    margin-right: 15px;
+    color: var(--primary_color);
+}
+
+.about_one .column .wrapper .ab_sha_seven .custom_shp .shp_row .content{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.about_one .column .wrapper .ab_sha_seven .custom_shp .shp_row .content .c_head{
+    font-family: var(--font_bold);
+    text-transform: uppercase;
+    font-size: 13px;
+}
+
+.about_one .column .wrapper .ab_sha_seven .custom_shp .shp_row .content .c_phone{
+    width: 100%;
+}
+
+.about_one .column .wrapper .ab_sha_seven .custom_shp .shp_row .content .c_phone a{
+    font-family: var(--font_regular);
+    text-transform: uppercase;
+    font-size: 22px;
+    color: var(--primary_color);
+}
+
+.about_one .column .wrapper .ab_sha_eight{
+    position: absolute;
+    display: flex;
+    bottom:50px;    
+    left: -220px;
+    z-index: 0;    
+}
+
+.about_one .column .wrapper .ab_sha_nine{
+    position: absolute;
+    display: flex;
+    bottom: -150px;
+    left: 45%;
+    z-index: 0;    
+}
+
+.about_one .column .wrapper .ab_sha_nine .scroll_d{
+    height: 200px;
+    width: 200px;
+    background-color: rgba(255, 255, 255, .5);
+    border-radius: 50%;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    position: relative;
+}
+
+.about_one .column .wrapper .ab_sha_nine .scroll_d:before {
+	-webkit-animation: ripple_2 3s linear infinite;
+	animation: ripple_2 3s linear infinite
+}
+
+.about_one .column .wrapper .ab_sha_nine .scroll_d:after {
+	-webkit-animation: ripple_2 3s linear 1s infinite;
+	animation: ripple_2 3s linear 1s infinite
+}
+
+.about_one .column .wrapper .ab_sha_nine .scroll_d:before, .about_one .column .wrapper .ab_sha_nine .scroll_d:after {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: -1;
+    bottom: 0;
+    left: 0;
+    -webkit-transition: var(--transition);
+    transition: var(--transition);
+    border-radius: 50%;
+    border: 1px solid #0251af47;
+}
+
+.about_one .column .wrapper .ab_sha_nine .scroll_d i{
+    padding-top: 40px;
+    font-size: 26px;
+    color: var(--primary_color);
+    cursor: pointer;
+}
+
+.about_one .column .wrapper .ab_img_one{
+    position: absolute;
+    display: flex;
+    top: 50px;
+    left: -230px;
+    z-index: 1;
+}
+
+.about_one .column .wrapper .ab_img_one span img{
+    -webkit-animation: techs-radius-change 8s linear infinite;
+    animation: techs-radius-change 8s linear infinite;
+}
+
+.about_one .column .wrapper .ab_img_two{
+    position: absolute;
+    display: flex;
+    top: 90px;
+    right: -230px;
+    z-index: 1;
+}
+
+.about_one .column .wrapper .ab_img_two span img{
+    border-radius: 50px 0px 50px 0px;
+    -webkit-animation: techs-radius-change2 8s linear infinite;
+    animation: techs-radius-change2 8s linear infinite;
+}
+
+.about_one .column .wrapper .ab_img_three{
+    position: absolute;
+    display: flex;
+    bottom: 70px;
+    right: 40px;
+    z-index: 1;
+}
+
+.about_one .column .wrapper .ab_img_three span img{
+    border-radius: 50px 0px 50px 0px;
+    -webkit-animation: techs-radius-change2 8s linear infinite;
+    animation: techs-radius-change2 8s linear infinite;
+}
+
+.about_one .column .wrapper .ab_text{
+    width: 100%;
+    float: left;
+    text-align: center;
+    margin-top: 100px;
+}
+
+.about_one .column .wrapper .ab_text .text_title{
+    font-size: 50px;
+    font-family: var(--font_bold);
+    line-height: 65px;
+}
+
+.about_one .column .wrapper .ab_text_two{
+    width: 100%;
+    text-align: center;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+.about_one .column .wrapper .ab_text_two .text_title{
+    font-size: 30px;
+    font-family: var(--font_regular);
+    line-height: 18px;
+    text-transform: uppercase;
+}
+
+.about_one .column .wrapper .ab_text_two .text_title span{
+    font-size: 35px;
+    font-family: var(--font_bold);
+    color: var(--primary_color);
+}
+
+.about_in .about_content .about_c .about_para p {
+    margin-bottom: 10px;
+    width: 100%;
+    text-align: justify;
+}
+
+.about_in .about_image {
+    margin-bottom: 170px;
+}
+
+/* Core styles/functionality */
+.tab {
+  position: relative;
+}
+.tab input {
+  position: absolute;
+  opacity: 0;
+  z-index: -1;
+}
+.tab__content {
+  max-height: 0;
+  overflow: hidden;
+  transition: all 0.35s;
+}
+.tab input:checked ~ .tab__content {
+  max-height: 10rem;
+}
+
+/* Visual styles */
+.accordion {
+  
+  overflow: hidden;
+}
+.tab__label,
+.tab__close {
+    display: flex;
+    color: rgb(255, 255, 255);
+    background: var(--primary_color);
+    cursor: pointer;
+    border-radius: 5px;
+    margin-bottom: 5px;
+}
+.tab__label {
+  justify-content: space-between;
+  padding: 1rem;
+}
+.tab__label::after {
+  content: "\276F";
+  width: 25px;
+  height: 25px;
+  text-align: center;
+  transform: rotate(90deg);
+  transition: all 0.35s;
+}
+.tab input:checked + .tab__label::after {
+  transform: rotate(270deg);
+}
+.tab__content p {
+  padding: 10px;
+  text-align: justify;
+}
+.tab__close {
+  justify-content: flex-end;
+  padding: 5px 10px;
+  font-size: 0.75rem;
+}
+
+
+/* Choose Us Starts */
+.fac_life_con{
+    min-width: 100%;
+    float: left;
+}
+
+.fac_life_con .fac_life_center{
+    width: 1300px;
+    margin: 0 auto;
+}
+
+.fac_life_con .fac_life_center .fac_life{
+	width: 100%;
+    float: left;
+    box-sizing: border-box;
+    position: relative;
+    margin: 0px 0 100px;
+}
+
+.fac_life .fac_left{
+	width: 50%;
+    float: right;   
+	position: relative;
+}
+
+.fac_life .fac_left .img{
+	width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 650px;
+}
+
+.fac_life .fac_left .img img{
+	width: 70%;    
+}
+
+.fac_life .fac_left .img_one{
+	right: 0px;
+    bottom: -70px;
+    position: absolute;
+}
+
+.fac_life .fac_left .img_two{
+	bottom: 0px;
+    left: 30px;
+    position: absolute;
+    transform: rotate(45deg);
+}
+
+.fac_life .fac_left .img_three{
+	top: 10px;
+    right: 180px;
+    position: absolute;
+}
+
+.fac_life .fac_left .img_four{
+	bottom: -50px;
+    right: 245px;
+    position: absolute;
+}
+
+
+.fac_life .fac_left .img_four img{
+	animation: 5s linear 0s infinite normal none running rotate-animation;
+}
+
+.fac_life .fac_right{
+	width: 50%;
+    float: left;   
+	position: relative;
+	
+}
+
+.fac_life .fac_right{
+	width: 50%;
+    float: left;   
+	position: relative;
+	padding: 10px;
+	padding-left: 50px;
+	box-sizing: border-box;
+}
+
+.fac_life .fac_right .title{
+	width: 100%;
+    float: left;  
+	margin-bottom: 25px;
+}
+
+.fac_life .fac_right .title .head{
+	font-size: 30px;
+    line-height: 1.3;
+    margin-bottom: 15px;
+	font-family: var(--font_medium);
+	color: var(--primary_color);
+	width: 100%;
+    float: left; 
+}
+
+.fac_life .fac_right .title .para{
+	width: 100%;
+    float: left; 
+}
+
+.fac_life .fac_right .title .para p{
+	line-height: 1.8;
+    font-size: 16px;
+	color: #555;
+	font-family: var(--font_regular);
+}
+
+.fac_life .fac_right .info{
+	width: 100%;
+    float: left;  
+	margin-bottom: 20px;
+	
+}
+
+.fac_life .fac_right .info ol {
+  list-style: none;
+  color: #ccc;
+}
+
+.fac_life .fac_right .info ol li {
+  font-family: var(--font_regular);
+  position: relative;
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+  padding: 10px 20px;
+  border: 1px solid;
+  border-radius: 10px;
+}
+
+.fac_life .fac_right .info ol li p {
+    font-family: var(--font_regular);
+    color: #555;
+    padding-left: 30px;
+    float: left;
+    text-align: justify;
+}
+
+.fac_life .fac_right .info ol li p:first-child{
+    font-family: var(--font_bold);
+    text-transform: uppercase;
+    margin-bottom: 10px;
+}
+
+.fac_life .fac_right .info ol li span {
+  font-size: 60px;
+  line-height: 25px;
+  font-family: var(--font_bold);
+  color: #ffa443;
+}
+  
+
+/* Choose Us Ends */
+
+/* Countdown starts */
+.coundown_con{
+    min-width: 100%;
+    float: left;
+}
+
+.coundown_con .coundown_center{
+    width: 1300px;
+    margin: 0 auto;
+}
+
+.coundown_con .coundown_center .coundown{
+	width: 100%;
+    float: left;
+    box-sizing: border-box;
+    position: relative;
+    margin: 0px 0 100px;
+    display: flex;
+}
+
+.coundown_center .coundown .count_left{
+	width: 40%;
+    float: right;   
+	position: relative;
+}
+
+.coundown_center .coundown .count_left .head_sub{
+    font-weight: 500;
+    display: inline-block;
+    text-transform: uppercase;
+    margin-bottom: 15px;
+    letter-spacing: 1px;
+    color: #858584;
+    width: 100%;
+    float: left;
+    font-family: var(--font_regular);
+}
+
+.coundown_center .coundown .count_left .head_main{
+    margin-bottom: 30px;
+    width: 100%;
+    float: left;
+    font-size: 30px;
+    font-family: var(--font_medium);
+    position: relative;
+}
+
+.coundown_center .coundown .count_left .head_main:before{
+    position: absolute;
+    bottom: -17px;
+    left: 0px;
+    right: 0px;
+    content: "";
+    width: 130px;
+    height: 6px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-image: url(../../images/label/line.png);
+    background-position: 50% center;
+    animation: 1.5s linear 0s 2 normal none running width !important;
+}
+
+.coundown_center .coundown .count_left .head_main mark {
+    color: var(--primary_color);
+    background: inherit;
+}
+
+.coundown_center .coundown .count_left .para{
+    margin-bottom: 15px;
+    width: 100%;
+    float: left;
+    font-size: 15px;
+    font-family: var(--font_regular);
+}
+.coundown_center .coundown .count_right{
+	width: 50%;
+    float: right;   
+	position: relative;
+}
+/* countdown Ends */
+
+
+
+
+
