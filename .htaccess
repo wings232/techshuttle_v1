@@ -83,7 +83,7 @@ RewriteRule ^(.*)$ https://www.drkmh.com$1 [R,L]
 RewriteEngine on
 
 #RewriteRule ^drkmh-consultants drkmh-consultants.php [NC,L]
-#RewriteRule ^index index.php [NC,L]
+RewriteRule ^about-us about_us.php [NC,L]
 
 #rewrite code for url for Course Details page for two query
 RewriteRule ^([0-9a-zA-Z_-]+)/([0-9a-zA-Z_-]+)$ course_details.php?key_one=$1&&key_two=$2 [NC,L]

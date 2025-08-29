@@ -538,8 +538,11 @@
 
 .coundown_center .coundown .count_left{
 	width: 40%;
-    float: right;   
-	position: relative;
+    float: left;
+    padding-right: 100px;
+    padding-top: 100px;
+    position: relative;
+    box-sizing: border-box;
 }
 
 .coundown_center .coundown .count_left .head_sub{
@@ -561,6 +564,7 @@
     font-size: 30px;
     font-family: var(--font_medium);
     position: relative;
+    line-height: 40px;
 }
 
 .coundown_center .coundown .count_left .head_main:before{
@@ -591,10 +595,135 @@
     font-family: var(--font_regular);
 }
 .coundown_center .coundown .count_right{
-	width: 50%;
+	width: 60%;
     float: right;   
 	position: relative;
+    display: flex
 }
+
+.coundown .count_right .right_col{
+    background: white;
+    box-shadow: rgba(16, 12, 47, 0.08) 0px 30px 70px 0px;
+    --e-column-margin-right: 15px;
+    --e-column-margin-left: 15px;
+    margin: 0px 15px;
+    padding: 70px;
+    display: flex;
+    position: relative;
+    width: 100%;
+    flex-wrap: wrap;
+    align-content: flex-start;
+    border-radius: 10px;
+}
+
+.coundown .count_right .right_col .count_shape_one{
+    position:absolute;
+    left:-20px;
+    width: auto;
+    top:-100px;
+}
+.coundown .count_right .right_col .count_shape_one span img{
+    animation: tech-rotate-y 15s normal infinite linear;
+    -webkit-animation-duration: 11s;
+    animation-duration: 11s;
+}
+
+.coundown .count_right .right_col .count_shape_two{
+    position:absolute;
+    left:-30px;
+    width: auto;
+    top: -20px;
+    z-index: -1;
+}
+
+.coundown .count_right .right_col .num_arc{
+    width:100%;
+    float: left;
+}
+
+.coundown .count_right .right_col .num_arc ul{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.coundown .count_right .right_col .num_arc ul li{
+    width: 50%;
+    float: left;
+}
+
+.coundown .count_right .right_col .num_arc ul li .li_con{
+    position: relative;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    align-content: flex-start;
+    border-style: solid;
+    border-width: 0px 0.8px 0.8px 0px;
+    border-color: #E5E5E5;
+    padding: 38px 30px 38px 30px;
+    justify-content: center;
+    box-sizing: border-box;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+}
+
+.coundown .count_right .right_col .num_arc ul li:nth-child(even) .li_con{
+    border-right: 0;
+}
+
+.coundown .count_right .right_col .num_arc ul li:nth-child(n+3) .li_con{
+    border-bottom: 0;
+}
+
+.coundown .count_right .right_col .num_arc ul li .li_con .nums{
+     width: 100%;
+     font-size: 50px;
+     font-family: var(--font_medium);     
+     line-height: 65px;
+}
+
+.coundown .count_right .right_col .num_arc ul li:nth-child(1) .li_con .nums{
+    color: #1AB69D;
+}
+
+.coundown .count_right .right_col .num_arc ul li:nth-child(2) .li_con .nums{
+    color: #EE4A62;
+}
+
+.coundown .count_right .right_col .num_arc ul li:nth-child(3) .li_con .nums{
+    color: #F8941F;
+}
+
+.coundown .count_right .right_col .num_arc ul li:nth-child(4) .li_con .nums{
+    color: #8E56FF;
+}
+
+.coundown .count_right .right_col .num_arc ul li .li_con .txt{
+     width: 100%;
+     text-transform: uppercase;
+     line-height: 30px;
+     font-family: var(--font_regular);
+}
+
+.coundown .count_right .right_col .count_shape_three{
+    position:absolute;
+    right:-70px;
+    width: auto;
+    bottom: -70px;
+    z-index: -1;
+}
+
+.coundown .count_right .right_col .count_shape_four{
+    position:absolute;
+    right:30px;
+    width: auto;
+    bottom: -60px;
+    z-index: -1;
+}
+
 /* countdown Ends */
 
 

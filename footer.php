@@ -69,7 +69,7 @@
                                 <div class="head">About</div>
                                 <div class="site_list">
                                     <ul>
-                                        <li><a href="#">About Us</a></li>
+                                        <li><a href="about-us">About Us</a></li>
                                         <li><a href="#">Courses</a></li>
                                         <li><a href="#">News & Blog</a></li>
                                         <li><a href="#">Become A Teacher</a></li>

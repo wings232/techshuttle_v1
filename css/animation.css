@@ -222,6 +222,17 @@
 	}
 }
 
+@keyframes tech-rotate-y {
+	0% {
+        -webkit-transform: rotate(0deg);
+        transform: rotate(0deg);
+    }
+    100% {
+        -webkit-transform: rotate(-360deg);
+        transform: rotate(-360deg);
+    }
+}
+
 /* Arrow animation */
 .tab input:not(:checked) + .tab__label:hover::after {
   animation: bounce .5s infinite;

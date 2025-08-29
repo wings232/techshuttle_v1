@@ -209,7 +209,75 @@
                         </div>
                     </div>
                     <div class='count_right'>
-                        
+                        <div class='right_col'>
+                            <div class='count_num'>
+                                 <div class='count_shape_one'>
+                                    <span>
+                                        <img src='images/label/about_07.png'/>
+                                    </span>
+                                 </div>
+                                 <div class='count_shape_two'>
+                                    <span>
+                                        <img src='images/label/about_02.png'/>
+                                    </span>
+                                 </div>
+                                 <div class='num_arc'><!-- num_arc Starts-->
+                                    <ul>
+                                        <li><!-- Loop Starts-->
+                                            <div class='li_con'>
+                                                <div class='nums'>
+                                                    4,500
+                                                </div>
+                                                <div class='txt'>
+                                                    STUDENTS ENROLLED
+                                                </div>
+                                            </div>
+                                        </li><!-- Loop Ends-->
+                                        <li><!-- Loop Starts-->
+                                            <div class='li_con'>
+                                                <div class='nums'>
+                                                    500+
+                                                </div>
+                                                <div class='txt'>
+                                                    Instructors
+                                                </div>
+                                            </div>
+                                        </li><!-- Loop Ends-->
+                                        <li><!-- Loop Starts-->
+                                            <div class='li_con'>
+                                                <div class='nums'>
+                                                    400+
+                                                </div>
+                                                <div class='txt'>
+                                                    Courses
+                                                </div>
+                                            </div>
+                                        </li><!-- Loop Ends-->
+                                        <li><!-- Loop Starts-->
+                                            <div class='li_con'>
+                                                <div class='nums'>
+                                                    1,200
+                                                </div>
+                                                <div class='txt'>
+                                                    EXPERTS INSTRUCTORS
+                                                </div>
+                                            </div>
+                                        </li><!-- Loop Ends-->
+                                    </ul>
+                                 </div><!-- num_arc Ends-->
+
+                                 <div class='count_shape_three'>
+                                    <span>
+                                        <img src='images/label/about_05.png'/>
+                                    </span>
+                                 </div>
+                                 <div class='count_shape_four'>
+                                    <span>
+                                        <img src='images/label/about_02.png'/>
+                                    </span>
+                                 </div>
+                            </div>
+                        </div>
                     </div>
                 </div><!--coundown Ends -->
             </div><!--coundown_center Ends -->
