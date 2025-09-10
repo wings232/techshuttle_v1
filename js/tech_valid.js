@@ -99,21 +99,21 @@ function contact_form(){
 }
 
 function contact_form_open(){
-	var name = document.getElementById('name').value;
-    var email = document.getElementById('email').value;
-    var c_val = document.getElementById('c_val').innerHTML;
-    var country_code = document.getElementById('c_c').options[document.getElementById('c_c').selectedIndex].text;
-    var mobile = document.getElementById('mobile').value;
-    var message = document.getElementById('message').value;
-    var course = document.getElementById('course_name').value;;
-    var course_type = document.getElementById('course_type').value;;
+	var name = document.getElementById('name_op').value;
+    var email = document.getElementById('email_op').value;
+    var c_val = document.getElementById('c_val_op').innerHTML;
+    var country_code = document.getElementById('c_cf').options[document.getElementById('c_cf').selectedIndex].text;
+    var mobile = document.getElementById('mobile_op').value;
+    var message = document.getElementById('message_op').value;
+    var course = document.getElementById('course_name_op').value;;
+    var course_type = document.getElementById('course_type_op').value;;
     //var patient_gender_pt = document.getElementById('c_c').options[document.getElementById('c_c').selectedIndex].text;*/
     
-    //alert(patgender + " " + patgender_id+ " " +patname + " " +patdoblogin+ " " +patmobile+ " " +patemail )
+    alert(name + " " + email+ " " +c_val + " " +country_code+ " " +mobile+ " " +message+ " " +course+ " " +course_type )
     //login_verify();    
 
     if($('.enquiries_form').valid() == true){
-    	$('.common_form .input_box .spinner').css({"display":"block"});
+    	$('.common_form_one .input_box .spinner').css({"display":"block"});
     	//login_verify();
     	$.ajax({
             url:"ajax/portal/enq_submit.php",
@@ -129,9 +129,9 @@ function contact_form_open(){
                 course_type:course_type
             },
             success:function(result){  
-             	$('.common_form .input_box .spinner').css({"display":"none"});  
-                $('.common_form .input_box .result').show();
-             	$('.common_form .input_box .result').html(result);
+             	$('.common_form_one .input_box .spinner').css({"display":"none"});  
+                $('.common_form_one .input_box .result').show();
+             	$('.common_form_one .input_box .result').html(result);
               	//re = result.trim()
               	// if(re == 'valid'){
 	            //   	//window.location.href = "http://192.168.0.34/kmh_new_v1/patient_portal.php";            

@@ -12,6 +12,8 @@
     $course = isset($_REQUEST['course'])?$_REQUEST['course']:"";
     $course_type = isset($_REQUEST['course_type'])?$_REQUEST['course_type']:"";
 
+	//echo $name."-".$email."-".$mobile."-".$phone_code."-".$country_code."-".$message."-".$course."-".$course_type;
+	
 	date_default_timezone_set('Asia/Calcutta'); 
 	$currentdates = date("Y-m-d H:s"); 
 	$currentDateAlone = date("Y-m-d");

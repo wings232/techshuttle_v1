@@ -122,6 +122,7 @@
     background: var(--primary_color);
     border-radius: 10px;
     padding: 30px 0px;
+    height: 196px;
 }
 
 .cont_addr .addr_bar ul li .li_con .img{
@@ -410,3 +411,63 @@
 
 
 /* Form Ends */
+.contact_form .social{
+    width:100%;
+    float: left;
+    margin: 60px 0;
+}
+
+.social_media_list {
+  position: relative;
+  font-size: 22px;
+  text-align: center;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0;
+}
+
+.social_media_list li a {
+  color: #fff;
+}
+
+.social_media_list li {
+  position: relative; 
+  display: inline-block;
+  height: 60px;
+  width: 60px;
+  margin: 10px 3px;
+  line-height: 60px;
+  border-radius: 50%;
+  color: #fff;
+  background-color: var(--primary_color);
+  cursor: pointer; 
+  transition: all .2s ease-in-out;
+}
+
+.social_media_list li:after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 60px;
+  height: 60px;
+  line-height: 60px;
+  border-radius: 50%;
+  opacity: 0;
+  box-shadow: 0 0 0 1px var(--primary_color);
+  transition: all .2s ease-in-out;
+}
+
+.social_media_list li:hover {
+  background-color: var(--primary_color); 
+}
+
+.social_media_list li:hover:after {
+  opacity: 1;  
+  transform: scale(1.12);
+  transition-timing-function: cubic-bezier(0.37,0.74,0.15,1.65);
+}
+
+.social_media_list li:hover a {
+  color: var(--white);
+}

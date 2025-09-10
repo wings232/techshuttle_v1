@@ -9,12 +9,12 @@
                             </div>
                             <div class="view">
                                 <div class="course_btn">
-                                    <a href="/course-with-filter" class="tp-btn-inner">View Course 
+                                    <a href="about-us" class="tp-btn-inner">About Us
                                         <span><i class="fa fa-arrow-right" aria-hidden="true"></i></span>
                                     </a>
                                 </div>
                                 <div class="course_btn">
-                                    <a href="/course-with-filter" class="tp-btn-inner">View Course 
+                                    <a href="corporate-connect" class="tp-btn-inner">Corporate Connect
                                         <span><i class="fa fa-arrow-right" aria-hidden="true"></i></span>
                                     </a>
                                 </div>
@@ -70,11 +70,11 @@
                                 <div class="site_list">
                                     <ul>
                                         <li><a href="about-us">About Us</a></li>
-                                        <li><a href="#">Courses</a></li>
+                                        <li><a href="corporate-connect">Corporate Connect</a></li>
                                         <li><a href="#">News & Blog</a></li>
                                         <li><a href="#">Become A Teacher</a></li>
                                         <li><a href="#">Events</a></li>
-                                        <li><a href="#">Contact</a></li>
+                                        <li><a href="contact-us">Contact</a></li>
                                     </ul>
                                 </div>
                             </div><!--site_se loop Ends -->

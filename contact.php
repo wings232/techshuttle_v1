@@ -57,15 +57,16 @@
                 <div class='cont_addr'>
                     <div class='addr_bar'><!--addr_bar Starts -->
                         <ul>
+                            
                             <li><!--Loop Starts -->
                                 <div class='li_con'>
                                     <div class='img'>
-                                        <i class="fas fa-map-marked"></i>
+                                        <i class="fa fa-phone" aria-hidden="true"></i>
                                     </div>
                                     <div class='img_txt'>
-                                        <div class='head'>Address</div>
-                                        <span>Electronic City </span> 
-                                        <span>Bangalore ,Karnataka, INDIA</span> 
+                                        <div class='head'>Contact Number</div>
+                                        <span>+91 81424 37969 </span> 
+                                        <span>+91 89044 61087</span> 
                                     </div>
                                 </div>
                             </li><!--Loop Ends -->
@@ -77,22 +78,23 @@
                                     <div class='img_txt'>
                                         <div class='head'>Email</div>
                                         <span>info@techshuttle.com</span> 
-                                        <span>info@techshuttle.com</span> 
+                                        
                                     </div>
                                 </div>
                             </li><!--Loop Ends -->
                             <li><!--Loop Starts -->
                                 <div class='li_con'>
                                     <div class='img'>
-                                        <i class="fa fa-phone" aria-hidden="true"></i>
+                                        <i class='fas fa-headset'></i>
                                     </div>
                                     <div class='img_txt'>
-                                        <div class='head'>Contact Number</div>
-                                        <span>+4733378901 </span> 
-                                        <span>+1433378912</span> 
+                                        <div class='head'>Support</div>
+                                        <span>24/7</span> 
+                                        <!-- <span>Bangalore ,Karnataka, INDIA</span>  -->
                                     </div>
                                 </div>
                             </li><!--Loop Ends -->
+                            
                         </ul>
                     </div><!--addr_bar Ends -->
 
@@ -121,7 +123,7 @@
                                                     Name
                                                 </div>
                                                 <div class='box_feild'>
-                                                    <input type='text' id="name" name='name' placeholder='Name'/>
+                                                    <input type='text' id="name_op" name='name' placeholder='Name'/>
                                                 </div>
                                             </div>
                                             <div class='feild_b'>
@@ -129,7 +131,7 @@
                                                     Email Id
                                                 </div>
                                                 <div class='box_feild'>
-                                                    <input type='email' id="email" name='email' placeholder='Email Id'/>
+                                                    <input type='email' id="email_op" name='email' placeholder='Email Id'/>
                                                 </div>
                                             </div>
                                             <div class='feild_b'>
@@ -139,32 +141,32 @@
                                                 <div class='box_feild'>
                                                     <div class="cty_code">
                                                         <div class='code'>
-            <?php
-                $countryCodeLoad= countryCodeLoad("countries");
-                $countryCodeLoad_json = json_decode($countryCodeLoad, true);
-                //print_r($accopany_filter_List_json);
-                $countryCodeLoad_json_count = isset($countryCodeLoad_json['countryCodeLoad_count'])?$countryCodeLoad_json['countryCodeLoad_count']:"";
-            ?>
-                                                            <select  id='c_cf' name='c_cf' onchange='getPhoneCodeForm()'>
-                                                            <option value=''>Code</option>
-            <?php
-                if($countryCodeLoad_json_count > 0){
-                    foreach ($countryCodeLoad_json['countryCodeLoad_details'] as $countryCodeLoad_lists) {
-                    $country_code  = $countryCodeLoad_lists["code"];
-                    $phone_code  = $countryCodeLoad_lists["phone"];
-            ?>
-                                                                <option value='<?php echo $phone_code; ?>'><?php echo $country_code; ?></option>
-            <?php
-            
-                    }
-                }
-            ?>
+                                                            <?php
+                                                                $countryCodeLoad= countryCodeLoad("countries");
+                                                                $countryCodeLoad_json = json_decode($countryCodeLoad, true);
+                                                                //print_r($accopany_filter_List_json);
+                                                                $countryCodeLoad_json_count = isset($countryCodeLoad_json['countryCodeLoad_count'])?$countryCodeLoad_json['countryCodeLoad_count']:"";
+                                                            ?>
+                                                                                                            <select  id='c_cf' name='c_cf' onchange='getPhoneCodeForm()'>
+                                                                                                            <option value=''>Code</option>
+                                                            <?php
+                                                                if($countryCodeLoad_json_count > 0){
+                                                                    foreach ($countryCodeLoad_json['countryCodeLoad_details'] as $countryCodeLoad_lists) {
+                                                                    $country_code  = $countryCodeLoad_lists["code"];
+                                                                    $phone_code  = $countryCodeLoad_lists["phone"];
+                                                            ?>
+                                                                                                                <option value='<?php echo $phone_code; ?>'><?php echo $country_code; ?></option>
+                                                            <?php
+                                                            
+                                                                    }
+                                                                }
+                                                            ?>
                                                             </select>
                                                         </div>
-                                                        <div class='c_val' id='c_val'></div>
+                                                        <div class='c_val' id='c_val_op'></div>
                                                     </div>
                                                     <div class="box">
-                                                        <input type='text' id="mobile" name='mobile' placeholder='Mobile No'/>
+                                                        <input type='text' id="mobile_op" name='mobile' placeholder='Mobile No'/>
                                                     </div>														
                                                 </div>
                                                 
@@ -174,22 +176,44 @@
                                                     Message
                                                 </div>
                                                 <div class='box_feild'>
-                                                    <textarea id="message" name='message' placeholder='Message'></textarea>
+                                                    <textarea id="message_op" name='message' placeholder='Message'></textarea>
                                                 </div>
                                             </div>
                                             <div class='feild_b'>														
                                                 <div class='box_feild'>
-                                                    <input type='button' value="Send Message" onclick='contact_form_open("general","","")' class='ignoreThisClass' />
-                                                    <input type='hidden' id='type' name='type'  />
-                                                    <input type='hidden' id='course_name' name='course_name'  />
-                                                    <input type='hidden' id='course_type' name='course_type'  />
+                                                    <input type='button' value="Send Message" onclick='contact_form_open("contact","","")' class='ignoreThisClass' />
+                                                    <input type='hidden' id='type_op' name='type'  />
+                                                    <input type='hidden' id='course_name_op' name='course_name'  />
+                                                    <input type='hidden' id='course_type_op' name='course_type'  />
                                                 </div>
                                             </div>
                                         </form>
                                     </div><!--input_box Ends -->
-                                </div>  <!--inq_con Ends -->
+                            </div>  <!--inq_con Ends -->
+
+                            <div class='social'>
+                                <ul class="social_media_list">
+                                    <li><a href="#" target="_blank" class="contact-icon">
+                                        <i class="fa-brands fa-facebook-f" aria-hidden="true"></i></a>
+                                    </li>
+                                    <li><a href="#" target="_blank" class="contact-icon">
+                                        <i class="fa-brands fa-instagram" aria-hidden="true"></i></a>
+                                    </li>
+                                    <li><a href="#" target="_blank" class="contact-icon">
+                                        <i class="fa-brands fa-x-twitter" aria-hidden="true"></i></a>
+                                    </li>
+                                    <li><a href="#" target="_blank" class="contact-icon">
+                                        <i class="fa-brands fa-linkedin-in" aria-hidden="true"></i></a>
+                                    </li> 
+                                    <li><a href="#" target="_blank" class="contact-icon">
+                                        <i class="fa-brands fa-youtube" aria-hidden="true"></i></a>
+                                    </li>       
+                                </ul>
+                            </div>
+                            
                         </div><!--enquiry_form Ends -->
                     </div>
+
                 </div>
             </div>
         </div>
