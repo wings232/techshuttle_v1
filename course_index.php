@@ -452,7 +452,7 @@
                                     <div class="img_cont">
                                         <div class="depart">
                                             <span>
-                                               <div class='cor'><a href="">SAP</a></div>
+                                               <div class='cor'><a href="">Workday</a></div>
                                             </span>
                                         </div>
                                         <div class="head">
@@ -634,7 +634,7 @@
                                     <div class="img_cont">
                                         <div class="depart">
                                             <span>
-                                               <div class='cor'><a href="">SAP</a></div>
+                                               <div class='cor'><a href="">AI & Machine Learning</a></div>
                                             </span>
                                         </div>
                                         <div class="head">
@@ -816,7 +816,7 @@
                                     <div class="img_cont">
                                         <div class="depart">
                                             <span>
-                                               <div class='cor'><a href="">SAP</a></div>
+                                               <div class='cor'><a href="">Cloud Computing</a></div>
                                             </span>
                                         </div>
                                         <div class="head">
@@ -997,7 +997,7 @@
                                     <div class="img_cont">
                                         <div class="depart">
                                             <span>
-                                               <div class='cor'><a href="">SAP</a></div>
+                                               <div class='cor'><a href="">Blockchain</a></div>
                                             </span>
                                         </div>
                                         <div class="head">
@@ -1178,7 +1178,7 @@
                                     <div class="img_cont">
                                         <div class="depart">
                                             <span>
-                                               <div class='cor'><a href="">SAP</a></div>
+                                               <div class='cor'><a href="">Data Science</a></div>
                                             </span>
                                         </div>
                                         <div class="head">

@@ -17,6 +17,7 @@
     <link rel="stylesheet" href="css/fonts.css"/>    
     <link rel="stylesheet" href="css/animation.css"/> 
     <link rel="stylesheet" href="css/style.css"/>
+    <link rel="stylesheet" href="css/style_mobile.css"/>
     <script type="text/javascript" src="js/jquery.js"></script>
 </head>
 <body>

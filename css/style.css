@@ -1,3 +1,5 @@
+
+
 body{
     font-family: var(--font_regular);  
     line-height: 26px;
@@ -1078,11 +1080,13 @@ body{
     --bs-gutter-y: 0;
     display: flex;
     flex-wrap: wrap;
-    margin-left: calc(var(--bs-gutter-x)* -.5);
+    /* margin-left: calc(var(--bs-gutter-x)* -.5); */
     margin-right: calc(var(--bs-gutter-x)* -.5);
     margin-top: calc(var(--bs-gutter-y)* -1);
     align-items: end;
     margin-bottom: 50px;
+    padding: 10px;
+    box-sizing: border-box;
 }
 
 .course_t .course_heads .pop_course{
@@ -1204,10 +1208,12 @@ body{
     --bs-gutter-y: 0;
     display: flex;
     flex-wrap: wrap;
-    margin-left: calc(var(--bs-gutter-x)* -.5);
+    /* margin-left: calc(var(--bs-gutter-x)* -.5); */
     margin-right: calc(var(--bs-gutter-x)* -.5);
     margin-top: calc(var(--bs-gutter-y)* -1);
     align-items: end;
+    padding: 10px;
+    box-sizing: border-box;
 }
 
 .course_t .course_list > ul{
@@ -1444,7 +1450,7 @@ body{
 
 .course_t .course_list > ul > li .list_hover .img_cont .head{
     border-bottom: 1px solid rgba(3, 31, 66, .08);
-    font-size: 17px;
+    font-size: 15px;
     font-weight: 500;
     line-height: 25px;
     font-family: var(--font_bold);
@@ -1452,6 +1458,12 @@ body{
     text-transform: capitalize;
     padding-bottom: 10px;
     transition: 0.4sease-in-out;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+    height: 18px;
 }
 
 .course_t .course_list > ul > li .list_hover .img_cont .f_num{
@@ -1535,8 +1547,8 @@ body{
 .course_t .course_list > ul > li .list_hover .img_cont .button{
     width: 100%;
     float: left;
-    margin-top:10px;
-    margin-top: 23px;
+    /* margin-top:10px;
+    margin-top: 23px; */
 
 }
 
@@ -1657,6 +1669,8 @@ body{
     float: left;
     margin: 70px 0px; 
     display: flex;
+    padding: 10px;
+    box-sizing: border-box;
 }
 
 .about_in .about_image{
@@ -1827,6 +1841,7 @@ body{
 .container .blog_t_con{
     width:100%;
     float: left;  
+    display: none;
 }
 
 .container .blog_t_con .blog_t_center{
@@ -2380,5 +2395,4 @@ body{
 }
 
 /* Footer Css Ends */
-
 
